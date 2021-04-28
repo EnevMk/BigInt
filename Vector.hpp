@@ -18,6 +18,7 @@ public:
     void push(T data, int index);
     void popBack();
     void removeAtIndex(const int index);
+    void null();
     int size() const;
     int maxCapacity() const;
     T& operator[](int index) const;

@@ -110,7 +110,7 @@ BigInt operator+(const BigInt &obj1, const BigInt &obj2) {
     return res;
 }
 
-/* BigInt operator-(const BigInt &obj1, const BigInt &obj2) {
+BigInt operator-(const BigInt &obj1, const BigInt &obj2) {
 
     int fstLen = obj1.bigNum.maxCapacity();
     int sndLen = obj2.bigNum.maxCapacity();
@@ -122,8 +122,23 @@ BigInt operator+(const BigInt &obj1, const BigInt &obj2) {
     long long minuend;
     long long subtrahend;
 
-    for (int i = 0; i < )
-} */
+    res.bigNum.null();
+
+    for (int i = newSize - 1; i >= 0; --i) {
+
+        minuend = (fstLen - 1 < 0) ? 0 : obj1.bigNum[fstLen - 1];
+        subtrahend = (sndLen - 1 < 0) ? 0 : obj2.bigNum[fstLen - 1];
+
+        (minuend < subtrahend) ? res.bigNum[i - 1]--, minuend += BASE : 1;
+
+        res.bigNum[i] += minuend - subtrahend;
+
+        fstLen--;
+        sndLen--;
+    }
+
+    return res;
+}
 
 std::ostream& operator<<(std::ostream &os, const BigInt &obj) {
     for (int i = 0; i < obj.bigNum.maxCapacity(); ++i) {

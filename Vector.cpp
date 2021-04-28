@@ -146,3 +146,9 @@ void Vector<T>::reserve(unsigned n) {
     }
 }
 
+template <>
+void Vector<long long>::null() {
+    for (int i = 0; i < this->maxCapacity(); ++i) {
+        arr[i] = 0;
+    }
+}

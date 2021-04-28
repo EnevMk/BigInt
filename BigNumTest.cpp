@@ -20,12 +20,22 @@ int main() {
     
     BigInt f = c + w;
 
+    Vector <long long> bign;
+    bign.push(23000);
+    bign.push(500000000);
+
+    BigInt g = bign;
+    BigInt g2 = g + g;
+
     std::cout << "a: " << a
     << "\nb: " << b
     << "\nc: " << (c)
     << "\nf: " << f
-    << "\nz: " << z + z;
-    
+    << "\nz: " << z + z
+    << "\ng: " << g
+    << "\ng + g: " << g2
+    << "\n g2 - g: " << g2 - g
+    << "\na - w: " << a - w;
 
     //BigInt y = z - a;
     std::cout << '\n' << z.bigNum.size() << '\n' << z.bigNum.maxCapacity();

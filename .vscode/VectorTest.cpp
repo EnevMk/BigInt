@@ -1,4 +1,4 @@
-#include <iostream>
+/* #include <iostream>
 #include "Vector.hpp"
 #include "catch_amalgamated.hpp"
 #include "BigInt.hpp"
@@ -34,7 +34,7 @@ TEST_CASE("testing bigint") {
     a.bigNum.push(7899911241);
     CHECK(a.bigNum.size() == 4);
     CHECK(a.bigNum[3] == 7899911241);
-}
+} */
 
 /* int main() {
 
