@@ -37,6 +37,10 @@ BigInt::BigInt(const Vector<long long> &v) {
     bigNum = v;
 }
 
+BigInt& BigInt::operator=(const BigInt &obj) {
+    bigNum = obj.bigNum;
+}
+
 BigInt operator+(const BigInt &obj1, const BigInt &obj2) {
 
     int fstLen = obj1.bigNum.maxCapacity();
