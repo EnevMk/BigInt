@@ -278,7 +278,7 @@ BigInt multiplyByNum(const BigInt &obj, long long num) {
 
     res.bigNum.null();
     int len = maxLen;
-    
+
     long long rem = 0;
     for (int i = bigIntLen - 1; i >= 0; --i) {
         
