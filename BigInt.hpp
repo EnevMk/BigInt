@@ -22,7 +22,7 @@ public:
     BigInt(const BigInt &obj);
     void reserveVectorCapacity(int n);
     void pushLast(long long digit);
-    void operator=(long long num);
+    void operator=(long long num);//??
     bool operator==(const BigInt &obj) const;
     //long long operator[](size_t ind) const;
     int size() const;
@@ -34,10 +34,14 @@ public:
     BigInt negate() const;
     
     friend std::ostream& operator<<(std::ostream &os, const BigInt &obj);
-    //friend std::ostream& operator<<(std::ostream &os, const BigInt *obj);
-    friend BigInt operator+(const BigInt &obj1, const BigInt &obj2);
+
+    BigInt operator+(const BigInt &obj) const;
+    BigInt operator-(const BigInt &obj) const;
+    BigInt operator*(const BigInt &obj) const;
+
+    /* friend BigInt operator+(const BigInt &obj1, const BigInt &obj2);
     friend BigInt operator-(const BigInt &obj1, const BigInt &obj2);
-    friend BigInt operator*(const BigInt &obj1, const BigInt &obj2);
+    friend BigInt operator*(const BigInt &obj1, const BigInt &obj2); */
 };
 
 #endif

@@ -123,30 +123,32 @@ bool BigInt::operator<(const BigInt &obj) const {
     return !(*this > obj);
 }
 
-BigInt operator+(const BigInt &obj1, const BigInt &obj2) {
-
+BigInt BigInt::operator+(const BigInt &obj) const {
     BigInt res;
 
-    if (obj1 > ZERO && obj2 < ZERO) {
+    if (*this > ZERO && obj < ZERO) {
         
-        res = obj1 - obj2.negate();
+        res = *this - obj.negate();
         return res;
     }
-    else if (obj1 < ZERO && obj2 < ZERO) {
+    else if (*this < ZERO && obj < ZERO) {
 
-        res = (obj1.negate() + obj2.negate()).negate();
+        res = (this->negate() + obj.negate()).negate();
         return res;
-    }
+    }/* 
+    else if (*this < ZERO && obj > ZERO) {
+        return obj - this->negate();
+    } */
 
-    int fstLen = obj1.size();
-    int sndLen = obj2.size();
+    int fstLen = this->size();
+    int sndLen = obj.size();
 
     if (fstLen == 0) {
-        res = obj2;
+        res = obj;
         return res;
     }
     else if (sndLen == 0) {
-        res = obj1;
+        res = *this;
         return res;
     }
 
@@ -160,8 +162,8 @@ BigInt operator+(const BigInt &obj1, const BigInt &obj2) {
     long long remainder = 0;
     for (int i = newSize - 1; i >= 0; --i) {
 
-        addend1 = (fstLen - 1 < 0) ? 0 : obj1[fstLen - 1];
-        addend2 = (sndLen - 1 < 0) ? 0 : obj2[sndLen - 1];
+        addend1 = (fstLen - 1 < 0) ? 0 : (*this)[fstLen - 1];
+        addend2 = (sndLen - 1 < 0) ? 0 : obj[sndLen - 1];
         
         long long sum = addend1 + addend2;
         long long digit = sum % BASE + remainder;
@@ -181,30 +183,33 @@ BigInt operator+(const BigInt &obj1, const BigInt &obj2) {
     return res;
 }
 
-BigInt operator-(const BigInt &obj1, const BigInt &obj2) {
-
+BigInt BigInt::operator-(const BigInt &obj) const {
     BigInt res;
     
-    if (obj1 < ZERO && obj2 < ZERO) {
-        return (obj2.negate() - (obj1.negate()));
+    if (*this < ZERO && obj < ZERO) {
+        //return (this->negate() - (obj.negate())).negate();
+        
+        return obj.negate() - this->negate();
     }
 
-    else if (obj1 < ZERO && obj2 > ZERO) {
-        return (obj1.negate() + obj2).negate();
+    else if (*this < ZERO && obj > ZERO) {
+        
+        return (this->negate() + obj).negate();
     }
 
-    else if (obj1 > ZERO && obj2 < ZERO) {
-        return obj1 + obj2.negate();
+    else if (*this > ZERO && obj < ZERO) {
+        return *this + obj.negate();
     }
 
-    if (obj1 < obj2) {
-        res = obj2 - obj1;
+    if (*this < obj) {
+        res = obj - *this;
         //res.negate();
+        //res = res.negate();
         return res.negate();
     }
 
-    int fstLen = obj1.size();
-    int sndLen = obj2.size();
+    int fstLen =this->size();
+    int sndLen = obj.size();
     int newSize = (fstLen < sndLen) ? sndLen : fstLen;
 
     res.reserveVectorCapacity(newSize);
@@ -216,8 +221,8 @@ BigInt operator-(const BigInt &obj1, const BigInt &obj2) {
 
     for (int i = newSize - 1; i >= 0; --i) {
 
-        minuend = (fstLen - 1 < 0) ? 0 : obj1[fstLen - 1];
-        subtrahend = (sndLen - 1 < 0) ? 0 : obj2[sndLen - 1];
+        minuend = (fstLen - 1 < 0) ? 0 : (*this)[fstLen - 1];
+        subtrahend = (sndLen - 1 < 0) ? 0 : obj[sndLen - 1];
 
         (minuend < subtrahend) ? res.bigNum[i - 1]--, minuend += BASE : 1;
 
@@ -233,9 +238,9 @@ BigInt operator-(const BigInt &obj1, const BigInt &obj2) {
     return res;
 }
 
-BigInt operator*(const BigInt &obj1, const BigInt &obj2) {
-    int fstLen = obj1.size();
-    int sndlen = obj1.size();
+BigInt BigInt::operator*(const BigInt &obj) const {
+    int fstLen = this->size();
+    int sndlen = obj.size();
 
     int newSize = fstLen + sndlen;
     
@@ -247,7 +252,7 @@ BigInt operator*(const BigInt &obj1, const BigInt &obj2) {
     prods.reserve(sndlen);
 
     for (int i = sndlen - 1; i >= 0; i--) {
-        BigInt temp = multiplyByNum(obj1, obj2.bigNum[i]);
+        BigInt temp = multiplyByNum(*this, obj.bigNum[i]);
         
         prods.push(temp);
     }

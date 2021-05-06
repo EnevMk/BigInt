@@ -81,6 +81,7 @@ TEST_CASE(" - operation") {
 
     BigInt b = 999999999;
     BigInt c = 1;
+    BigInt b2 = b.negate();
 
     CHECK(a - b == c);
     CHECK(a - c == b);
@@ -90,7 +91,8 @@ TEST_CASE(" - operation") {
     Vector<long long> v1;
     v1.push(-1);
     v1.push(999999999);
-    CHECK(b.negate() - a == BigInt(v1));
+    BigInt v(v1);
+    CHECK(b.negate() - a == v);
     CHECK(b - a.negate() == a + b);
 }
 
@@ -121,4 +123,36 @@ TEST_CASE("BigInt by long long multiplication") {
     r.pushLast(120);
 
     CHECK(multiplyByNum(s, 3) == r);
+}
+
+TEST_CASE("* operation") {
+    BigInt a;
+    a.reserveVectorCapacity(2);
+    a.pushLast(240000);
+    a.pushLast(134);
+    
+    BigInt b;
+    b.reserveVectorCapacity(2);
+    b.pushLast(0);
+    b.pushLast(2);
+
+    BigInt res;
+    res.reserveVectorCapacity(3);
+    res.pushLast(0);
+    res.pushLast(480000);
+    res.pushLast(268);
+
+    CHECK(res == a * b);
+
+    BigInt c;
+    c.reserveVectorCapacity(2);
+    c.pushLast(50000);
+    c.pushLast(13);
+
+    BigInt res2;
+    res2.reserveVectorCapacity(3);
+    res2.pushLast(0);
+    res2.pushLast(100000);
+    res2.pushLast(26);
+    CHECK(b * c == res2);
 }
