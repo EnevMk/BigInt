@@ -18,7 +18,7 @@ int main() {
 
     std::cout << a * b; */
 
-    BigInt a;
+    /* BigInt a;
     a.reserveVectorCapacity(2);
     a.pushLast(0);
     a.pushLast(1);
@@ -31,7 +31,10 @@ int main() {
 
     std::cout << "b2: " << b2;
     std::cout << "\n-a: " << a.negate();
-    std::cout << "\n-b -a: " << b2 - a2;
+    std::cout << "\n-b -a: " << b2 - a2; */
+
+    BigInt g = 999999999;
+    std::cout << g;
     
     return 0;
 }

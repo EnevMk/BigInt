@@ -1,38 +1,16 @@
 #include "BigInt.hpp"
 #define ZERO BigInt(0)
 
-void BigInt::validate(long long num) {
-    int len = 1;
-    long long copy = num;
-    
-    while (copy / BASE != 0) {
-        ++len;
-        copy /= BASE;
-    }
-    this->reserveVectorCapacity(len);
-
-    int del = 1;
-
-    for (int i = len - 1; i >= 0; --i) {
-        //this->bigNum[i] = (num % BASE);
-        this->pushLast(num % BASE);
-        del *= 10;
-        num = num / BASE * BASE / del;
-              
-    }
-}
 
 BigInt::BigInt():bigNum() {
 
 }
 
-/* BigInt::BigInt(int size_):bigNum(size_) {
-    
-} */
-
 BigInt::BigInt(long long num):bigNum() {
-    validate(num);
-    //bigNum.push(num);
+    if (num < BASE) {
+        
+        pushLast(num);
+    }
 }
 
 BigInt::BigInt(const Vector<long long> &v) {

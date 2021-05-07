@@ -79,6 +79,7 @@ Vector<T>::~Vector() {
     delete[] arr;
     current = 0;
     capacity = 0;
+    lastFreeIndex = -1;
 }
 
 
@@ -175,7 +176,7 @@ int Vector<T>::maxCapacity() const {
 }
 
 template <typename T>
-T& Vector<T>::operator[](int index) const {
+const T& Vector<T>::operator[](int index) const {
     return *(arr + index);
 }
 

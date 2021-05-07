@@ -96,7 +96,7 @@ TEST_CASE(" - operation") {
     CHECK(b - a.negate() == a + b);
 }
 
-TEST_CASE("BigInt by long long multiplication") {
+/* TEST_CASE("BigInt by long long multiplication") {
     BigInt a;
     a.reserveVectorCapacity(2);
     a.pushLast(100000000);
@@ -123,7 +123,7 @@ TEST_CASE("BigInt by long long multiplication") {
     r.pushLast(120);
 
     CHECK(multiplyByNum(s, 3) == r);
-}
+} */
 
 TEST_CASE("* operation") {
     BigInt a;

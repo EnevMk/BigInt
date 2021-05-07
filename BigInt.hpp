@@ -9,12 +9,13 @@
 class BigInt {
 
 private:
-    void validate(long long num);
-    
-    Vector<long long> bigNum; //TODO: do it in dynamic memory
-public:
     
     friend BigInt multiplyByNum(const BigInt &obj, long long num);
+
+    Vector<long long> bigNum;
+public:
+    
+    
     BigInt();
     BigInt(long long num);
     //BigInt(int size_);
@@ -22,7 +23,6 @@ public:
     BigInt(const BigInt &obj);
     void reserveVectorCapacity(int n);
     void pushLast(long long digit);
-    void operator=(long long num);//??
     bool operator==(const BigInt &obj) const;
     //long long operator[](size_t ind) const;
     int size() const;

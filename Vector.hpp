@@ -29,7 +29,7 @@ public:
     int getLastFreeIndex() const;
     void setLastFreeIndex(int ind);
     bool operator==(const Vector<T> &obj) const;
-    T& operator[](int index) const;
+    const T& operator[](int index) const;
     T& operator[](int index);
     void reserve(unsigned n);
     ~Vector();
