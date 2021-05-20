@@ -97,76 +97,88 @@ bool BigInt::operator>(const BigInt &obj) const {
     return false;
 }
 
-bool BigInt::operator<(const BigInt &obj) const {
-    return !(*this > obj);
+bool BigInt::operator>=(const BigInt &obj) const {
+    return (*this > obj || *this == obj);
 }
 
-BigInt BigInt::operator+(const BigInt &obj) const {
-    BigInt res;
+bool BigInt::operator<=(const BigInt &obj) const {
+    return (*this < obj || *this == obj);
+}
+
+bool BigInt::operator<(const BigInt &obj) const {
+    return !(*this >= obj);
+}
+
+BigInt BigInt::operatorHandlerAddition(const BigInt &obj) const{
 
     if (*this > ZERO && obj < ZERO) {
         
-        res = *this - obj.negate();
-        return res;
+        return *this - obj.negate();
     }
     else if (*this < ZERO && obj < ZERO) {
-
-        res = (this->negate() + obj.negate()).negate();
-        return res;
-    }/* 
+        
+        return (this->negate() + obj.negate()).negate();
+    }
     else if (*this < ZERO && obj > ZERO) {
-        return obj - this->negate();
-    } */
-
-    int fstLen = this->size();
-    int sndLen = obj.size();
-
-    if (fstLen == 0) {
-        res = obj;
-        return res;
+        
+        return (this->negate() - obj).negate();
     }
-    else if (sndLen == 0) {
-        res = *this;
-        return res;
-    }
+    
+    return BigInt(0);
+}
+
+bool BigInt::operator!=(const BigInt &obj) const {
+    return !(*this == obj);
+}
+
+long long BigInt::calculateDigitAddition(const BigInt &obj, int first, int second, long long &remainder) const {
+    long long addend1, addend2;
+
+    addend1 = (first - 1 < 0) ? 0 : (*this)[first - 1];
+    addend2 = (second - 1 < 0) ? 0 : obj[second - 1];
+
+    long long sum = addend1 + addend2;
+    long long digit = sum % BASE + remainder;
+
+    remainder = sum / BASE;
+
+    return digit;
+}
+
+BigInt BigInt::operator+(const BigInt &obj) const {
+
+    BigInt res = this->operatorHandlerAddition(obj);
+    if (res != ZERO) return res;
+
+    int fstLen = this->size(), sndLen = obj.size();
+
+    if (fstLen == 0) return obj;
+    if (sndLen == 0) return *this;
 
     int newSize = (fstLen < sndLen) ? sndLen + 1: fstLen + 1;
 
+    res.bigNum.popBack();
     res.reserveVectorCapacity(newSize);
     res.bigNum.null();
-
-    long long addend1;
-    long long addend2;
+    
     long long remainder = 0;
+
     for (int i = newSize - 1; i >= 0; --i) {
 
-        addend1 = (fstLen - 1 < 0) ? 0 : (*this)[fstLen - 1];
-        addend2 = (sndLen - 1 < 0) ? 0 : obj[sndLen - 1];
-        
-        long long sum = addend1 + addend2;
-        long long digit = sum % BASE + remainder;
-
+        long long digit = calculateDigitAddition(obj, fstLen, sndLen, remainder);
         res.pushLast(digit);
-
-        long long rem = sum / BASE;
-
-        remainder = (rem) ? rem : 0;
 
         fstLen--;
         sndLen--;
     }
 
     res.bigNum.cutFirstNull();
-
     return res;
 }
 
-BigInt BigInt::operator-(const BigInt &obj) const {
-    BigInt res;
+BigInt BigInt::operatorHandlerSubtraction(const BigInt &obj) const {
     
     if (*this < ZERO && obj < ZERO) {
-        //return (this->negate() - (obj.negate())).negate();
-        
         return obj.negate() - this->negate();
     }
 
@@ -180,31 +192,43 @@ BigInt BigInt::operator-(const BigInt &obj) const {
     }
 
     if (*this < obj) {
-        res = obj - *this;
-        //res.negate();
-        //res = res.negate();
-        return res.negate();
+
+        return (obj - *this).negate();
     }
 
-    int fstLen =this->size();
-    int sndLen = obj.size();
-    int newSize = (fstLen < sndLen) ? sndLen : fstLen;
+    return BigInt(0);
+}
 
-    res.reserveVectorCapacity(newSize);
+long long BigInt::calculateDigitSubtraction(const BigInt &obj, int first, int second, BigInt &result, int index) const {
 
     long long minuend;
     long long subtrahend;
 
+    minuend = (first - 1 < 0) ? 0 : (*this)[first - 1];
+    subtrahend = (second - 1 < 0) ? 0 : obj[second - 1];
+
+    (minuend < subtrahend) ? result.bigNum[index - 1]--, minuend += BASE : 1;
+
+    long long digit = minuend - subtrahend + result.bigNum[index];
+
+    return digit;
+}
+
+BigInt BigInt::operator-(const BigInt &obj) const {
+    
+    BigInt res = operatorHandlerSubtraction(obj);
+    if (res != 0) return res;
+
+    int fstLen = this->size(), sndLen = obj.size();
+    int newSize = (fstLen < sndLen) ? sndLen : fstLen;
+
+    res.reserveVectorCapacity(newSize);
     res.bigNum.null();
+    res.bigNum.popBack();
 
     for (int i = newSize - 1; i >= 0; --i) {
 
-        minuend = (fstLen - 1 < 0) ? 0 : (*this)[fstLen - 1];
-        subtrahend = (sndLen - 1 < 0) ? 0 : obj[sndLen - 1];
-
-        (minuend < subtrahend) ? res.bigNum[i - 1]--, minuend += BASE : 1;
-
-        long long digit = minuend - subtrahend + res.bigNum[i];
+        long long digit = calculateDigitSubtraction(obj, fstLen, sndLen, res, i);
         res.pushLast(digit);
 
         fstLen--;
@@ -212,7 +236,6 @@ BigInt BigInt::operator-(const BigInt &obj) const {
     }
 
     res.bigNum.cutFirstNull();
-
     return res;
 }
 
@@ -222,9 +245,11 @@ BigInt BigInt::operator*(const BigInt &obj) const {
 
     int newSize = fstLen + sndlen;
     
-    BigInt res;
+    BigInt res(0);
     res.reserveVectorCapacity(newSize);
-    res.bigNum.null();
+    
+    /* std::cout << "res before err" << (res < ZERO) << '\n';
+    std::cout << "RES: " << res; */
 
     Vector<BigInt> prods;
     prods.reserve(sndlen);
@@ -247,7 +272,10 @@ BigInt BigInt::operator*(const BigInt &obj) const {
         }
         res = res + prods[i];
     }
-
+    /* std::cout << "sndlen: " << sndlen << '\n';
+    for (int i = 0; i < sndlen; ++i) {
+        std::cout << prods[i] << '\n';
+    } */
     return res;
 }
 

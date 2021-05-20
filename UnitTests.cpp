@@ -91,6 +91,7 @@ TEST_CASE(" - operation") {
     Vector<long long> v1;
     v1.push(-1);
     v1.push(999999999);
+    
     BigInt v(v1);
     CHECK(b.negate() - a == v);
     CHECK(b - a.negate() == a + b);
