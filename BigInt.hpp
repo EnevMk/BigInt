@@ -12,9 +12,11 @@ private:
     
     long long calculateDigitAddition(const BigInt &obj, int first, int second, long long &rem) const;
     long long calculateDigitSubtraction(const BigInt &obj, int first, int second, BigInt &result, int index) const;
+    void calculateBigIntByNum(int bigIntLen, const BigInt &obj, BigInt& result, long long num) const;
 
     BigInt operatorHandlerAddition(const BigInt &obj) const;
     BigInt operatorHandlerSubtraction(const BigInt &obj) const;
+    BigInt operatorHandlerMultiplication(const BigInt &obj) const;
 
     Vector<long long> bigNum;
 public:

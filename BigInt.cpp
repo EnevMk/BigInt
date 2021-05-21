@@ -267,13 +267,34 @@ BigInt BigInt::operator-(const BigInt &obj) const {
     return res;
 }
 
+BigInt BigInt::operatorHandlerMultiplication(const BigInt &obj) const {
+
+    if (*this < 0 && obj > 0) {
+        return (this->negate() * obj).negate();
+    }
+
+    else if (*this > 0 && obj < 0) {
+        return (*this * obj.negate()).negate();
+    }
+
+    else if (*this < 0 && obj < 0) {
+        return (this->negate() * obj.negate());
+    }
+
+    return BigInt(0);
+}
+
 BigInt BigInt::operator*(const BigInt &obj) const {
+
+    BigInt res = operatorHandlerMultiplication(obj);
+    if (res != ZERO) return res;
+
     int fstLen = this->size();
     int sndlen = obj.size();
 
     int newSize = fstLen + sndlen;
     
-    BigInt res(0);
+    //BigInt res(0);
     res.reserveVectorCapacity(newSize);
     
     /* std::cout << "res before err" << (res < ZERO) << '\n';
@@ -300,11 +321,27 @@ BigInt BigInt::operator*(const BigInt &obj) const {
         }
         res = res + prods[i];
     }
-    /* std::cout << "sndlen: " << sndlen << '\n';
-    for (int i = 0; i < sndlen; ++i) {
-        std::cout << prods[i] << '\n';
-    } */
+
     return res;
+}
+
+void BigInt::calculateBigIntByNum(int bigIntLen, const BigInt &obj, BigInt& result, long long num) const {
+
+    int maxLen = bigIntLen + 1, diff = 1;
+
+    long long remainder = 0;
+
+    for (int i = bigIntLen - 1; i >= 0; --i) {
+
+        long long digit = result[i + diff] + (obj[i] * num) % BASE;
+        result.pushLast(digit + remainder);
+
+        remainder = (obj[i] * num) / BASE;
+    }
+
+    if (remainder) result.pushLast(remainder);
+
+    //return result
 }
 
 BigInt multiplyByNum(const BigInt &obj, long long num) {
@@ -316,7 +353,7 @@ BigInt multiplyByNum(const BigInt &obj, long long num) {
     res.reserveVectorCapacity(maxLen);
 
     res.null();
-    int len = maxLen;
+    /* int len = maxLen;
 
     long long rem = 0;
     for (int i = bigIntLen - 1; i >= 0; --i) {
@@ -330,7 +367,9 @@ BigInt multiplyByNum(const BigInt &obj, long long num) {
 
     if (rem) {
         res.pushLast(rem);
-    }
+    } */
+
+    obj.calculateBigIntByNum(bigIntLen, obj, res, num);
 
     res.cutFirstNull();
     return res;
