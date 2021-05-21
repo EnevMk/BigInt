@@ -12,6 +12,7 @@ private:
     
     long long calculateDigitAddition(const BigInt &obj, int first, int second, long long &rem) const;
     long long calculateDigitSubtraction(const BigInt &obj, int first, int second, BigInt &result, int index) const;
+
     BigInt operatorHandlerAddition(const BigInt &obj) const;
     BigInt operatorHandlerSubtraction(const BigInt &obj) const;
 
@@ -22,34 +23,34 @@ public:
     
     BigInt();
     BigInt(long long num);
-    //BigInt(int size_);
     BigInt(const Vector<long long> &v);
     BigInt(const BigInt &obj);
     
     void reserveVectorCapacity(int n);
     void pushLast(long long digit); // pushes a long long to the last free position of the vector
-    bool operator==(const BigInt &obj) const;
-    bool operator!=(const BigInt &obj) const;
-    //long long operator[](size_t ind) const;
+    
     int size() const;
     const Vector<long long>& getVector() const;
+
     const long long operator[](size_t i) const; // returning a digit of the BigInt on ith index
+
+    bool operator==(const BigInt &obj) const;
+    bool operator!=(const BigInt &obj) const;
     bool operator>(const BigInt &obj) const;
     bool operator<(const BigInt &obj) const;
     bool operator>=(const BigInt &obj) const;
     bool operator<=(const BigInt &obj) const;
+
     BigInt& operator=(const BigInt &obj);
     BigInt negate() const; // returns the negated BigInt number
+    void cutFirstNull();
+    void null();
     
     friend std::ostream& operator<<(std::ostream &os, const BigInt &obj);
 
     BigInt operator+(const BigInt &obj) const;
     BigInt operator-(const BigInt &obj) const;
     BigInt operator*(const BigInt &obj) const;
-
-    /* friend BigInt operator+(const BigInt &obj1, const BigInt &obj2);
-    friend BigInt operator-(const BigInt &obj1, const BigInt &obj2);
-    friend BigInt operator*(const BigInt &obj1, const BigInt &obj2); */
 };
 
 #endif

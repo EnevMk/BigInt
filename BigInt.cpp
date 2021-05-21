@@ -27,7 +27,14 @@ BigInt& BigInt::operator=(const BigInt &obj) {
 }
 
 bool BigInt::operator==(const BigInt &obj) const {
-    return bigNum == obj.bigNum;
+    //return bigNum == obj.bigNum;
+    for (int i = 0; i < this->bigNum.size(); ++i) {
+
+        if (this->bigNum[i] != obj.bigNum[i]) {
+            return false;
+        }
+    }
+    return this->size() == obj.size();
 }
 
 void BigInt::reserveVectorCapacity(int n) {
@@ -61,6 +68,27 @@ BigInt BigInt::negate() const {
 
     negated.bigNum[0] = -1 * this->bigNum[0];
     return negated;
+}
+
+void BigInt::cutFirstNull() {
+
+    if (bigNum[0] == 0) {
+        
+        long long *newArr = new long long[bigNum.capacity - 1];
+        for (int i = 0; i < bigNum.capacity - 1; ++i) {
+            newArr[i] = bigNum.arr[i + 1];
+        }
+        bigNum.capacity--;
+        bigNum.current = bigNum.capacity;
+        delete[] bigNum.arr;
+        bigNum.arr = newArr;
+    }
+}
+
+void BigInt::null() {
+    for (int i = 0; i < this->bigNum.maxCapacity(); ++i) {
+        bigNum[i] = 0;
+    }
 }
 
 bool BigInt::operator>(const BigInt &obj) const {
@@ -159,7 +187,7 @@ BigInt BigInt::operator+(const BigInt &obj) const {
 
     res.bigNum.popBack();
     res.reserveVectorCapacity(newSize);
-    res.bigNum.null();
+    res.null();
     
     long long remainder = 0;
 
@@ -172,7 +200,7 @@ BigInt BigInt::operator+(const BigInt &obj) const {
         sndLen--;
     }
 
-    res.bigNum.cutFirstNull();
+    res.cutFirstNull();
     return res;
 }
 
@@ -223,7 +251,7 @@ BigInt BigInt::operator-(const BigInt &obj) const {
     int newSize = (fstLen < sndLen) ? sndLen : fstLen;
 
     res.reserveVectorCapacity(newSize);
-    res.bigNum.null();
+    res.null();
     res.bigNum.popBack();
 
     for (int i = newSize - 1; i >= 0; --i) {
@@ -235,7 +263,7 @@ BigInt BigInt::operator-(const BigInt &obj) const {
         sndLen--;
     }
 
-    res.bigNum.cutFirstNull();
+    res.cutFirstNull();
     return res;
 }
 
@@ -287,7 +315,7 @@ BigInt multiplyByNum(const BigInt &obj, long long num) {
     BigInt res;
     res.reserveVectorCapacity(maxLen);
 
-    res.bigNum.null();
+    res.null();
     int len = maxLen;
 
     long long rem = 0;
@@ -304,7 +332,7 @@ BigInt multiplyByNum(const BigInt &obj, long long num) {
         res.pushLast(rem);
     }
 
-    res.bigNum.cutFirstNull();
+    res.cutFirstNull();
     return res;
 }
 
