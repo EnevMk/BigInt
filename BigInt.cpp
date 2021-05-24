@@ -2,7 +2,34 @@
 #define ZERO BigInt(0)
 
 
+
+
 BigInt::BigInt():bigNum() {
+
+}
+
+BigInt::BigInt(const String &value) {
+
+    //BigInt s("12 350000 0");
+    int countSpaces = 0;
+    for (int i = 0; i < value.size(); ++i) {
+        (value[i] == ' ') ? countSpaces++ : 1;
+    }
+    
+    int size = countSpaces + 1;
+    this->reserveVectorCapacity(size);
+    //std::cout << "Reserved space for : " << size << " digits\n";
+
+    int startIndex = 0, endIndex = -1;
+    for (int i = 0; i < value.size() + 1; ++i) {
+
+        if (value[i] == ' ' || value[i] == '\0') {
+            this->bigNum.push(map(value.subStr(startIndex, endIndex), charToll));
+            //std::cout << '\n' << startIndex << ' ' << endIndex << '\n';
+            startIndex = endIndex + 2;
+        }
+        endIndex++;
+    }
 
 }
 
@@ -284,22 +311,34 @@ BigInt BigInt::operatorHandlerMultiplication(const BigInt &obj) const {
     return BigInt(0);
 }
 
+void BigInt::sumVectorsMultiplication(Vector<BigInt> &numbersVector) {
+    int count = numbersVector.size();
+
+    for (int i = count - 1; i >= 0; i--) {
+
+        int newCapacity = numbersVector[i].size() + i;
+
+        if (i != 0) numbersVector[i].reserveVectorCapacity(newCapacity);
+
+        for (int j = 0; j < i; ++j) {
+            
+            numbersVector[i].bigNum.push(0);
+        }
+
+        *this = *this + numbersVector[i];
+    }
+}
+
 BigInt BigInt::operator*(const BigInt &obj) const {
 
     BigInt res = operatorHandlerMultiplication(obj);
     if (res != ZERO) return res;
 
-    int fstLen = this->size();
-    int sndlen = obj.size();
-
+    int fstLen = this->size(), sndlen = obj.size();
     int newSize = fstLen + sndlen;
     
-    //BigInt res(0);
     res.reserveVectorCapacity(newSize);
     
-    /* std::cout << "res before err" << (res < ZERO) << '\n';
-    std::cout << "RES: " << res; */
-
     Vector<BigInt> prods;
     prods.reserve(sndlen);
 
@@ -308,19 +347,8 @@ BigInt BigInt::operator*(const BigInt &obj) const {
         
         prods.push(temp);
     }
-    
-    for (int i = 0; i < sndlen; ++i) {
 
-        int newCapacity = prods[i].size() + i;
-        
-        if (i != 0) prods[i].reserveVectorCapacity(newCapacity);
-
-        for (int j = 0 ; j < i; ++j) {
-            
-            prods[i].bigNum.push(0);
-        }
-        res = res + prods[i];
-    }
+    res.sumVectorsMultiplication(prods);
 
     return res;
 }
@@ -341,34 +369,17 @@ void BigInt::calculateBigIntByNum(int bigIntLen, const BigInt &obj, BigInt& resu
 
     if (remainder) result.pushLast(remainder);
 
-    //return result
 }
 
 BigInt multiplyByNum(const BigInt &obj, long long num) {
     int bigIntLen = obj.size();
     int maxLen = bigIntLen + 1;
-    int diff = maxLen - bigIntLen;
+    //int diff = maxLen - bigIntLen;
 
     BigInt res;
     res.reserveVectorCapacity(maxLen);
 
     res.null();
-    /* int len = maxLen;
-
-    long long rem = 0;
-    for (int i = bigIntLen - 1; i >= 0; --i) {
-        
-        long long digit = res.bigNum[i + diff] + (obj.bigNum[i] * num) % BASE;
-        res.pushLast(digit + rem);
-
-        rem = (obj.bigNum[i] * num) / BASE;
-        
-    }
-
-    if (rem) {
-        res.pushLast(rem);
-    } */
-
     obj.calculateBigIntByNum(bigIntLen, obj, res, num);
 
     res.cutFirstNull();

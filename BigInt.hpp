@@ -1,6 +1,7 @@
 #ifndef BIGINT_HPP
 #define BIGINT_HPP
 #include <iostream>
+#include "String.hpp"
 #include "Vector.hpp"
 
 #define BASE (long long)1000000000
@@ -18,12 +19,15 @@ private:
     BigInt operatorHandlerSubtraction(const BigInt &obj) const;
     BigInt operatorHandlerMultiplication(const BigInt &obj) const;
 
+    void sumVectorsMultiplication(Vector<BigInt> &obj);
+
     Vector<long long> bigNum;
 public:
     
     friend BigInt multiplyByNum(const BigInt &obj, long long num); // multiplies a BigInt by a long long 
     
     BigInt();
+    BigInt(const String &value);
     BigInt(long long num);
     BigInt(const Vector<long long> &v);
     BigInt(const BigInt &obj);
@@ -54,5 +58,19 @@ public:
     BigInt operator-(const BigInt &obj) const;
     BigInt operator*(const BigInt &obj) const;
 };
+
+inline long long charToll(char character) {
+    return (character - '0');
+}
+
+inline long long map(const String &str, long long (*ptr)(char)) {
+    long long num = 0;
+
+    for (int i = 0; i < str.size(); ++i) {
+        num = num * 10 + (*ptr)(str[i]);
+    }
+    
+    return num;
+}
 
 #endif
