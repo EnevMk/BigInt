@@ -2,8 +2,6 @@
 #define ZERO BigInt(0)
 
 
-
-
 BigInt::BigInt():bigNum() {
 
 }
@@ -88,9 +86,7 @@ const Vector<long long>& BigInt::getVector() const {
 }
 
 BigInt BigInt::negate() const {
-
-    int prevLen = this->size();
-
+    
     BigInt negated = *this;
 
     negated.bigNum[0] = -1 * this->bigNum[0];
