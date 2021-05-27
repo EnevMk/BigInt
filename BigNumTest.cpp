@@ -1,8 +1,6 @@
 #include <iostream>
 #include "BigInt.hpp"
 
-#ifndef ZERO
-#define ZERO BigInt(0)
 
 int main() {
     
@@ -23,10 +21,11 @@ int main() {
     //std::cout << '\n' << multiplyByNum(c, 2);
     //std::cout << "\n\nc * d: " << c * d.negate();
 
-    BigInt s("12 350000 0");
-    std::cout << s;
+    BigInt s("5 0");
+    BigInt power(2);
     
+    std::cout << fastPow(s, power);
+    std::cout << '\n' << power[power.size() - 1];
     return 0;
 }
 
-#endif

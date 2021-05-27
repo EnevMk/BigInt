@@ -35,6 +35,7 @@ public:
     const T& operator[](int index) const;
     T& operator[](int index);
     void reserve(unsigned n);
+    void shrink();
     ~Vector();
     
 };
@@ -213,6 +214,22 @@ void Vector<T>::reserve(unsigned n) {
         arr = temp;
         capacity = n;
         lastFreeIndex = capacity - 1;
+    }
+}
+
+template <typename T>
+void Vector<T>::shrink() {
+    if (current < capacity) {
+        T *newArr = new T[current];
+
+        for (int i = 0; i < current; ++i) {
+            newArr[i] = arr[i];
+        }
+        delete[] arr;
+
+        arr = newArr;
+        capacity = current;
+        lastFreeIndex = -1;
     }
 }
 

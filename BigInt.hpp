@@ -5,6 +5,7 @@
 #include "Vector.hpp"
 
 #define BASE (long long)1000000000
+#define ZERO BigInt(0)
 
 
 class BigInt {
@@ -24,7 +25,8 @@ private:
     Vector<long long> bigNum;
 public:
     
-    friend BigInt multiplyByNum(const BigInt &obj, long long num); // multiplies a BigInt by a long long 
+    BigInt multiplyByNum(long long num) const; // multiplies a BigInt by a long long
+    BigInt divideByTwo() const;
     
     BigInt();
     BigInt(const String &value);
@@ -57,13 +59,15 @@ public:
     BigInt operator+(const BigInt &obj) const;
     BigInt operator-(const BigInt &obj) const;
     BigInt operator*(const BigInt &obj) const;
+    //BigInt fastPow(const BigInt &obj) const;
+    friend BigInt fastPow(const BigInt &number, const BigInt &power);
 };
 
 inline long long charToll(char character) {
     return (character - '0');
 }
 
-inline long long map(const String &str, long long (*ptr)(char)) {
+inline long long mapStringToNumbers(const String &str, long long (*ptr)(char)) {
     long long num = 0;
 
     for (int i = 0; i < str.size(); ++i) {

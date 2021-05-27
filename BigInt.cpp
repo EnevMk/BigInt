@@ -1,14 +1,30 @@
 #include "BigInt.hpp"
-#define ZERO BigInt(0)
+#include <cassert>
+
+
+bool isDigit(char character) {
+    return character >= '0' && character <= '9';
+}
 
 
 BigInt::BigInt():bigNum() {
 
 }
 
+bool validate(const String &value) {
+    for (int i = 0; i < value.size(); ++i) {
+        if (!isDigit(value[i]) && value[i] != ' ') {
+            std::cout << value[i];
+            return false;
+        }
+    }
+    return true;
+}
+
 BigInt::BigInt(const String &value) {
 
-    //BigInt s("12 350000 0");
+    assert(validate(value));
+
     int countSpaces = 0;
     for (int i = 0; i < value.size(); ++i) {
         (value[i] == ' ') ? countSpaces++ : 1;
@@ -16,14 +32,12 @@ BigInt::BigInt(const String &value) {
     
     int size = countSpaces + 1;
     this->reserveVectorCapacity(size);
-    //std::cout << "Reserved space for : " << size << " digits\n";
 
     int startIndex = 0, endIndex = -1;
     for (int i = 0; i < value.size() + 1; ++i) {
 
         if (value[i] == ' ' || value[i] == '\0') {
-            this->bigNum.push(map(value.subStr(startIndex, endIndex), charToll));
-            //std::cout << '\n' << startIndex << ' ' << endIndex << '\n';
+            this->bigNum.push(mapStringToNumbers(value.subStr(startIndex, endIndex), charToll));
             startIndex = endIndex + 2;
         }
         endIndex++;
@@ -86,7 +100,7 @@ const Vector<long long>& BigInt::getVector() const {
 }
 
 BigInt BigInt::negate() const {
-    
+
     BigInt negated = *this;
 
     negated.bigNum[0] = -1 * this->bigNum[0];
@@ -112,6 +126,22 @@ void BigInt::null() {
     for (int i = 0; i < this->bigNum.maxCapacity(); ++i) {
         bigNum[i] = 0;
     }
+}
+
+BigInt BigInt::divideByTwo() const {
+
+    BigInt res;
+    res.reserveVectorCapacity(this->size());
+
+    int remainder = 0;
+
+    for (int i = 0; i < size(); ++i) {
+        res.bigNum.push((*this)[i] / 2 + remainder);
+        remainder = (*this)[i] % 2 * BASE / 2;
+    }
+
+    res.cutFirstNull();
+    return res;
 }
 
 bool BigInt::operator>(const BigInt &obj) const {
@@ -246,7 +276,7 @@ BigInt BigInt::operatorHandlerSubtraction(const BigInt &obj) const {
 
         return (obj - *this).negate();
     }
-
+    
     return BigInt(0);
 }
 
@@ -257,7 +287,7 @@ long long BigInt::calculateDigitSubtraction(const BigInt &obj, int first, int se
 
     minuend = (first - 1 < 0) ? 0 : (*this)[first - 1];
     subtrahend = (second - 1 < 0) ? 0 : obj[second - 1];
-
+    
     (minuend < subtrahend) ? result.bigNum[index - 1]--, minuend += BASE : 1;
 
     long long digit = minuend - subtrahend + result.bigNum[index];
@@ -268,24 +298,27 @@ long long BigInt::calculateDigitSubtraction(const BigInt &obj, int first, int se
 BigInt BigInt::operator-(const BigInt &obj) const {
     
     BigInt res = operatorHandlerSubtraction(obj);
-    if (res != 0) return res;
+    if (res != ZERO) return res;
 
     int fstLen = this->size(), sndLen = obj.size();
     int newSize = (fstLen < sndLen) ? sndLen : fstLen;
+    
+    res.bigNum.popBack();
+    res.bigNum.shrink();
 
     res.reserveVectorCapacity(newSize);
     res.null();
-    res.bigNum.popBack();
 
     for (int i = newSize - 1; i >= 0; --i) {
-
+        
         long long digit = calculateDigitSubtraction(obj, fstLen, sndLen, res, i);
+        
         res.pushLast(digit);
 
         fstLen--;
         sndLen--;
     }
-
+    
     res.cutFirstNull();
     return res;
 }
@@ -339,7 +372,7 @@ BigInt BigInt::operator*(const BigInt &obj) const {
     prods.reserve(sndlen);
 
     for (int i = sndlen - 1; i >= 0; i--) {
-        BigInt temp = multiplyByNum(*this, obj.bigNum[i]);
+        BigInt temp = this->multiplyByNum(obj.bigNum[i]);
         
         prods.push(temp);
     }
@@ -367,8 +400,8 @@ void BigInt::calculateBigIntByNum(int bigIntLen, const BigInt &obj, BigInt& resu
 
 }
 
-BigInt multiplyByNum(const BigInt &obj, long long num) {
-    int bigIntLen = obj.size();
+BigInt BigInt::multiplyByNum(/* const BigInt &obj,  */long long num) const {
+    int bigIntLen = size();
     int maxLen = bigIntLen + 1;
     //int diff = maxLen - bigIntLen;
 
@@ -376,10 +409,37 @@ BigInt multiplyByNum(const BigInt &obj, long long num) {
     res.reserveVectorCapacity(maxLen);
 
     res.null();
-    obj.calculateBigIntByNum(bigIntLen, obj, res, num);
+    this->calculateBigIntByNum(bigIntLen, *this, res, num);
 
     res.cutFirstNull();
     return res;
+}
+
+/* BigInt BigInt::fastPow(const BigInt &power) const {
+
+    //assert(power > ZERO);
+
+    if (power == ZERO) return BigInt(1);
+    if (power == BigInt(1)) return BigInt(*this);
+
+    if (!power[power.size() - 1] % 2) {
+        return (*this * (*this)).fastPow(power.divideByTwo());
+    }
+
+    return *this * (*this * *this).fastPow((power - BigInt(1)).divideByTwo());
+    
+} */
+
+BigInt fastPow(const BigInt &number, const BigInt &power) {
+
+    if (power == ZERO) return BigInt(1);
+    if (power == BigInt(1)) return BigInt(number);
+
+    if (power[power.size() - 1] % 2 == 0) {
+        return fastPow((number * number), power.divideByTwo());
+    }
+
+    return number * fastPow(number * number, (power - BigInt(1)).divideByTwo());
 }
 
 std::ostream& operator<<(std::ostream &os, const BigInt &obj) {
