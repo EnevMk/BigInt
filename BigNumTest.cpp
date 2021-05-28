@@ -22,10 +22,12 @@ int main() {
     //std::cout << "\n\nc * d: " << c * d.negate();
 
     BigInt s("5 0");
-    BigInt power(2);
-    
-    std::cout << fastPow(s, power);
-    std::cout << '\n' << power[power.size() - 1];
+    BigInt res("25 0 0");
+    std::cout << s << '|' << s.size() << '|';
+
+    std::cout << '\n' << BigInt("2") - BigInt("1") - BigInt("1");
+    std::cout << "\n tru \n";
+    std::cout << (fastPow(s, BigInt("2") == res));
     return 0;
 }
 

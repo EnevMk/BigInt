@@ -157,3 +157,34 @@ TEST_CASE("* operation") {
     res2.pushLast(26);
     CHECK(b * c == res2);
 }
+
+TEST_CASE("Fast raising to power") {
+    BigInt number("5 0");
+    CHECK(fastPow(number, BigInt(2)) == BigInt("25 0 0"));
+}
+
+TEST_CASE("getting to ZERO by Minus operation") {
+    BigInt num("2");
+    
+    BigInt minuend("1");
+    CHECK(num - minuend == minuend);
+    CHECK(num - minuend - minuend == ZERO);
+}
+
+TEST_CASE("String init") {
+    BigInt v("5 0");
+    BigInt s("5 1 2");
+    String str("5 0");
+
+    /* v.reserveVectorCapacity(2);
+    v.pushLast(0);
+    v.pushLast(5); */
+    int len = v.size();
+    CHECK(len == 2);
+    CHECK(str.size() == 3);
+}
+
+/* TEST_CASE("Power raising a negative number") {
+    BigInt byString("-3 0");
+    CHECK(fastPow(byString, ))
+} */

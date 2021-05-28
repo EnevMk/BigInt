@@ -33,13 +33,8 @@ public:
     BigInt(long long num);
     BigInt(const Vector<long long> &v);
     BigInt(const BigInt &obj);
+    BigInt& operator=(const BigInt &obj);
     
-    void reserveVectorCapacity(int n);
-    void pushLast(long long digit); // pushes a long long to the last free position of the vector
-    
-    int size() const;
-    const Vector<long long>& getVector() const;
-
     const long long operator[](size_t i) const; // returning a digit of the BigInt on ith index
 
     bool operator==(const BigInt &obj) const;
@@ -49,10 +44,13 @@ public:
     bool operator>=(const BigInt &obj) const;
     bool operator<=(const BigInt &obj) const;
 
-    BigInt& operator=(const BigInt &obj);
     BigInt negate() const; // returns the negated BigInt number
     void cutFirstNull();
     void null();
+    void reserveVectorCapacity(int n);
+    void pushLast(long long digit); // pushes a long long to the last free position of the vector
+    int size() const;
+    const Vector<long long>& getVector() const;
     
     friend std::ostream& operator<<(std::ostream &os, const BigInt &obj);
 
@@ -64,16 +62,27 @@ public:
 };
 
 inline long long charToll(char character) {
+
     return (character - '0');
 }
 
 inline long long mapStringToNumbers(const String &str, long long (*ptr)(char)) {
     long long num = 0;
+    bool isNegative = false;
 
-    for (int i = 0; i < str.size(); ++i) {
+    int i = 0;
+    if (str[0] == '-') {
+        i = 1;
+        isNegative = true;
+    }
+    
+    for (i; i < str.size(); ++i) {
         num = num * 10 + (*ptr)(str[i]);
     }
     
+    if (isNegative) {
+        return num - 2 * num;
+    }
     return num;
 }
 

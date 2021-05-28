@@ -32,7 +32,7 @@ String::~String() {
     str = nullptr;
 }
 
-bool String::operator==(const String &obj) {
+bool String::operator==(const String &obj) const {
     return !strCmp(str, obj.str);
 }
 
@@ -96,6 +96,31 @@ void String::setStr(const char *str_) {
     strCpy(str, str_);
 }
 
+void String::removeEndWhiteSpaces() {
+
+    int begin = 0;
+    int end = this->size() - 1;
+    while (str[begin] == ' ') {
+        begin++;
+    }
+
+    while (str[end] == ' ') {
+        end--;
+    }
+
+    if (begin != 0 || end != this->size() - 1) {
+        char* newStr = new char[end - begin + 2];
+        
+        for (int i = 0; i < end - begin + 1; ++i) {
+            newStr[i] = str[i + begin];
+        }
+        newStr[end-begin + 1] = '\0';
+        delete[] str;
+
+        str = newStr;
+    }
+}
+
 std::ostream& operator<<(std::ostream& os, const String &obj) {
     os << obj.str;
     return os;
@@ -112,7 +137,13 @@ int strLen(const char *str_) {
 void strCpy(char *dest, const char *src) {
     int i = 0;
     for (i = 0; src[i] != '\0'; ++i) {
+
+        /* if (dest[i] == '\0') {
+            return;
+        } */
+
         dest[i] = src[i];
+        
     }
     dest[i] = '\0';
 }

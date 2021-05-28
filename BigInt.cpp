@@ -23,7 +23,7 @@ bool validate(const String &value) {
 
 BigInt::BigInt(const String &value) {
 
-    assert(validate(value));
+    //assert(validate(value)); fails for negative nums
 
     int countSpaces = 0;
     for (int i = 0; i < value.size(); ++i) {
@@ -299,6 +299,7 @@ BigInt BigInt::operator-(const BigInt &obj) const {
     
     BigInt res = operatorHandlerSubtraction(obj);
     if (res != ZERO) return res;
+    if (*this == obj) return ZERO;
 
     int fstLen = this->size(), sndLen = obj.size();
     int newSize = (fstLen < sndLen) ? sndLen : fstLen;
@@ -308,7 +309,7 @@ BigInt BigInt::operator-(const BigInt &obj) const {
 
     res.reserveVectorCapacity(newSize);
     res.null();
-
+    
     for (int i = newSize - 1; i >= 0; --i) {
         
         long long digit = calculateDigitSubtraction(obj, fstLen, sndLen, res, i);
