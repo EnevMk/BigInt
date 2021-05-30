@@ -5,7 +5,8 @@
 
 TEST_CASE("Fast raising to power") {
     BigInt number("5 1");
-    CHECK(fastPow(number, BigInt(2)) == BigInt("25 10 1"));
+    //CHECK(fastPow(number, BigInt(2)) == BigInt("25 10 1"));
+    CHECK(number.fastPow(BigInt(2)) == BigInt("25 10 1"));
 }
 
 TEST_CASE("getting to ZERO by Minus operation") {
@@ -37,7 +38,8 @@ TEST_CASE("Remove whitespaces in ends string method") {
 }
 
 TEST_CASE("negative BigInt by String initialization") {
-    BigInt str("-3 0");
+    
+    BigInt str("  -3 0");
 
     BigInt vec;
     vec.reserveVectorCapacity(2);

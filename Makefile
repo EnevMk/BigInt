@@ -4,10 +4,10 @@ main.exe: String.o BigInt.o BigNumTest.o
 	
 	g++ -o main String.o BigInt.o BigNumTest.o
 
-unit2.exe: Unit2.o BigInt.o String.o catch_amalgamated.o
+unit2: Unit2.o BigInt.o String.o catch_amalgamated.o
 	g++ -o unit2 Unit2.o BigInt.o String.o catch_amalgamated.o
 
-utest.exe: UnitTests.o BigInt.o String.o catch_amalgamated.o
+utest: UnitTests.o BigInt.o String.o catch_amalgamated.o
 	g++ -o utest UnitTests.o BigInt.o String.o catch_amalgamated.o
 
 UnitTests.o: UnitTests.cpp

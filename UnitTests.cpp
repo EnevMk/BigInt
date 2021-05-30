@@ -52,8 +52,8 @@ TEST_CASE("+ operation") {
 
     CHECK(test[0] == 5);
     CHECK(test[1] == 100000000);
-    //CHECK(test.size() == test.bigNum.maxCapacity());
-    //CHECK(test.size() == test.bigNum.size());
+    //CHECK(test.size() == test.digitsContainer.maxCapacity());
+    //CHECK(test.size() == test.digitsContainer.size());
 
     BigInt t2;
     t2.reserveVectorCapacity(2);
@@ -63,8 +63,8 @@ TEST_CASE("+ operation") {
 
     CHECK(t2[0] == 5);
     CHECK(t2[1] == 100000000);
-    //CHECK(t2.size() == t2.bigNum.maxCapacity());
-    //CHECK(t2.size() == t2.bigNum.size());
+    //CHECK(t2.size() == t2.digitsContainer.maxCapacity());
+    //CHECK(t2.size() == t2.digitsContainer.size());
     CHECK(t2 == test);
 
     BigInt mm = 900000000;

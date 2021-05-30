@@ -22,7 +22,7 @@ private:
 
     void sumVectorsMultiplication(Vector<BigInt> &obj);
 
-    Vector<long long> bigNum;
+    Vector<long long> digitsContainer;
 public:
     
     BigInt multiplyByNum(long long num) const; // multiplies a BigInt by a long long
@@ -59,6 +59,7 @@ public:
     BigInt operator*(const BigInt &obj) const;
     //BigInt fastPow(const BigInt &obj) const;
     friend BigInt fastPow(const BigInt &number, const BigInt &power);
+    BigInt fastPow(const BigInt &power) const;
 };
 
 inline long long charToll(char character) {

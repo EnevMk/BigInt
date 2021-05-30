@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VECTOR_HPP
+#define VECTOR_HPP
 
 template <typename T>
 class Vector {
@@ -23,10 +24,6 @@ public:
     void push(T data, int index);
     void popBack();
     void removeAtIndex(const int index);
-    //long long sum() const;
-    //template<>
-    //void cutFirstNull();
-    //void null();
     int size() const;
     int maxCapacity() const;
     int getLastFreeIndex() const;
@@ -261,3 +258,4 @@ void Vector<T>::setLastFreeIndex(int ind) {
     }
     return this->size() == obj.size();
 } */
+#endif
