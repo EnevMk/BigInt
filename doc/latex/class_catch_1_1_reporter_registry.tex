@@ -1,0 +1,33 @@
+\hypertarget{class_catch_1_1_reporter_registry}{}\doxysection{Catch\+::Reporter\+Registry Class Reference}
+\label{class_catch_1_1_reporter_registry}\index{Catch::ReporterRegistry@{Catch::ReporterRegistry}}
+Inheritance diagram for Catch\+::Reporter\+Registry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_catch_1_1_reporter_registry}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_reporter_registry_ada65856c27ae4692a827610bcfa66945}\label{class_catch_1_1_reporter_registry_ada65856c27ae4692a827610bcfa66945}} 
+\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{IStreaming\+Reporter\+Ptr}} {\bfseries create} (std\+::string const \&name, \mbox{\hyperlink{struct_catch_1_1_i_config}{IConfig}} const $\ast$config) const override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_reporter_registry_aab7c9862106fd2d3dd5d3dc8d72338c6}\label{class_catch_1_1_reporter_registry_aab7c9862106fd2d3dd5d3dc8d72338c6}} 
+void {\bfseries register\+Reporter} (std\+::string const \&name, \mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{IReporter\+Factory\+Ptr}} factory)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_reporter_registry_af983713eece95d2e2f82042852d09c51}\label{class_catch_1_1_reporter_registry_af983713eece95d2e2f82042852d09c51}} 
+void {\bfseries register\+Listener} (\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{IReporter\+Factory\+Ptr}} factory)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_reporter_registry_a97a4cc859d73ea07fbcdb47cfef611d8}\label{class_catch_1_1_reporter_registry_a97a4cc859d73ea07fbcdb47cfef611d8}} 
+Factory\+Map const  \& {\bfseries get\+Factories} () const override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_reporter_registry_a28607d81c9bd99e81ae9ac108aa68718}\label{class_catch_1_1_reporter_registry_a28607d81c9bd99e81ae9ac108aa68718}} 
+Listeners const  \& {\bfseries get\+Listeners} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

@@ -8,11 +8,41 @@
 #define ZERO BigInt(0)
 
 
+/// The main class for the whole project.
+///
+/// Class BigInt, its purpose being enabling users to work with numbers too big that aren't supported by
+/// the language built-in types. Working in a billion number system, it offers broad functionality along with 
+/// great effectiveness resource-wise. 
+/// 
+/// Core functionalities are: Addition, Subtraction, Multiplication and a fast exponentiation alghoritm.
+/// 
 class BigInt {
 
 private:
     
+    /// Helper method for the addition operator.
+    ///
+    /// This method is used in the main addition operator. Given two BigInt numbers
+    /// (one as argument, the other passed implicitly, as caller of the method), 
+    /// two indexes showing which exact digits in the two numbers are being summed,
+    /// and a remainder variable passed by reference to keep the remainder of the operation.
+    /// @param obj - a const reference to the second BigInt number (the other is caller of the method)
+    /// @param first - the index of the digit from the first BigInt number *(namely *this)*
+    /// @param second - the index of the digit from the second BigInt number *( @param obj )*
+    /// @param rem - A long long variable storing the eventual remainder of the sum of the two digits modulo the BASE
     long long calculateDigitAddition(const BigInt &obj, int first, int second, long long &rem) const;
+
+    /// Helper method for the subtraction operator.
+    ///
+    /// This method is used in the main subtraction operator. Given two BigInt numbers
+    /// (one as argument, the other passed implicitly, as caller of the method), 
+    /// two indexes showing which exact digits in the two numbers are being subtracted,
+    /// and a remainder variable passed by reference to keep the remainder of the operation.
+    /// @param obj - a const reference to the second BigInt number (the other is caller of the method)
+    /// @param first - the index of the digit from the first BigInt number *(namely *this)*
+    /// @param second - the index of the digit from the second BigInt number *( @param obj )*
+    /// @param rem - A long long variable storing the eventual remainder of the sum of the two digits modulo the BASE
+    
     long long calculateDigitSubtraction(const BigInt &obj, int first, int second, BigInt &result, int index) const;
     void calculateBigIntByNum(int bigIntLen, const BigInt &obj, BigInt& result, long long num) const;
 
@@ -49,6 +79,7 @@ public:
     void null();
     void reserveVectorCapacity(int n);
     void pushLast(long long digit); // pushes a long long to the last free position of the vector
+    void push(long long digit);
     int size() const;
     const Vector<long long>& getVector() const;
     
@@ -58,7 +89,7 @@ public:
     BigInt operator-(const BigInt &obj) const;
     BigInt operator*(const BigInt &obj) const;
     //BigInt fastPow(const BigInt &obj) const;
-    friend BigInt fastPow(const BigInt &number, const BigInt &power);
+    //friend BigInt fastPow(const BigInt &number, const BigInt &power);
     BigInt fastPow(const BigInt &power) const;
 };
 

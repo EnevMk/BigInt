@@ -22,6 +22,8 @@ public:
     char* getStr() const;
     void setStr(const char *str_);
     void removeEndWhiteSpaces();
+    size_t countExcessiveSpaces() const;
+    void removeRepetitiveWhiteSpaces();
 
     friend std::ostream& operator<<(std::ostream& os, const String &obj);
 };

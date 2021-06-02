@@ -1,0 +1,84 @@
+\hypertarget{class_catch_1_1_listening_reporter}{}\doxysection{Catch\+::Listening\+Reporter Class Reference}
+\label{class_catch_1_1_listening_reporter}\index{Catch::ListeningReporter@{Catch::ListeningReporter}}
+Inheritance diagram for Catch\+::Listening\+Reporter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_catch_1_1_listening_reporter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_af0651069faf2a2f8442a7f456cb648e3}\label{class_catch_1_1_listening_reporter_af0651069faf2a2f8442a7f456cb648e3}} 
+void {\bfseries add\+Listener} (\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{IStreaming\+Reporter\+Ptr}} \&\&listener)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a133cee99cffbaa1bb4b82e4c8df757ce}\label{class_catch_1_1_listening_reporter_a133cee99cffbaa1bb4b82e4c8df757ce}} 
+void {\bfseries add\+Reporter} (\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{IStreaming\+Reporter\+Ptr}} \&\&reporter)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a9f2dd7fd9ad465474d0991de5e8a8022}\label{class_catch_1_1_listening_reporter_a9f2dd7fd9ad465474d0991de5e8a8022}} 
+void {\bfseries no\+Matching\+Test\+Cases} (std\+::string const \&spec) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a0eb12a1f6a53491920fcd3e4b8d53c24}\label{class_catch_1_1_listening_reporter_a0eb12a1f6a53491920fcd3e4b8d53c24}} 
+void {\bfseries report\+Invalid\+Arguments} (std\+::string const \&arg) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a56838de2516ce30c18ad754786b960af}\label{class_catch_1_1_listening_reporter_a56838de2516ce30c18ad754786b960af}} 
+void {\bfseries benchmark\+Preparing} (std\+::string const \&name) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a5f0115018b42c6424fcd887c04545920}\label{class_catch_1_1_listening_reporter_a5f0115018b42c6424fcd887c04545920}} 
+void {\bfseries benchmark\+Starting} (\mbox{\hyperlink{struct_catch_1_1_benchmark_info}{Benchmark\+Info}} const \&benchmark\+Info) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_aa715a52202d2850bb607399e14c774b7}\label{class_catch_1_1_listening_reporter_aa715a52202d2850bb607399e14c774b7}} 
+void {\bfseries benchmark\+Ended} (\mbox{\hyperlink{struct_catch_1_1_benchmark_stats}{Benchmark\+Stats}}$<$$>$ const \&benchmark\+Stats) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_ac61202266d416b46ebc66e94c3b4619b}\label{class_catch_1_1_listening_reporter_ac61202266d416b46ebc66e94c3b4619b}} 
+void {\bfseries benchmark\+Failed} (std\+::string const \&) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a5681779111a3f8c0827000d04f7de199}\label{class_catch_1_1_listening_reporter_a5681779111a3f8c0827000d04f7de199}} 
+void {\bfseries test\+Run\+Starting} (\mbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&test\+Run\+Info) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a3d2ffe4c24a7877657bc3e5e0e9ae7d2}\label{class_catch_1_1_listening_reporter_a3d2ffe4c24a7877657bc3e5e0e9ae7d2}} 
+void {\bfseries test\+Group\+Starting} (\mbox{\hyperlink{struct_catch_1_1_group_info}{Group\+Info}} const \&group\+Info) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a41a88ece54222d8a5fd629e58ed2b676}\label{class_catch_1_1_listening_reporter_a41a88ece54222d8a5fd629e58ed2b676}} 
+void {\bfseries test\+Case\+Starting} (\mbox{\hyperlink{struct_catch_1_1_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_af1df5628b89d61db63b4d9d4d5bd3bf2}\label{class_catch_1_1_listening_reporter_af1df5628b89d61db63b4d9d4d5bd3bf2}} 
+void {\bfseries section\+Starting} (\mbox{\hyperlink{struct_catch_1_1_section_info}{Section\+Info}} const \&section\+Info) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_ac54f461297eca221a06425ed5edc2129}\label{class_catch_1_1_listening_reporter_ac54f461297eca221a06425ed5edc2129}} 
+void {\bfseries assertion\+Starting} (\mbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} const \&assertion\+Info) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a2c47aa9e99eba2ba5fe60c76d81b3660}\label{class_catch_1_1_listening_reporter_a2c47aa9e99eba2ba5fe60c76d81b3660}} 
+bool {\bfseries assertion\+Ended} (\mbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&assertion\+Stats) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a6e85b5d61a9e5c894288086e52449c2e}\label{class_catch_1_1_listening_reporter_a6e85b5d61a9e5c894288086e52449c2e}} 
+void {\bfseries section\+Ended} (\mbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&section\+Stats) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a81969997dee722a6eed64a81dda6a9d1}\label{class_catch_1_1_listening_reporter_a81969997dee722a6eed64a81dda6a9d1}} 
+void {\bfseries test\+Case\+Ended} (\mbox{\hyperlink{struct_catch_1_1_test_case_stats}{Test\+Case\+Stats}} const \&test\+Case\+Stats) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a8bb6e2d75f76be7c4b2012e9b8659d57}\label{class_catch_1_1_listening_reporter_a8bb6e2d75f76be7c4b2012e9b8659d57}} 
+void {\bfseries test\+Group\+Ended} (\mbox{\hyperlink{struct_catch_1_1_test_group_stats}{Test\+Group\+Stats}} const \&test\+Group\+Stats) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_ae07e52e85111d49886059403c02b9347}\label{class_catch_1_1_listening_reporter_ae07e52e85111d49886059403c02b9347}} 
+void {\bfseries test\+Run\+Ended} (\mbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&test\+Run\+Stats) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a61c6d70973c7bc21414007c9c7497241}\label{class_catch_1_1_listening_reporter_a61c6d70973c7bc21414007c9c7497241}} 
+void {\bfseries skip\+Test} (\mbox{\hyperlink{struct_catch_1_1_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_a334611832fa7c095d813eca20ed484e7}\label{class_catch_1_1_listening_reporter_a334611832fa7c095d813eca20ed484e7}} 
+void \mbox{\hyperlink{class_catch_1_1_listening_reporter_a334611832fa7c095d813eca20ed484e7}{list\+Reporters}} (std\+::vector$<$ \mbox{\hyperlink{struct_catch_1_1_reporter_description}{Reporter\+Description}} $>$ const \&descriptions, \mbox{\hyperlink{struct_catch_1_1_i_config}{IConfig}} const \&config) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided reporters using reporter-\/specific format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_abdff8ad3af5cbf45e443145126994aaa}\label{class_catch_1_1_listening_reporter_abdff8ad3af5cbf45e443145126994aaa}} 
+void \mbox{\hyperlink{class_catch_1_1_listening_reporter_abdff8ad3af5cbf45e443145126994aaa}{list\+Tests}} (std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&tests, \mbox{\hyperlink{struct_catch_1_1_i_config}{IConfig}} const \&config) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided tests using reporter-\/specific format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_catch_1_1_listening_reporter_ac9e7b3fad9e40ea60a44ef9ac05994b5}\label{class_catch_1_1_listening_reporter_ac9e7b3fad9e40ea60a44ef9ac05994b5}} 
+void \mbox{\hyperlink{class_catch_1_1_listening_reporter_ac9e7b3fad9e40ea60a44ef9ac05994b5}{list\+Tags}} (std\+::vector$<$ \mbox{\hyperlink{struct_catch_1_1_tag_info}{Tag\+Info}} $>$ const \&tags, \mbox{\hyperlink{struct_catch_1_1_i_config}{IConfig}} const \&config) override
+\begin{DoxyCompactList}\small\item\em Writes out information about the provided tags using reporter-\/specific format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

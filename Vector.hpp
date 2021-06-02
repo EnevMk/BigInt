@@ -11,7 +11,7 @@ private:
 
     int lastFreeIndex;
 
-    friend class BigInt;
+    //friend class BigInt;
 
 public:
     Vector();
@@ -125,14 +125,14 @@ Vector<T>::~Vector() {
 template <typename T>
 void Vector<T>::push(T data) {
     if (current == capacity) {
-        T *temp = new T[2 * capacity];
+        T *temp = new T[capacity + 1];
 
         for (int i = 0; i < current; ++i) {
             temp[i] = arr[i];
         }
 
         delete[] arr;
-        capacity *= 2;
+        capacity++;
         arr = temp;
     }
     arr[current] = data;

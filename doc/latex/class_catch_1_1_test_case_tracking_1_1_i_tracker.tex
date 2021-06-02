@@ -1,0 +1,81 @@
+\hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker}{}\doxysection{Catch\+::Test\+Case\+Tracking\+::ITracker Class Reference}
+\label{class_catch_1_1_test_case_tracking_1_1_i_tracker}\index{Catch::TestCaseTracking::ITracker@{Catch::TestCaseTracking::ITracker}}
+Inheritance diagram for Catch\+::Test\+Case\+Tracking\+::ITracker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_catch_1_1_test_case_tracking_1_1_i_tracker}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_a972b54916989bd782032bcc23aab9ca1}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_a972b54916989bd782032bcc23aab9ca1}} 
+{\bfseries ITracker} (\mbox{\hyperlink{struct_catch_1_1_test_case_tracking_1_1_name_and_location}{Name\+And\+Location}} const \&name\+And\+Loc)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_a238e8f123d4bbc4bcefd615ae4a5d2d3}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_a238e8f123d4bbc4bcefd615ae4a5d2d3}} 
+\mbox{\hyperlink{struct_catch_1_1_test_case_tracking_1_1_name_and_location}{Name\+And\+Location}} const  \& {\bfseries name\+And\+Location} () const
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_abe7e5f4437ce1fece2a6e665942f85d3}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_abe7e5f4437ce1fece2a6e665942f85d3}} 
+virtual bool {\bfseries is\+Complete} () const =0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_ad5bd2235dc66579d13de98dbd75f2858}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_ad5bd2235dc66579d13de98dbd75f2858}} 
+virtual bool {\bfseries is\+Successfully\+Completed} () const =0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_a72617a6781de28006a37218b3d9cc624}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_a72617a6781de28006a37218b3d9cc624}} 
+virtual bool {\bfseries is\+Open} () const =0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_add6400f8b0eb8e6b05337b084c6c449b}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_add6400f8b0eb8e6b05337b084c6c449b}} 
+virtual bool {\bfseries has\+Started} () const =0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_a65be4d356a4f8ae5672f6434c036d3db}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_a65be4d356a4f8ae5672f6434c036d3db}} 
+virtual \mbox{\hyperlink{class_catch_1_1_test_case_tracking_1_1_i_tracker}{ITracker}} \& {\bfseries parent} ()=0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_a64d18c92b66ff001fcbdb1c3d839b2c5}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_a64d18c92b66ff001fcbdb1c3d839b2c5}} 
+virtual void {\bfseries close} ()=0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_acc828c861cdc9df217bc585f6bd55f1d}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_acc828c861cdc9df217bc585f6bd55f1d}} 
+virtual void {\bfseries fail} ()=0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_a1b472c5c2e9941734f53fd1897020bbc}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_a1b472c5c2e9941734f53fd1897020bbc}} 
+virtual void {\bfseries mark\+As\+Needing\+Another\+Run} ()=0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_abb8b8e22ef7b7acaddb5d8dea96755bf}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_abb8b8e22ef7b7acaddb5d8dea96755bf}} 
+void \mbox{\hyperlink{class_catch_1_1_test_case_tracking_1_1_i_tracker_abb8b8e22ef7b7acaddb5d8dea96755bf}{add\+Child}} (ITracker\+Ptr const \&child)
+\begin{DoxyCompactList}\small\item\em Register a nested \mbox{\hyperlink{class_catch_1_1_test_case_tracking_1_1_i_tracker}{ITracker}}. \end{DoxyCompactList}\item 
+ITracker\+Ptr \mbox{\hyperlink{class_catch_1_1_test_case_tracking_1_1_i_tracker_a22c42880036ec7f8ec8d82a3e943c8e6}{find\+Child}} (\mbox{\hyperlink{struct_catch_1_1_test_case_tracking_1_1_name_and_location}{Name\+And\+Location}} const \&name\+And\+Location)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_a157e9ca628aa9369c207c1272bd5ed30}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_a157e9ca628aa9369c207c1272bd5ed30}} 
+bool \mbox{\hyperlink{class_catch_1_1_test_case_tracking_1_1_i_tracker_a157e9ca628aa9369c207c1272bd5ed30}{has\+Children}} () const
+\begin{DoxyCompactList}\small\item\em Have any children been added? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_ab0ce59a1e2cfb2c30e41e28e55ab40c4}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_ab0ce59a1e2cfb2c30e41e28e55ab40c4}} 
+virtual void {\bfseries open\+Child} ()=0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_a91af0a3bcb13a76cb665d75329d30458}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_a91af0a3bcb13a76cb665d75329d30458}} 
+virtual bool {\bfseries is\+Section\+Tracker} () const =0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_a5b8a771b1d41a76b73895d1f2428b009}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_a5b8a771b1d41a76b73895d1f2428b009}} 
+virtual bool {\bfseries is\+Generator\+Tracker} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_afed285f277f8426451076f5837a7bf98}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_afed285f277f8426451076f5837a7bf98}} 
+Children {\bfseries m\+\_\+children}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_i_tracker_a22c42880036ec7f8ec8d82a3e943c8e6}\label{class_catch_1_1_test_case_tracking_1_1_i_tracker_a22c42880036ec7f8ec8d82a3e943c8e6}} 
+\index{Catch::TestCaseTracking::ITracker@{Catch::TestCaseTracking::ITracker}!findChild@{findChild}}
+\index{findChild@{findChild}!Catch::TestCaseTracking::ITracker@{Catch::TestCaseTracking::ITracker}}
+\doxysubsubsection{\texorpdfstring{findChild()}{findChild()}}
+{\footnotesize\ttfamily ITracker\+Ptr Catch\+::\+Test\+Case\+Tracking\+::\+ITracker\+::find\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_catch_1_1_test_case_tracking_1_1_name_and_location}{Name\+And\+Location}} const \&}]{name\+And\+Location }\end{DoxyParamCaption})}
+
+Returns ptr to specific child if register with this tracker.
+
+Returns nullptr if not found. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

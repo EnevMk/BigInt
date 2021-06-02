@@ -28,6 +28,7 @@ BigInt::BigInt(const String &value) {
 
     String copy = value;
     copy.removeEndWhiteSpaces();
+    copy.removeRepetitiveWhiteSpaces();
 
     assert(validate(copy));
 
@@ -93,6 +94,10 @@ void BigInt::pushLast(long long digit) {
     digitsContainer.setLastFreeIndex(--lastInd);
 }
 
+void BigInt::push(long long digit) {
+    digitsContainer.push(digit);
+}
+
 int BigInt::size() const {
     return digitsContainer.size();
 }
@@ -115,16 +120,10 @@ BigInt BigInt::negate() const {
 
 void BigInt::cutFirstNull() {
 
-    if (digitsContainer[0] == 0) {
-        
-        long long *newArr = new long long[digitsContainer.capacity - 1];
-        for (int i = 0; i < digitsContainer.capacity - 1; ++i) {
-            newArr[i] = digitsContainer.arr[i + 1];
-        }
-        digitsContainer.capacity--;
-        digitsContainer.current = digitsContainer.capacity;
-        delete[] digitsContainer.arr;
-        digitsContainer.arr = newArr;
+    if (digitsContainer[0] == 0 && size() > 1) {
+
+        digitsContainer.removeAtIndex(0);
+        digitsContainer.shrink();
     }
 }
 
@@ -296,6 +295,10 @@ long long BigInt::calculateDigitSubtraction(const BigInt &obj, int first, int se
     
     (minuend < subtrahend) ? result.digitsContainer[index - 1]--, minuend += BASE : 1;
 
+    //(minuend < subtrahend) ? result.digitsContainer[index - 1]--, minuend += BASE : 1;
+
+    //this->digitsContainer[index - 1]--;
+
     long long digit = minuend - subtrahend + result.digitsContainer[index];
 
     return digit;
@@ -396,18 +399,26 @@ void BigInt::calculateBigIntByNum(int bigIntLen, const BigInt &obj, BigInt& resu
     long long remainder = 0;
 
     for (int i = bigIntLen - 1; i >= 0; --i) {
-
+        
         long long digit = result[i + diff] + (obj[i] * num) % BASE;
         result.pushLast(digit + remainder);
 
         remainder = (obj[i] * num) / BASE;
     }
 
-    if (remainder) result.pushLast(remainder);
+    if (remainder != 0) result.pushLast(remainder);
+    else {
+        result.pushLast(0);
+    }
 
 }
 
 BigInt BigInt::multiplyByNum(long long num) const {
+
+    if (num == 0) {
+        return BigInt(0);
+    }
+
     int bigIntLen = size();
     int maxLen = bigIntLen + 1;
 
@@ -420,18 +431,6 @@ BigInt BigInt::multiplyByNum(long long num) const {
     res.cutFirstNull();
     return res;
 }
-
-/* BigInt fastPow(const BigInt &number, const BigInt &power) {
-
-    if (power == ZERO) return BigInt(1);
-    if (power == BigInt(1)) return BigInt(number);
-
-    if (power[power.size() - 1] % 2 == 0) {
-        return fastPow((number * number), power.divideByTwo());
-    }
-
-    return number * fastPow(number * number, (power - BigInt(1)).divideByTwo());
-} */
 
 BigInt BigInt::fastPow(const BigInt &power) const {
 

@@ -121,6 +121,54 @@ void String::removeEndWhiteSpaces() {
     }
 }
 
+size_t String::countExcessiveSpaces() const {
+    int size = this->size();
+
+    size_t totalExcessiveSpaces = 0;
+
+    for (int i = 0; i < size; ++i) {
+
+        if (str[i] == ' ' && str[i + 1] == ' ') {
+            
+            int currentExcessiveSpaces = 0;
+            for (int j = i + 1; str[j] == ' '; ++j) {
+                currentExcessiveSpaces++;
+            }
+
+            totalExcessiveSpaces += currentExcessiveSpaces;
+            i += currentExcessiveSpaces;
+        }
+    }
+    return totalExcessiveSpaces;
+}
+
+void String::removeRepetitiveWhiteSpaces() {
+    size_t spacesToRemove = countExcessiveSpaces();
+
+    size_t newSize = size() - spacesToRemove + 1;
+    char *filtered = new char[newSize];
+    
+    int deviation = 0;
+    for (int i = 0; i < size(); ++i) {
+
+        if (i == 0) {
+            filtered[i] = str[i];
+            continue;
+        }
+        
+        if (str[i - 1] == ' ' && str[i] == ' ') {
+
+            deviation++;
+            continue;
+        }
+        
+        filtered[i - deviation] = str[i];
+    }  
+    filtered[newSize - 1] = '\0';
+    delete[] str;
+    str = filtered;
+}
+
 std::ostream& operator<<(std::ostream& os, const String &obj) {
     os << obj.str;
     return os;

@@ -1,0 +1,87 @@
+\hypertarget{class_catch_1_1_xml_reporter}{}\doxysection{Catch\+::Xml\+Reporter Class Reference}
+\label{class_catch_1_1_xml_reporter}\index{Catch::XmlReporter@{Catch::XmlReporter}}
+Inheritance diagram for Catch\+::Xml\+Reporter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_catch_1_1_xml_reporter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_aa34d7e971361f72ce7622602011d6441}\label{class_catch_1_1_xml_reporter_aa34d7e971361f72ce7622602011d6441}} 
+{\bfseries Xml\+Reporter} (\mbox{\hyperlink{struct_catch_1_1_reporter_config}{Reporter\+Config}} const \&\+\_\+config)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_ad94c592b511097332f6e5ecf29ccb2ee}\label{class_catch_1_1_xml_reporter_ad94c592b511097332f6e5ecf29ccb2ee}} 
+virtual std\+::string {\bfseries get\+Stylesheet\+Ref} () const
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a190d2ae83de78e06273fa476d3729771}\label{class_catch_1_1_xml_reporter_a190d2ae83de78e06273fa476d3729771}} 
+void {\bfseries write\+Source\+Info} (\mbox{\hyperlink{struct_catch_1_1_source_line_info}{Source\+Line\+Info}} const \&source\+Info)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a5e80921e60f776401d6e2e111e48398f}\label{class_catch_1_1_xml_reporter_a5e80921e60f776401d6e2e111e48398f}} 
+void {\bfseries no\+Matching\+Test\+Cases} (std\+::string const \&s) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_ab5de0b02d5a30612ae5449360d867672}\label{class_catch_1_1_xml_reporter_ab5de0b02d5a30612ae5449360d867672}} 
+void {\bfseries test\+Run\+Starting} (\mbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} const \&test\+Info) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a873beb2333056238c4fd476ef90412fb}\label{class_catch_1_1_xml_reporter_a873beb2333056238c4fd476ef90412fb}} 
+void {\bfseries test\+Group\+Starting} (\mbox{\hyperlink{struct_catch_1_1_group_info}{Group\+Info}} const \&group\+Info) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a1395b2efb62faaa947a42638a03be32c}\label{class_catch_1_1_xml_reporter_a1395b2efb62faaa947a42638a03be32c}} 
+void {\bfseries test\+Case\+Starting} (\mbox{\hyperlink{struct_catch_1_1_test_case_info}{Test\+Case\+Info}} const \&test\+Info) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a06befa9cf2b661c5226317bff0f05c64}\label{class_catch_1_1_xml_reporter_a06befa9cf2b661c5226317bff0f05c64}} 
+void {\bfseries section\+Starting} (\mbox{\hyperlink{struct_catch_1_1_section_info}{Section\+Info}} const \&section\+Info) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a4f2661042672c0930086700fcd348f04}\label{class_catch_1_1_xml_reporter_a4f2661042672c0930086700fcd348f04}} 
+void {\bfseries assertion\+Starting} (\mbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} const \&) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a133d3b5deb923998634d96ff8f234cde}\label{class_catch_1_1_xml_reporter_a133d3b5deb923998634d96ff8f234cde}} 
+bool {\bfseries assertion\+Ended} (\mbox{\hyperlink{struct_catch_1_1_assertion_stats}{Assertion\+Stats}} const \&assertion\+Stats) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a73c809f067d58a7a6748cb13643448e5}\label{class_catch_1_1_xml_reporter_a73c809f067d58a7a6748cb13643448e5}} 
+void {\bfseries section\+Ended} (\mbox{\hyperlink{struct_catch_1_1_section_stats}{Section\+Stats}} const \&section\+Stats) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_ab641ec7e115cb94efa02f85e9d91de0f}\label{class_catch_1_1_xml_reporter_ab641ec7e115cb94efa02f85e9d91de0f}} 
+void {\bfseries test\+Case\+Ended} (\mbox{\hyperlink{struct_catch_1_1_test_case_stats}{Test\+Case\+Stats}} const \&test\+Case\+Stats) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_ab9ba05f0311cb976fb6f7e5bd2df477c}\label{class_catch_1_1_xml_reporter_ab9ba05f0311cb976fb6f7e5bd2df477c}} 
+void {\bfseries test\+Group\+Ended} (\mbox{\hyperlink{struct_catch_1_1_test_group_stats}{Test\+Group\+Stats}} const \&test\+Group\+Stats) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a2458c9f342a446f0b3a7480b53c93705}\label{class_catch_1_1_xml_reporter_a2458c9f342a446f0b3a7480b53c93705}} 
+void {\bfseries test\+Run\+Ended} (\mbox{\hyperlink{struct_catch_1_1_test_run_stats}{Test\+Run\+Stats}} const \&test\+Run\+Stats) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a86a17e62163089217ac8b73214b7ebae}\label{class_catch_1_1_xml_reporter_a86a17e62163089217ac8b73214b7ebae}} 
+void {\bfseries benchmark\+Preparing} (std\+::string const \&name) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_aedcd354a33e40ba80fdce75b19f0c393}\label{class_catch_1_1_xml_reporter_aedcd354a33e40ba80fdce75b19f0c393}} 
+void {\bfseries benchmark\+Starting} (\mbox{\hyperlink{struct_catch_1_1_benchmark_info}{Benchmark\+Info}} const \&) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a025db47f21efafb00017e962622ff330}\label{class_catch_1_1_xml_reporter_a025db47f21efafb00017e962622ff330}} 
+void {\bfseries benchmark\+Ended} (\mbox{\hyperlink{struct_catch_1_1_benchmark_stats}{Benchmark\+Stats}}$<$$>$ const \&) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a363da26194592e84b36680664217d573}\label{class_catch_1_1_xml_reporter_a363da26194592e84b36680664217d573}} 
+void {\bfseries benchmark\+Failed} (std\+::string const \&) override
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a7899003ea907c24ed70959ce72a0880d}\label{class_catch_1_1_xml_reporter_a7899003ea907c24ed70959ce72a0880d}} 
+void \mbox{\hyperlink{class_catch_1_1_xml_reporter_a7899003ea907c24ed70959ce72a0880d}{list\+Reporters}} (std\+::vector$<$ \mbox{\hyperlink{struct_catch_1_1_reporter_description}{Reporter\+Description}} $>$ const \&descriptions, \mbox{\hyperlink{struct_catch_1_1_i_config}{IConfig}} const \&config) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided reporters using reporter-\/specific format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a03e5720c7d1c5c65758ccdf07a98dd2e}\label{class_catch_1_1_xml_reporter_a03e5720c7d1c5c65758ccdf07a98dd2e}} 
+void \mbox{\hyperlink{class_catch_1_1_xml_reporter_a03e5720c7d1c5c65758ccdf07a98dd2e}{list\+Tests}} (std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const \&tests, \mbox{\hyperlink{struct_catch_1_1_i_config}{IConfig}} const \&config) override
+\begin{DoxyCompactList}\small\item\em Writes out information about provided tests using reporter-\/specific format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_a73fbe6ef3b9b2b030a727ee9ba68c10c}\label{class_catch_1_1_xml_reporter_a73fbe6ef3b9b2b030a727ee9ba68c10c}} 
+void \mbox{\hyperlink{class_catch_1_1_xml_reporter_a73fbe6ef3b9b2b030a727ee9ba68c10c}{list\+Tags}} (std\+::vector$<$ \mbox{\hyperlink{struct_catch_1_1_tag_info}{Tag\+Info}} $>$ const \&tags, \mbox{\hyperlink{struct_catch_1_1_i_config}{IConfig}} const \&config) override
+\begin{DoxyCompactList}\small\item\em Writes out information about the provided tags using reporter-\/specific format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_reporter_ab998bc455a7b20f6a8b78ce291601807}\label{class_catch_1_1_xml_reporter_ab998bc455a7b20f6a8b78ce291601807}} 
+static std\+::string {\bfseries get\+Description} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{catch__amalgamated_8hpp}{catch\+\_\+amalgamated.\+hpp}}\item 
+\mbox{\hyperlink{catch__amalgamated_8cpp}{catch\+\_\+amalgamated.\+cpp}}\end{DoxyCompactItemize}

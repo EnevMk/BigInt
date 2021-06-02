@@ -160,7 +160,8 @@ TEST_CASE("* operation") {
 
 TEST_CASE("Fast raising to power") {
     BigInt number("5 0");
-    CHECK(fastPow(number, BigInt(2)) == BigInt("25 0 0"));
+    //CHECK(fastPow(number, BigInt(2)) == BigInt("25 0 0"));
+    CHECK(number.fastPow(BigInt("2")) == BigInt("25 0 0"));
 }
 
 TEST_CASE("getting to ZERO by Minus operation") {
