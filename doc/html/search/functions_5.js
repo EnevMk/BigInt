@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['haschildren_698',['hasChildren',['../class_catch_1_1_test_case_tracking_1_1_i_tracker.html#a157e9ca628aa9369c207c1272bd5ed30',1,'Catch::TestCaseTracking::ITracker']]]
+  ['findchild_730',['findChild',['../class_catch_1_1_test_case_tracking_1_1_i_tracker.html#a22c42880036ec7f8ec8d82a3e943c8e6',1,'Catch::TestCaseTracking::ITracker']]]
 ];

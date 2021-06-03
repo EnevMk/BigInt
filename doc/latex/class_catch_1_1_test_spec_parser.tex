@@ -12,6 +12,109 @@
 \mbox{\Hypertarget{class_catch_1_1_test_spec_parser_add7c2909cf42d02e83d504956dc3e8bc}\label{class_catch_1_1_test_spec_parser_add7c2909cf42d02e83d504956dc3e8bc}} 
 \mbox{\hyperlink{class_catch_1_1_test_spec}{Test\+Spec}} {\bfseries test\+Spec} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a926e1696c02a11020c64dae2888b82f8}\label{class_catch_1_1_test_spec_parser_a926e1696c02a11020c64dae2888b82f8}} 
+enum {\bfseries Mode} \{ \newline
+{\bfseries None}
+, {\bfseries Name}
+, {\bfseries Quoted\+Name}
+, {\bfseries Tag}
+, \newline
+{\bfseries Escaped\+Name}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a4f5e961060eb15e7f878b790aa8e1064}\label{class_catch_1_1_test_spec_parser_a4f5e961060eb15e7f878b790aa8e1064}} 
+bool {\bfseries visit\+Char} (char c)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_ad86a17992b2ef52a6eb9024fbeb0889a}\label{class_catch_1_1_test_spec_parser_ad86a17992b2ef52a6eb9024fbeb0889a}} 
+void {\bfseries start\+New\+Mode} (Mode mode)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_af9ed7d41353e3d73c0b87b9e23e6f71f}\label{class_catch_1_1_test_spec_parser_af9ed7d41353e3d73c0b87b9e23e6f71f}} 
+bool {\bfseries process\+None\+Char} (char c)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_ab8f7a5478ec05fc5b3c0f951528a257b}\label{class_catch_1_1_test_spec_parser_ab8f7a5478ec05fc5b3c0f951528a257b}} 
+void {\bfseries process\+Name\+Char} (char c)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_aae835bab46ece7c8a20aa591996e9be9}\label{class_catch_1_1_test_spec_parser_aae835bab46ece7c8a20aa591996e9be9}} 
+bool {\bfseries process\+Other\+Char} (char c)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a2c1f6a489244a1e586982ad4a051ba05}\label{class_catch_1_1_test_spec_parser_a2c1f6a489244a1e586982ad4a051ba05}} 
+void {\bfseries end\+Mode} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a36f8f3fbeb701c0e3416feb314528ae9}\label{class_catch_1_1_test_spec_parser_a36f8f3fbeb701c0e3416feb314528ae9}} 
+void {\bfseries escape} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a2d84b2f7466f92a767e63f4b0da7de9a}\label{class_catch_1_1_test_spec_parser_a2d84b2f7466f92a767e63f4b0da7de9a}} 
+bool {\bfseries is\+Control\+Char} (char c) const
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a09cb35ac8febbbd4aed68409bdf9c74f}\label{class_catch_1_1_test_spec_parser_a09cb35ac8febbbd4aed68409bdf9c74f}} 
+void {\bfseries save\+Last\+Mode} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_ac4eb65ecbcdd4dd03ffe508ecb371376}\label{class_catch_1_1_test_spec_parser_ac4eb65ecbcdd4dd03ffe508ecb371376}} 
+void {\bfseries revert\+Back\+To\+Last\+Mode} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a7f50542e2ff304d5ffd70c1f9e301c52}\label{class_catch_1_1_test_spec_parser_a7f50542e2ff304d5ffd70c1f9e301c52}} 
+void {\bfseries add\+Filter} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a24fe5b78d9fe788230e1d73f1ee2dc4e}\label{class_catch_1_1_test_spec_parser_a24fe5b78d9fe788230e1d73f1ee2dc4e}} 
+bool {\bfseries separate} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_aab6603257ea3536d19894af1263b9e99}\label{class_catch_1_1_test_spec_parser_aab6603257ea3536d19894af1263b9e99}} 
+std\+::string {\bfseries preprocess\+Pattern} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a9c3971bbd44c4d5d1326f179af4f6cc7}\label{class_catch_1_1_test_spec_parser_a9c3971bbd44c4d5d1326f179af4f6cc7}} 
+void {\bfseries add\+Name\+Pattern} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_ad4acf126f0c88ae41b21952b173d604f}\label{class_catch_1_1_test_spec_parser_ad4acf126f0c88ae41b21952b173d604f}} 
+void {\bfseries add\+Tag\+Pattern} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a702d4e3071479134739c1996efc2e62b}\label{class_catch_1_1_test_spec_parser_a702d4e3071479134739c1996efc2e62b}} 
+void {\bfseries add\+Char\+To\+Pattern} (char c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a9165857ee6ef57b622f8d047a5deb4a4}\label{class_catch_1_1_test_spec_parser_a9165857ee6ef57b622f8d047a5deb4a4}} 
+Mode {\bfseries m\+\_\+mode} = None
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a7df3d75638cebe31b41925a1e3bb7cac}\label{class_catch_1_1_test_spec_parser_a7df3d75638cebe31b41925a1e3bb7cac}} 
+Mode {\bfseries last\+Mode} = None
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a4553a8e8f7f7a1f716fd91691252060d}\label{class_catch_1_1_test_spec_parser_a4553a8e8f7f7a1f716fd91691252060d}} 
+bool {\bfseries m\+\_\+exclusion} = false
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a89b4c4a389543fac6e79ee9f3f557194}\label{class_catch_1_1_test_spec_parser_a89b4c4a389543fac6e79ee9f3f557194}} 
+std\+::size\+\_\+t {\bfseries m\+\_\+pos} = 0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a1bbb0814f560a13b9d31a266d6f610cb}\label{class_catch_1_1_test_spec_parser_a1bbb0814f560a13b9d31a266d6f610cb}} 
+std\+::size\+\_\+t {\bfseries m\+\_\+real\+Pattern\+Pos} = 0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a45ef6ceffad14831f777588b14b6c8eb}\label{class_catch_1_1_test_spec_parser_a45ef6ceffad14831f777588b14b6c8eb}} 
+std\+::string {\bfseries m\+\_\+arg}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a8203ee400737f2d1a9a666a58c6b2792}\label{class_catch_1_1_test_spec_parser_a8203ee400737f2d1a9a666a58c6b2792}} 
+std\+::string {\bfseries m\+\_\+substring}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a3c9381d58a97b95ed4dfea5827303096}\label{class_catch_1_1_test_spec_parser_a3c9381d58a97b95ed4dfea5827303096}} 
+std\+::string {\bfseries m\+\_\+pattern\+Name}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a4392a334710d503b2a7f6d52716e037e}\label{class_catch_1_1_test_spec_parser_a4392a334710d503b2a7f6d52716e037e}} 
+std\+::vector$<$ std\+::size\+\_\+t $>$ {\bfseries m\+\_\+escape\+Chars}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_acd78d27395cca67153d36b9cb338cb52}\label{class_catch_1_1_test_spec_parser_acd78d27395cca67153d36b9cb338cb52}} 
+\mbox{\hyperlink{struct_catch_1_1_test_spec_1_1_filter}{Test\+Spec\+::\+Filter}} {\bfseries m\+\_\+current\+Filter}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a9fc19aec938fd7d14b6310c0f44d1709}\label{class_catch_1_1_test_spec_parser_a9fc19aec938fd7d14b6310c0f44d1709}} 
+\mbox{\hyperlink{class_catch_1_1_test_spec}{Test\+Spec}} {\bfseries m\+\_\+test\+Spec}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_spec_parser_a9fa938996c21402262b87d35487866ea}\label{class_catch_1_1_test_spec_parser_a9fa938996c21402262b87d35487866ea}} 
+\mbox{\hyperlink{struct_catch_1_1_i_tag_alias_registry}{ITag\+Alias\+Registry}} const  $\ast$ {\bfseries m\+\_\+tag\+Aliases} = nullptr
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

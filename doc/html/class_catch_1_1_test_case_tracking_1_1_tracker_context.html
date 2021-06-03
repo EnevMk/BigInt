@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -69,6 +69,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_catch_1_1_test_case_tracking_1_1_tracker_context-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Catch::TestCaseTracking::TrackerContext Class Reference</div>  </div>
@@ -98,6 +100,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>completedCycle</b> ()
 <tr class="memitem:a0439ee3170881dbfb1df90a681d48423"><td class="memItemLeft" align="right" valign="top"><a id="a0439ee3170881dbfb1df90a681d48423"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setCurrentTracker</b> (<a class="el" href="class_catch_1_1_test_case_tracking_1_1_i_tracker.html">ITracker</a> *tracker)</td></tr>
 <tr class="separator:a0439ee3170881dbfb1df90a681d48423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:ad60a86070dec47e3521e2b06c66cb86a"><td class="memItemLeft" align="right" valign="top"><a id="ad60a86070dec47e3521e2b06c66cb86a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>RunState</b> { <b>NotStarted</b>
+, <b>Executing</b>
+, <b>CompletedCycle</b>
+ }</td></tr>
+<tr class="separator:ad60a86070dec47e3521e2b06c66cb86a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2ff79af867ceffdbd0db15d30ebfdc98"><td class="memItemLeft" align="right" valign="top"><a id="a2ff79af867ceffdbd0db15d30ebfdc98"></a>
+ITrackerPtr&#160;</td><td class="memItemRight" valign="bottom"><b>m_rootTracker</b></td></tr>
+<tr class="separator:a2ff79af867ceffdbd0db15d30ebfdc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36509ae6501fc3469afb3a1b6c9d6bee"><td class="memItemLeft" align="right" valign="top"><a id="a36509ae6501fc3469afb3a1b6c9d6bee"></a>
+<a class="el" href="class_catch_1_1_test_case_tracking_1_1_i_tracker.html">ITracker</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>m_currentTracker</b> = nullptr</td></tr>
+<tr class="separator:a36509ae6501fc3469afb3a1b6c9d6bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d593dac4a5cebaf5fd95afe90fc16a1"><td class="memItemLeft" align="right" valign="top"><a id="a5d593dac4a5cebaf5fd95afe90fc16a1"></a>
+RunState&#160;</td><td class="memItemRight" valign="bottom"><b>m_runState</b> = NotStarted</td></tr>
+<tr class="separator:a5d593dac4a5cebaf5fd95afe90fc16a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="catch__amalgamated_8hpp_source.html">catch_amalgamated.hpp</a></li>

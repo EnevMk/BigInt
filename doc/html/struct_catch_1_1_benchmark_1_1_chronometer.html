@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -69,6 +69,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="struct_catch_1_1_benchmark_1_1_chronometer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Catch::Benchmark::Chronometer Struct Reference</div>  </div>
@@ -87,6 +89,26 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>runs</b> () const</td>
 <tr class="memitem:a3302c48061da0cc3eeed30fe38caebc9"><td class="memItemLeft" align="right" valign="top"><a id="a3302c48061da0cc3eeed30fe38caebc9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Chronometer</b> (<a class="el" href="struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept.html">Detail::ChronometerConcept</a> &amp;meter, int repeats_)</td></tr>
 <tr class="separator:a3302c48061da0cc3eeed30fe38caebc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:afbc63bf6896e0d510ed35f0d4fc8127e"><td class="memTemplParams" colspan="2"><a id="afbc63bf6896e0d510ed35f0d4fc8127e"></a>
+template&lt;typename Fun &gt; </td></tr>
+<tr class="memitem:afbc63bf6896e0d510ed35f0d4fc8127e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>measure</b> (Fun &amp;&amp;fun, std::false_type)</td></tr>
+<tr class="separator:afbc63bf6896e0d510ed35f0d4fc8127e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e7c1a08f021f9c1b94f6bf48ecab11"><td class="memTemplParams" colspan="2"><a id="a48e7c1a08f021f9c1b94f6bf48ecab11"></a>
+template&lt;typename Fun &gt; </td></tr>
+<tr class="memitem:a48e7c1a08f021f9c1b94f6bf48ecab11"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>measure</b> (Fun &amp;&amp;fun, std::true_type)</td></tr>
+<tr class="separator:a48e7c1a08f021f9c1b94f6bf48ecab11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7f73c21b7a542209494a303328e55d42"><td class="memItemLeft" align="right" valign="top"><a id="a7f73c21b7a542209494a303328e55d42"></a>
+<a class="el" href="struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept.html">Detail::ChronometerConcept</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>impl</b></td></tr>
+<tr class="separator:a7f73c21b7a542209494a303328e55d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaba4ccfa31ae95d750a91e1d12ad551"><td class="memItemLeft" align="right" valign="top"><a id="acaba4ccfa31ae95d750a91e1d12ad551"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>repeats</b></td></tr>
+<tr class="separator:acaba4ccfa31ae95d750a91e1d12ad551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="catch__amalgamated_8hpp_source.html">catch_amalgamated.hpp</a></li>

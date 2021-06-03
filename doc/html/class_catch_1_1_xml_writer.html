@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -70,6 +70,8 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_catch_1_1_xml_writer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Catch::XmlWriter Class Reference</div>  </div>
@@ -126,6 +128,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>writeStylesheetRef</b
 <tr class="memitem:aba98703d9852416e237de82aed4a9c4f"><td class="memItemLeft" align="right" valign="top"><a id="aba98703d9852416e237de82aed4a9c4f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ensureTagClosed</b> ()</td></tr>
 <tr class="separator:aba98703d9852416e237de82aed4a9c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4b3d6ff6c7d7b6b4a2fa03e41e240823"><td class="memItemLeft" align="right" valign="top"><a id="a4b3d6ff6c7d7b6b4a2fa03e41e240823"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>applyFormatting</b> (XmlFormatting fmt)</td></tr>
+<tr class="separator:a4b3d6ff6c7d7b6b4a2fa03e41e240823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92fb640f3055a8a3cc15827ff680a659"><td class="memItemLeft" align="right" valign="top"><a id="a92fb640f3055a8a3cc15827ff680a659"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>writeDeclaration</b> ()</td></tr>
+<tr class="separator:a92fb640f3055a8a3cc15827ff680a659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb07b4e735567a14eb92c72d26769d9a"><td class="memItemLeft" align="right" valign="top"><a id="aeb07b4e735567a14eb92c72d26769d9a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>newlineIfNecessary</b> ()</td></tr>
+<tr class="separator:aeb07b4e735567a14eb92c72d26769d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae7a99fb12a935a6cec8eff50330e6810"><td class="memItemLeft" align="right" valign="top"><a id="ae7a99fb12a935a6cec8eff50330e6810"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_tagIsOpen</b> = false</td></tr>
+<tr class="separator:ae7a99fb12a935a6cec8eff50330e6810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22c927b78eabdeb47390d8dd4e90ad5"><td class="memItemLeft" align="right" valign="top"><a id="ab22c927b78eabdeb47390d8dd4e90ad5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_needsNewline</b> = false</td></tr>
+<tr class="separator:ab22c927b78eabdeb47390d8dd4e90ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73241386778cdb898b6da390ef89ff2a"><td class="memItemLeft" align="right" valign="top"><a id="a73241386778cdb898b6da390ef89ff2a"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_tags</b></td></tr>
+<tr class="separator:a73241386778cdb898b6da390ef89ff2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f2917a19b297383533cd1d1c08c0af"><td class="memItemLeft" align="right" valign="top"><a id="ac9f2917a19b297383533cd1d1c08c0af"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_indent</b></td></tr>
+<tr class="separator:ac9f2917a19b297383533cd1d1c08c0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a651c4ae4e42088b478df71cd81177b9e"><td class="memItemLeft" align="right" valign="top"><a id="a651c4ae4e42088b478df71cd81177b9e"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_os</b></td></tr>
+<tr class="separator:a651c4ae4e42088b478df71cd81177b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="catch__amalgamated_8hpp_source.html">catch_amalgamated.hpp</a></li>

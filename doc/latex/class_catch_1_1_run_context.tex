@@ -99,6 +99,87 @@ void {\bfseries assertion\+Passed} () override
 \mbox{\Hypertarget{class_catch_1_1_run_context_a632c9acd917a75ab7c6644308a462963}\label{class_catch_1_1_run_context_a632c9acd917a75ab7c6644308a462963}} 
 bool {\bfseries aborting} () const override
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_ab6dddb5187c3b661d793285b434878f0}\label{class_catch_1_1_run_context_ab6dddb5187c3b661d793285b434878f0}} 
+void {\bfseries run\+Current\+Test} (std\+::string \&redirected\+Cout, std\+::string \&redirected\+Cerr)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a9d61ed14e669a84f4c0404665db031f1}\label{class_catch_1_1_run_context_a9d61ed14e669a84f4c0404665db031f1}} 
+void {\bfseries invoke\+Active\+Test\+Case} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_afffbaf934d08e5bbae5de0844c6525fe}\label{class_catch_1_1_run_context_afffbaf934d08e5bbae5de0844c6525fe}} 
+void {\bfseries reset\+Assertion\+Info} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_ab444ae0a51c06239607f3ad243efda33}\label{class_catch_1_1_run_context_ab444ae0a51c06239607f3ad243efda33}} 
+bool {\bfseries test\+For\+Missing\+Assertions} (\mbox{\hyperlink{struct_catch_1_1_counts}{Counts}} \&assertions)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_ae53381f6c27cf1242bd73cffa2dabc9e}\label{class_catch_1_1_run_context_ae53381f6c27cf1242bd73cffa2dabc9e}} 
+void {\bfseries assertion\+Ended} (\mbox{\hyperlink{class_catch_1_1_assertion_result}{Assertion\+Result}} const \&result)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_acba25e98c8cb519acd0a6fe2c62e25ce}\label{class_catch_1_1_run_context_acba25e98c8cb519acd0a6fe2c62e25ce}} 
+void {\bfseries report\+Expr} (\mbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} const \&info, Result\+Was\+::\+Of\+Type result\+Type, \mbox{\hyperlink{struct_catch_1_1_i_transient_expression}{ITransient\+Expression}} const $\ast$expr, bool negated)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_aabe046d1fcdb7c93577656b333a75523}\label{class_catch_1_1_run_context_aabe046d1fcdb7c93577656b333a75523}} 
+void {\bfseries populate\+Reaction} (\mbox{\hyperlink{struct_catch_1_1_assertion_reaction}{Assertion\+Reaction}} \&reaction)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a59e4c264d52b89dbacc2c4d1c720646a}\label{class_catch_1_1_run_context_a59e4c264d52b89dbacc2c4d1c720646a}} 
+void {\bfseries handle\+Unfinished\+Sections} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a42d2a704c9b9d45aa51318b69f36f886}\label{class_catch_1_1_run_context_a42d2a704c9b9d45aa51318b69f36f886}} 
+\mbox{\hyperlink{struct_catch_1_1_test_run_info}{Test\+Run\+Info}} {\bfseries m\+\_\+run\+Info}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a45cafd540b66fda082714b073c48fa4b}\label{class_catch_1_1_run_context_a45cafd540b66fda082714b073c48fa4b}} 
+\mbox{\hyperlink{struct_catch_1_1_i_mutable_context}{IMutable\+Context}} \& {\bfseries m\+\_\+context}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a6a1a1a925d4b439d94495d51fb4ab8bc}\label{class_catch_1_1_run_context_a6a1a1a925d4b439d94495d51fb4ab8bc}} 
+\mbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} const  $\ast$ {\bfseries m\+\_\+active\+Test\+Case} = nullptr
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a3065e4b4d105c636bb5ce0d2752f6dd4}\label{class_catch_1_1_run_context_a3065e4b4d105c636bb5ce0d2752f6dd4}} 
+\mbox{\hyperlink{class_catch_1_1_test_case_tracking_1_1_i_tracker}{ITracker}} $\ast$ {\bfseries m\+\_\+test\+Case\+Tracker} = nullptr
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_adfa70adafad50a9023aa3337e44f9e22}\label{class_catch_1_1_run_context_adfa70adafad50a9023aa3337e44f9e22}} 
+\mbox{\hyperlink{class_catch_1_1_option}{Option}}$<$ \mbox{\hyperlink{class_catch_1_1_assertion_result}{Assertion\+Result}} $>$ {\bfseries m\+\_\+last\+Result}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a54e21c4bccd0241dabd01efed52d4585}\label{class_catch_1_1_run_context_a54e21c4bccd0241dabd01efed52d4585}} 
+\mbox{\hyperlink{struct_catch_1_1_i_config}{IConfig}} const  $\ast$ {\bfseries m\+\_\+config}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a864db03bc159a8f4a9062656bafbbd1c}\label{class_catch_1_1_run_context_a864db03bc159a8f4a9062656bafbbd1c}} 
+\mbox{\hyperlink{struct_catch_1_1_totals}{Totals}} {\bfseries m\+\_\+totals}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_ad5b3021f9404791d10170bcfb6f81106}\label{class_catch_1_1_run_context_ad5b3021f9404791d10170bcfb6f81106}} 
+\mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{IStreaming\+Reporter\+Ptr}} {\bfseries m\+\_\+reporter}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_ac4f4c70d2848f35911ee4f801d79d016}\label{class_catch_1_1_run_context_ac4f4c70d2848f35911ee4f801d79d016}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_catch_1_1_message_info}{Message\+Info}} $>$ {\bfseries m\+\_\+messages}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a0d2970200f42934b1124e87b6cd38962}\label{class_catch_1_1_run_context_a0d2970200f42934b1124e87b6cd38962}} 
+std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_scoped_message}{Scoped\+Message}} $>$ {\bfseries m\+\_\+message\+Scopes}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a08a1366867f2e2d471a5a7e95a1a85b6}\label{class_catch_1_1_run_context_a08a1366867f2e2d471a5a7e95a1a85b6}} 
+\mbox{\hyperlink{struct_catch_1_1_assertion_info}{Assertion\+Info}} {\bfseries m\+\_\+last\+Assertion\+Info}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_aee1c66ca7e0623727a62920c3466fc32}\label{class_catch_1_1_run_context_aee1c66ca7e0623727a62920c3466fc32}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_catch_1_1_section_end_info}{Section\+End\+Info}} $>$ {\bfseries m\+\_\+unfinished\+Sections}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_ae8e6fa627a96596b5111dc3be3ae6b8d}\label{class_catch_1_1_run_context_ae8e6fa627a96596b5111dc3be3ae6b8d}} 
+std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_test_case_tracking_1_1_i_tracker}{ITracker}} $\ast$ $>$ {\bfseries m\+\_\+active\+Sections}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_ad9213e5da5590cc4d690608ce1cdf5e7}\label{class_catch_1_1_run_context_ad9213e5da5590cc4d690608ce1cdf5e7}} 
+\mbox{\hyperlink{class_catch_1_1_test_case_tracking_1_1_tracker_context}{Tracker\+Context}} {\bfseries m\+\_\+tracker\+Context}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a8fb133c8f0ad4124dda0fb6f7bf14eb1}\label{class_catch_1_1_run_context_a8fb133c8f0ad4124dda0fb6f7bf14eb1}} 
+bool {\bfseries m\+\_\+last\+Assertion\+Passed} = false
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_a1e8026d51493932cc91b76433776cc41}\label{class_catch_1_1_run_context_a1e8026d51493932cc91b76433776cc41}} 
+bool {\bfseries m\+\_\+should\+Report\+Unexpected} = true
+\item 
+\mbox{\Hypertarget{class_catch_1_1_run_context_afc46ec96e7a03da67d721e7a9d63b658}\label{class_catch_1_1_run_context_afc46ec96e7a03da67d721e7a9d63b658}} 
+bool {\bfseries m\+\_\+include\+Successful\+Results}
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

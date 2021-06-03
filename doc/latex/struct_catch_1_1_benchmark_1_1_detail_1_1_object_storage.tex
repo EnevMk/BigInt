@@ -21,6 +21,27 @@ using {\bfseries TStorage} = typename std\+::aligned\+\_\+storage$<$ sizeof(T), 
 \mbox{\Hypertarget{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a088724173765b38361170afe98a70d6f}\label{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a088724173765b38361170afe98a70d6f}} 
 {\footnotesize template$<$bool Allow\+Manual\+Destruction = !\+Destruct$>$ }\\std\+::enable\+\_\+if$<$ Allow\+Manual\+Destruction $>$\+::type {\bfseries destruct} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a4d0b7ffcd125156fc80a2290749a6b0f}\label{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a4d0b7ffcd125156fc80a2290749a6b0f}} 
+{\footnotesize template$<$typename U $>$ }\\void {\bfseries destruct\+\_\+on\+\_\+exit} (typename std\+::enable\+\_\+if$<$ Destruct, U $>$\+::type $\ast$=0)
+\item 
+\mbox{\Hypertarget{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a709683bf5a730e46c867819e4604709b}\label{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a709683bf5a730e46c867819e4604709b}} 
+{\footnotesize template$<$typename U $>$ }\\void {\bfseries destruct\+\_\+on\+\_\+exit} (typename std\+::enable\+\_\+if$<$!Destruct, U $>$\+::type $\ast$=0)
+\item 
+\mbox{\Hypertarget{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_ac31c30085a09d09f2a4cf748fdca1706}\label{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_ac31c30085a09d09f2a4cf748fdca1706}} 
+T \& {\bfseries stored\+\_\+object} ()
+\item 
+\mbox{\Hypertarget{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a39bb42f26f3dbafb6cf181caa1ec9b22}\label{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a39bb42f26f3dbafb6cf181caa1ec9b22}} 
+T const  \& {\bfseries stored\+\_\+object} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a48f30c8cb5b52a83e381ee2260eaa498}\label{struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage_a48f30c8cb5b52a83e381ee2260eaa498}} 
+TStorage {\bfseries data}
+\end{DoxyCompactItemize}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}

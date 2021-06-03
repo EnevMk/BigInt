@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -71,6 +71,8 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="struct_catch_1_1_console_reporter-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Catch::ConsoleReporter Struct Reference</div>  </div>
@@ -197,6 +199,54 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>stream<
 <tr class="memitem:a82f2a7a5dec58bc093f6ab26a9e47bd8 inherit pub_attribs_struct_catch_1_1_streaming_reporter_base"><td class="memItemLeft" align="right" valign="top"><a id="a82f2a7a5dec58bc093f6ab26a9e47bd8"></a>
 std::vector&lt; <a class="el" href="struct_catch_1_1_section_info.html">SectionInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_sectionStack</b></td></tr>
 <tr class="separator:a82f2a7a5dec58bc093f6ab26a9e47bd8 inherit pub_attribs_struct_catch_1_1_streaming_reporter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aab579b9567493175b3f51451aca2c9a4"><td class="memItemLeft" align="right" valign="top"><a id="aab579b9567493175b3f51451aca2c9a4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>lazyPrint</b> ()</td></tr>
+<tr class="separator:aab579b9567493175b3f51451aca2c9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86bcf7d5b97a7f822b7ae163f8c4f6bb"><td class="memItemLeft" align="right" valign="top"><a id="a86bcf7d5b97a7f822b7ae163f8c4f6bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>lazyPrintWithoutClosingBenchmarkTable</b> ()</td></tr>
+<tr class="separator:a86bcf7d5b97a7f822b7ae163f8c4f6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50cda5f78738ec56e89b9854317bd967"><td class="memItemLeft" align="right" valign="top"><a id="a50cda5f78738ec56e89b9854317bd967"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>lazyPrintRunInfo</b> ()</td></tr>
+<tr class="separator:a50cda5f78738ec56e89b9854317bd967"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a962532cd4e43a4a9a1e9809fdecc164e"><td class="memItemLeft" align="right" valign="top"><a id="a962532cd4e43a4a9a1e9809fdecc164e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>lazyPrintGroupInfo</b> ()</td></tr>
+<tr class="separator:a962532cd4e43a4a9a1e9809fdecc164e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95314c47718dc07346e8bd4489126e43"><td class="memItemLeft" align="right" valign="top"><a id="a95314c47718dc07346e8bd4489126e43"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printTestCaseAndSectionHeader</b> ()</td></tr>
+<tr class="separator:a95314c47718dc07346e8bd4489126e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c7f38db2d7f44e10e367df8e1f11b48"><td class="memItemLeft" align="right" valign="top"><a id="a5c7f38db2d7f44e10e367df8e1f11b48"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printClosedHeader</b> (std::string const &amp;_name)</td></tr>
+<tr class="separator:a5c7f38db2d7f44e10e367df8e1f11b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfdbb614d52aa2c2c148c3a57c531f31"><td class="memItemLeft" align="right" valign="top"><a id="acfdbb614d52aa2c2c148c3a57c531f31"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printOpenHeader</b> (std::string const &amp;_name)</td></tr>
+<tr class="separator:acfdbb614d52aa2c2c148c3a57c531f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0921492a0edfd9bce35e11f5388f3f"><td class="memItemLeft" align="right" valign="top"><a id="a7e0921492a0edfd9bce35e11f5388f3f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printHeaderString</b> (std::string const &amp;_string, std::size_t indent=0)</td></tr>
+<tr class="separator:a7e0921492a0edfd9bce35e11f5388f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf4018e4fc6b94520b1a2f9cdf0244b"><td class="memItemLeft" align="right" valign="top"><a id="aadf4018e4fc6b94520b1a2f9cdf0244b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printTotals</b> (<a class="el" href="struct_catch_1_1_totals.html">Totals</a> const &amp;totals)</td></tr>
+<tr class="separator:aadf4018e4fc6b94520b1a2f9cdf0244b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22eaa1153166715969962b10b3385b85"><td class="memItemLeft" align="right" valign="top"><a id="a22eaa1153166715969962b10b3385b85"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printSummaryRow</b> (std::string const &amp;label, std::vector&lt; <a class="el" href="struct_catch_1_1_summary_column.html">SummaryColumn</a> &gt; const &amp;cols, std::size_t row)</td></tr>
+<tr class="separator:a22eaa1153166715969962b10b3385b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabdded86b5829701ceacceae9bba4b72"><td class="memItemLeft" align="right" valign="top"><a id="aabdded86b5829701ceacceae9bba4b72"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printTotalsDivider</b> (<a class="el" href="struct_catch_1_1_totals.html">Totals</a> const &amp;totals)</td></tr>
+<tr class="separator:aabdded86b5829701ceacceae9bba4b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a9442e7f09e74688b4fd62925e086d"><td class="memItemLeft" align="right" valign="top"><a id="a51a9442e7f09e74688b4fd62925e086d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printSummaryDivider</b> ()</td></tr>
+<tr class="separator:a51a9442e7f09e74688b4fd62925e086d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17753bd11bf166dbde7aad0b1bc9ae47"><td class="memItemLeft" align="right" valign="top"><a id="a17753bd11bf166dbde7aad0b1bc9ae47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printTestFilters</b> ()</td></tr>
+<tr class="separator:a17753bd11bf166dbde7aad0b1bc9ae47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a28dc8faf54deeb7ae1ea88ab0ed81bdf"><td class="memItemLeft" align="right" valign="top"><a id="a28dc8faf54deeb7ae1ea88ab0ed81bdf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_headerPrinted</b> = false</td></tr>
+<tr class="separator:a28dc8faf54deeb7ae1ea88ab0ed81bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

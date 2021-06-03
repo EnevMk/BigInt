@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -2024,21 +2024,21 @@ $(function() {
 <div class="line"><a name="l02011"></a><span class="lineno"> 2011</span>&#160; </div>
 <div class="line"><a name="l02019"></a><span class="lineno"><a class="line" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html"> 2019</a></span>&#160;            <span class="keyword">struct </span><a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a> {</div>
 <div class="line"><a name="l02020"></a><span class="lineno"> 2020</span>&#160;            <span class="keyword">private</span>:</div>
-<div class="line"><a name="l02021"></a><span class="lineno"> 2021</span>&#160;                <span class="keyword">struct </span>callable {</div>
+<div class="line"><a name="l02021"></a><span class="lineno"><a class="line" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html"> 2021</a></span>&#160;                <span class="keyword">struct </span><a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">callable</a> {</div>
 <div class="line"><a name="l02022"></a><span class="lineno"> 2022</span>&#160;                    <span class="keyword">virtual</span> <span class="keywordtype">void</span> call(<a class="code" href="struct_catch_1_1_benchmark_1_1_chronometer.html">Chronometer</a> meter) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l02023"></a><span class="lineno"> 2023</span>&#160;                    <span class="keyword">virtual</span> callable* clone() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l02024"></a><span class="lineno"> 2024</span>&#160;                    <span class="keyword">virtual</span> ~callable(); <span class="comment">// = default;</span></div>
+<div class="line"><a name="l02023"></a><span class="lineno"> 2023</span>&#160;                    <span class="keyword">virtual</span> <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">callable</a>* clone() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l02024"></a><span class="lineno"> 2024</span>&#160;                    <span class="keyword">virtual</span> ~<a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">callable</a>(); <span class="comment">// = default;</span></div>
 <div class="line"><a name="l02025"></a><span class="lineno"> 2025</span>&#160; </div>
-<div class="line"><a name="l02026"></a><span class="lineno"> 2026</span>&#160;                    callable() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l02027"></a><span class="lineno"> 2027</span>&#160;                    callable(callable <span class="keyword">const</span>&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l02028"></a><span class="lineno"> 2028</span>&#160;                    callable&amp; operator=(callable <span class="keyword">const</span>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l02026"></a><span class="lineno"> 2026</span>&#160;                    <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">callable</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l02027"></a><span class="lineno"> 2027</span>&#160;                    <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">callable</a>(<a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">callable</a> <span class="keyword">const</span>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l02028"></a><span class="lineno"> 2028</span>&#160;                    <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">callable</a>&amp; operator=(<a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">callable</a> <span class="keyword">const</span>&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l02029"></a><span class="lineno"> 2029</span>&#160;                };</div>
 <div class="line"><a name="l02030"></a><span class="lineno"> 2030</span>&#160;                <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Fun&gt;</div>
-<div class="line"><a name="l02031"></a><span class="lineno"> 2031</span>&#160;                <span class="keyword">struct </span>model : <span class="keyword">public</span> callable {</div>
-<div class="line"><a name="l02032"></a><span class="lineno"> 2032</span>&#160;                    model(Fun&amp;&amp; fun_) : fun(std::move(fun_)) {}</div>
-<div class="line"><a name="l02033"></a><span class="lineno"> 2033</span>&#160;                    model(Fun <span class="keyword">const</span>&amp; fun_) : fun(fun_) {}</div>
+<div class="line"><a name="l02031"></a><span class="lineno"><a class="line" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1model.html"> 2031</a></span>&#160;                <span class="keyword">struct </span><a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1model.html">model</a> : <span class="keyword">public</span> <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">callable</a> {</div>
+<div class="line"><a name="l02032"></a><span class="lineno"> 2032</span>&#160;                    <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1model.html">model</a>(Fun&amp;&amp; fun_) : fun(std::move(fun_)) {}</div>
+<div class="line"><a name="l02033"></a><span class="lineno"> 2033</span>&#160;                    <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1model.html">model</a>(Fun <span class="keyword">const</span>&amp; fun_) : fun(fun_) {}</div>
 <div class="line"><a name="l02034"></a><span class="lineno"> 2034</span>&#160; </div>
-<div class="line"><a name="l02035"></a><span class="lineno"> 2035</span>&#160;                    model&lt;Fun&gt;* clone()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="keyword">new</span> model&lt;Fun&gt;(*<span class="keyword">this</span>); }</div>
+<div class="line"><a name="l02035"></a><span class="lineno"> 2035</span>&#160;                    <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1model.html">model&lt;Fun&gt;</a>* clone()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1model.html">model&lt;Fun&gt;</a>(*<span class="keyword">this</span>); }</div>
 <div class="line"><a name="l02036"></a><span class="lineno"> 2036</span>&#160; </div>
 <div class="line"><a name="l02037"></a><span class="lineno"> 2037</span>&#160;                    <span class="keywordtype">void</span> call(<a class="code" href="struct_catch_1_1_benchmark_1_1_chronometer.html">Chronometer</a> meter)<span class="keyword"> const override </span>{</div>
 <div class="line"><a name="l02038"></a><span class="lineno"> 2038</span>&#160;                        call(meter, <a class="code" href="struct_catch_1_1is__callable.html">is_callable</a>&lt;Fun(<a class="code" href="struct_catch_1_1_benchmark_1_1_chronometer.html">Chronometer</a>)&gt;());</div>
@@ -2053,38 +2053,38 @@ $(function() {
 <div class="line"><a name="l02047"></a><span class="lineno"> 2047</span>&#160;                    Fun fun;</div>
 <div class="line"><a name="l02048"></a><span class="lineno"> 2048</span>&#160;                };</div>
 <div class="line"><a name="l02049"></a><span class="lineno"> 2049</span>&#160; </div>
-<div class="line"><a name="l02050"></a><span class="lineno"> 2050</span>&#160;                <span class="keyword">struct </span>do_nothing { <span class="keywordtype">void</span> operator()()<span class="keyword"> const </span>{} };</div>
+<div class="line"><a name="l02050"></a><span class="lineno"><a class="line" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1do__nothing.html"> 2050</a></span>&#160;                <span class="keyword">struct </span><a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1do__nothing.html">do_nothing</a> { <span class="keywordtype">void</span> operator()()<span class="keyword"> const </span>{} };</div>
 <div class="line"><a name="l02051"></a><span class="lineno"> 2051</span>&#160; </div>
 <div class="line"><a name="l02052"></a><span class="lineno"> 2052</span>&#160;                <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;                <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a>(model&lt;T&gt;* c) : f(c) {}</div>
+<div class="line"><a name="l02053"></a><span class="lineno"> 2053</span>&#160;                <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a>(<a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1model.html">model&lt;T&gt;</a>* c) : f(c) {}</div>
 <div class="line"><a name="l02054"></a><span class="lineno"> 2054</span>&#160; </div>
 <div class="line"><a name="l02055"></a><span class="lineno"> 2055</span>&#160;            <span class="keyword">public</span>:</div>
 <div class="line"><a name="l02056"></a><span class="lineno"> 2056</span>&#160;                <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a>()</div>
-<div class="line"><a name="l02057"></a><span class="lineno"> 2057</span>&#160;                    : f(<span class="keyword">new</span> model&lt;do_nothing&gt;{ {} }) {}</div>
+<div class="line"><a name="l02057"></a><span class="lineno"> 2057</span>&#160;                    : f(new model&lt;do_nothing&gt;{ {} }) {}</div>
 <div class="line"><a name="l02058"></a><span class="lineno"> 2058</span>&#160; </div>
 <div class="line"><a name="l02059"></a><span class="lineno"> 2059</span>&#160;                <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Fun,</div>
 <div class="line"><a name="l02060"></a><span class="lineno"> 2060</span>&#160;                    <span class="keyword">typename</span> std::enable_if&lt;!is_related&lt;Fun, BenchmarkFunction&gt;::value, <span class="keywordtype">int</span>&gt;::type = 0&gt;</div>
-<div class="line"><a name="l02061"></a><span class="lineno"> 2061</span>&#160;                    <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a>(Fun&amp;&amp; fun)</div>
-<div class="line"><a name="l02062"></a><span class="lineno"> 2062</span>&#160;                    : f(<span class="keyword">new</span> model&lt;<span class="keyword">typename</span> std::decay&lt;Fun&gt;::type&gt;(std::forward&lt;Fun&gt;(fun))) {}</div>
+<div class="line"><a name="l02061"></a><span class="lineno"> 2061</span>&#160;                    BenchmarkFunction(Fun&amp;&amp; fun)</div>
+<div class="line"><a name="l02062"></a><span class="lineno"> 2062</span>&#160;                    : f(new model&lt;typename std::decay&lt;Fun&gt;::type&gt;(std::forward&lt;Fun&gt;(fun))) {}</div>
 <div class="line"><a name="l02063"></a><span class="lineno"> 2063</span>&#160; </div>
-<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;                <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a>( <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a>&amp;&amp; that ) noexcept:</div>
+<div class="line"><a name="l02064"></a><span class="lineno"> 2064</span>&#160;                BenchmarkFunction( BenchmarkFunction&amp;&amp; that ) noexcept:</div>
 <div class="line"><a name="l02065"></a><span class="lineno"> 2065</span>&#160;                    f( std::move( that.f ) ) {}</div>
 <div class="line"><a name="l02066"></a><span class="lineno"> 2066</span>&#160; </div>
-<div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;                <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a>(<a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a> <span class="keyword">const</span>&amp; that)</div>
+<div class="line"><a name="l02067"></a><span class="lineno"> 2067</span>&#160;                BenchmarkFunction(BenchmarkFunction <span class="keyword">const</span>&amp; that)</div>
 <div class="line"><a name="l02068"></a><span class="lineno"> 2068</span>&#160;                    : f(that.f-&gt;clone()) {}</div>
 <div class="line"><a name="l02069"></a><span class="lineno"> 2069</span>&#160; </div>
-<div class="line"><a name="l02070"></a><span class="lineno"> 2070</span>&#160;                <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a>&amp;</div>
-<div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;                operator=( <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a>&amp;&amp; that ) noexcept {</div>
+<div class="line"><a name="l02070"></a><span class="lineno"> 2070</span>&#160;                BenchmarkFunction&amp;</div>
+<div class="line"><a name="l02071"></a><span class="lineno"> 2071</span>&#160;                operator=( BenchmarkFunction&amp;&amp; that ) noexcept {</div>
 <div class="line"><a name="l02072"></a><span class="lineno"> 2072</span>&#160;                    f = std::move( that.f );</div>
 <div class="line"><a name="l02073"></a><span class="lineno"> 2073</span>&#160;                    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l02074"></a><span class="lineno"> 2074</span>&#160;                }</div>
 <div class="line"><a name="l02075"></a><span class="lineno"> 2075</span>&#160; </div>
-<div class="line"><a name="l02076"></a><span class="lineno"> 2076</span>&#160;                <a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a>&amp; operator=(<a class="code" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">BenchmarkFunction</a> <span class="keyword">const</span>&amp; that) {</div>
+<div class="line"><a name="l02076"></a><span class="lineno"> 2076</span>&#160;                BenchmarkFunction&amp; operator=(BenchmarkFunction <span class="keyword">const</span>&amp; that) {</div>
 <div class="line"><a name="l02077"></a><span class="lineno"> 2077</span>&#160;                    f.reset(that.f-&gt;clone());</div>
 <div class="line"><a name="l02078"></a><span class="lineno"> 2078</span>&#160;                    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l02079"></a><span class="lineno"> 2079</span>&#160;                }</div>
 <div class="line"><a name="l02080"></a><span class="lineno"> 2080</span>&#160; </div>
-<div class="line"><a name="l02081"></a><span class="lineno"> 2081</span>&#160;                <span class="keywordtype">void</span> operator()(<a class="code" href="struct_catch_1_1_benchmark_1_1_chronometer.html">Chronometer</a> meter)<span class="keyword"> const </span>{ f-&gt;call(meter); }</div>
+<div class="line"><a name="l02081"></a><span class="lineno"> 2081</span>&#160;                <span class="keywordtype">void</span> operator()(Chronometer meter)<span class="keyword"> const </span>{ f-&gt;call(meter); }</div>
 <div class="line"><a name="l02082"></a><span class="lineno"> 2082</span>&#160; </div>
 <div class="line"><a name="l02083"></a><span class="lineno"> 2083</span>&#160;            <span class="keyword">private</span>:</div>
 <div class="line"><a name="l02084"></a><span class="lineno"> 2084</span>&#160;                <a class="code" href="class_catch_1_1_detail_1_1unique__ptr.html">Catch::Detail::unique_ptr&lt;callable&gt;</a> f;</div>
@@ -3664,33 +3664,33 @@ $(function() {
 <div class="line"><a name="l03662"></a><span class="lineno"> 3662</span>&#160; </div>
 <div class="line"><a name="l03663"></a><span class="lineno"><a class="line" href="class_catch_1_1_test_spec.html"> 3663</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_catch_1_1_test_spec.html">TestSpec</a> {</div>
 <div class="line"><a name="l03664"></a><span class="lineno"> 3664</span>&#160; </div>
-<div class="line"><a name="l03665"></a><span class="lineno"> 3665</span>&#160;        <span class="keyword">class </span>Pattern {</div>
+<div class="line"><a name="l03665"></a><span class="lineno"><a class="line" href="class_catch_1_1_test_spec_1_1_pattern.html"> 3665</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_catch_1_1_test_spec_1_1_pattern.html">Pattern</a> {</div>
 <div class="line"><a name="l03666"></a><span class="lineno"> 3666</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l03667"></a><span class="lineno"> 3667</span>&#160;            <span class="keyword">explicit</span> Pattern( std::string <span class="keyword">const</span>&amp; name );</div>
-<div class="line"><a name="l03668"></a><span class="lineno"> 3668</span>&#160;            <span class="keyword">virtual</span> ~Pattern();</div>
+<div class="line"><a name="l03667"></a><span class="lineno"> 3667</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="class_catch_1_1_test_spec_1_1_pattern.html">Pattern</a>( std::string <span class="keyword">const</span>&amp; name );</div>
+<div class="line"><a name="l03668"></a><span class="lineno"> 3668</span>&#160;            <span class="keyword">virtual</span> ~<a class="code" href="class_catch_1_1_test_spec_1_1_pattern.html">Pattern</a>();</div>
 <div class="line"><a name="l03669"></a><span class="lineno"> 3669</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> matches( <a class="code" href="struct_catch_1_1_test_case_info.html">TestCaseInfo</a> <span class="keyword">const</span>&amp; testCase ) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l03670"></a><span class="lineno"> 3670</span>&#160;            std::string <span class="keyword">const</span>&amp; name() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l03671"></a><span class="lineno"> 3671</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l03672"></a><span class="lineno"> 3672</span>&#160;            std::string <span class="keyword">const</span> m_name;</div>
 <div class="line"><a name="l03673"></a><span class="lineno"> 3673</span>&#160;        };</div>
 <div class="line"><a name="l03674"></a><span class="lineno"> 3674</span>&#160; </div>
-<div class="line"><a name="l03675"></a><span class="lineno"> 3675</span>&#160;        <span class="keyword">class </span>NamePattern : <span class="keyword">public</span> Pattern {</div>
+<div class="line"><a name="l03675"></a><span class="lineno"><a class="line" href="class_catch_1_1_test_spec_1_1_name_pattern.html"> 3675</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_catch_1_1_test_spec_1_1_name_pattern.html">NamePattern</a> : <span class="keyword">public</span> <a class="code" href="class_catch_1_1_test_spec_1_1_pattern.html">Pattern</a> {</div>
 <div class="line"><a name="l03676"></a><span class="lineno"> 3676</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l03677"></a><span class="lineno"> 3677</span>&#160;            <span class="keyword">explicit</span> NamePattern( std::string <span class="keyword">const</span>&amp; name, std::string <span class="keyword">const</span>&amp; filterString );</div>
+<div class="line"><a name="l03677"></a><span class="lineno"> 3677</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="class_catch_1_1_test_spec_1_1_name_pattern.html">NamePattern</a>( std::string <span class="keyword">const</span>&amp; name, std::string <span class="keyword">const</span>&amp; filterString );</div>
 <div class="line"><a name="l03678"></a><span class="lineno"> 3678</span>&#160;            <span class="keywordtype">bool</span> matches( <a class="code" href="struct_catch_1_1_test_case_info.html">TestCaseInfo</a> <span class="keyword">const</span>&amp; testCase ) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l03679"></a><span class="lineno"> 3679</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l03680"></a><span class="lineno"> 3680</span>&#160;            <a class="code" href="class_catch_1_1_wildcard_pattern.html">WildcardPattern</a> m_wildcardPattern;</div>
 <div class="line"><a name="l03681"></a><span class="lineno"> 3681</span>&#160;        };</div>
 <div class="line"><a name="l03682"></a><span class="lineno"> 3682</span>&#160; </div>
-<div class="line"><a name="l03683"></a><span class="lineno"> 3683</span>&#160;        <span class="keyword">class </span>TagPattern : <span class="keyword">public</span> Pattern {</div>
+<div class="line"><a name="l03683"></a><span class="lineno"><a class="line" href="class_catch_1_1_test_spec_1_1_tag_pattern.html"> 3683</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_catch_1_1_test_spec_1_1_tag_pattern.html">TagPattern</a> : <span class="keyword">public</span> <a class="code" href="class_catch_1_1_test_spec_1_1_pattern.html">Pattern</a> {</div>
 <div class="line"><a name="l03684"></a><span class="lineno"> 3684</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l03685"></a><span class="lineno"> 3685</span>&#160;            <span class="keyword">explicit</span> TagPattern( std::string <span class="keyword">const</span>&amp; tag, std::string <span class="keyword">const</span>&amp; filterString );</div>
+<div class="line"><a name="l03685"></a><span class="lineno"> 3685</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="class_catch_1_1_test_spec_1_1_tag_pattern.html">TagPattern</a>( std::string <span class="keyword">const</span>&amp; tag, std::string <span class="keyword">const</span>&amp; filterString );</div>
 <div class="line"><a name="l03686"></a><span class="lineno"> 3686</span>&#160;            <span class="keywordtype">bool</span> matches( <a class="code" href="struct_catch_1_1_test_case_info.html">TestCaseInfo</a> <span class="keyword">const</span>&amp; testCase ) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l03687"></a><span class="lineno"> 3687</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l03688"></a><span class="lineno"> 3688</span>&#160;            std::string m_tag;</div>
 <div class="line"><a name="l03689"></a><span class="lineno"> 3689</span>&#160;        };</div>
 <div class="line"><a name="l03690"></a><span class="lineno"> 3690</span>&#160; </div>
-<div class="line"><a name="l03691"></a><span class="lineno"> 3691</span>&#160;        <span class="keyword">struct </span>Filter {</div>
+<div class="line"><a name="l03691"></a><span class="lineno"><a class="line" href="struct_catch_1_1_test_spec_1_1_filter.html"> 3691</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="struct_catch_1_1_test_spec_1_1_filter.html">Filter</a> {</div>
 <div class="line"><a name="l03692"></a><span class="lineno"> 3692</span>&#160;            std::vector&lt;Detail::unique_ptr&lt;Pattern&gt;&gt; m_required;</div>
 <div class="line"><a name="l03693"></a><span class="lineno"> 3693</span>&#160;            std::vector&lt;Detail::unique_ptr&lt;Pattern&gt;&gt; m_forbidden;</div>
 <div class="line"><a name="l03694"></a><span class="lineno"> 3694</span>&#160; </div>
@@ -4013,7 +4013,7 @@ $(function() {
 <div class="line"><a name="l04015"></a><span class="lineno"> 4015</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l04016"></a><span class="lineno"><a class="line" href="class_catch_1_1_listener_registrar.html"> 4016</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_catch_1_1_listener_registrar.html">ListenerRegistrar</a> {</div>
 <div class="line"><a name="l04017"></a><span class="lineno"> 4017</span>&#160; </div>
-<div class="line"><a name="l04018"></a><span class="lineno"> 4018</span>&#160;        <span class="keyword">class </span>ListenerFactory : <span class="keyword">public</span> <a class="code" href="struct_catch_1_1_i_reporter_factory.html">IReporterFactory</a> {</div>
+<div class="line"><a name="l04018"></a><span class="lineno"><a class="line" href="class_catch_1_1_listener_registrar_1_1_listener_factory.html"> 4018</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_catch_1_1_listener_registrar_1_1_listener_factory.html">ListenerFactory</a> : <span class="keyword">public</span> <a class="code" href="struct_catch_1_1_i_reporter_factory.html">IReporterFactory</a> {</div>
 <div class="line"><a name="l04019"></a><span class="lineno"> 4019</span>&#160; </div>
 <div class="line"><a name="l04020"></a><span class="lineno"> 4020</span>&#160;            <a class="code" href="class_catch_1_1_detail_1_1unique__ptr.html">IStreamingReporterPtr</a> create( <a class="code" href="struct_catch_1_1_reporter_config.html">ReporterConfig</a> <span class="keyword">const</span>&amp; config )<span class="keyword"> const override </span>{</div>
 <div class="line"><a name="l04021"></a><span class="lineno"> 4021</span>&#160;                <span class="keywordflow">return</span> Detail::make_unique&lt;T&gt;(config);</div>
@@ -6492,10 +6492,10 @@ $(function() {
 <div class="line"><a name="l06509"></a><span class="lineno"> 6509</span>&#160; </div>
 <div class="line"><a name="l06510"></a><span class="lineno"><a class="line" href="class_catch_1_1_exception_translator_registrar.html"> 6510</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_catch_1_1_exception_translator_registrar.html">ExceptionTranslatorRegistrar</a> {</div>
 <div class="line"><a name="l06511"></a><span class="lineno"> 6511</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l06512"></a><span class="lineno"> 6512</span>&#160;        <span class="keyword">class </span>ExceptionTranslator : <span class="keyword">public</span> <a class="code" href="struct_catch_1_1_i_exception_translator.html">IExceptionTranslator</a> {</div>
+<div class="line"><a name="l06512"></a><span class="lineno"><a class="line" href="class_catch_1_1_exception_translator_registrar_1_1_exception_translator.html"> 6512</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_catch_1_1_exception_translator_registrar_1_1_exception_translator.html">ExceptionTranslator</a> : <span class="keyword">public</span> <a class="code" href="struct_catch_1_1_i_exception_translator.html">IExceptionTranslator</a> {</div>
 <div class="line"><a name="l06513"></a><span class="lineno"> 6513</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l06514"></a><span class="lineno"> 6514</span>&#160; </div>
-<div class="line"><a name="l06515"></a><span class="lineno"> 6515</span>&#160;            ExceptionTranslator( std::string(*translateFunction)( T <span class="keyword">const</span>&amp; ) )</div>
+<div class="line"><a name="l06515"></a><span class="lineno"> 6515</span>&#160;            <a class="code" href="class_catch_1_1_exception_translator_registrar_1_1_exception_translator.html">ExceptionTranslator</a>( std::string(*translateFunction)( T <span class="keyword">const</span>&amp; ) )</div>
 <div class="line"><a name="l06516"></a><span class="lineno"> 6516</span>&#160;            : m_translateFunction( translateFunction )</div>
 <div class="line"><a name="l06517"></a><span class="lineno"> 6517</span>&#160;            {}</div>
 <div class="line"><a name="l06518"></a><span class="lineno"> 6518</span>&#160; </div>
@@ -6523,7 +6523,7 @@ $(function() {
 <div class="line"><a name="l06540"></a><span class="lineno"> 6540</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l06541"></a><span class="lineno"> 6541</span>&#160;        <a class="code" href="class_catch_1_1_exception_translator_registrar.html">ExceptionTranslatorRegistrar</a>( std::string(*translateFunction)( T <span class="keyword">const</span>&amp; ) ) {</div>
 <div class="line"><a name="l06542"></a><span class="lineno"> 6542</span>&#160;            getMutableRegistryHub().registerTranslator</div>
-<div class="line"><a name="l06543"></a><span class="lineno"> 6543</span>&#160;                ( <span class="keyword">new</span> ExceptionTranslator&lt;T&gt;( translateFunction ) );</div>
+<div class="line"><a name="l06543"></a><span class="lineno"> 6543</span>&#160;                ( <span class="keyword">new</span> <a class="code" href="class_catch_1_1_exception_translator_registrar_1_1_exception_translator.html">ExceptionTranslator&lt;T&gt;</a>( translateFunction ) );</div>
 <div class="line"><a name="l06544"></a><span class="lineno"> 6544</span>&#160;        }</div>
 <div class="line"><a name="l06545"></a><span class="lineno"> 6545</span>&#160;    };</div>
 <div class="line"><a name="l06546"></a><span class="lineno"> 6546</span>&#160; </div>
@@ -8619,7 +8619,7 @@ $(function() {
 <div class="line"><a name="l08688"></a><span class="lineno"> 8688</span>&#160;        std::string m_substring;</div>
 <div class="line"><a name="l08689"></a><span class="lineno"> 8689</span>&#160;        std::string m_patternName;</div>
 <div class="line"><a name="l08690"></a><span class="lineno"> 8690</span>&#160;        std::vector&lt;std::size_t&gt; m_escapeChars;</div>
-<div class="line"><a name="l08691"></a><span class="lineno"> 8691</span>&#160;        TestSpec::Filter m_currentFilter;</div>
+<div class="line"><a name="l08691"></a><span class="lineno"> 8691</span>&#160;        <a class="code" href="struct_catch_1_1_test_spec_1_1_filter.html">TestSpec::Filter</a> m_currentFilter;</div>
 <div class="line"><a name="l08692"></a><span class="lineno"> 8692</span>&#160;        <a class="code" href="class_catch_1_1_test_spec.html">TestSpec</a> m_testSpec;</div>
 <div class="line"><a name="l08693"></a><span class="lineno"> 8693</span>&#160;        <a class="code" href="struct_catch_1_1_i_tag_alias_registry.html">ITagAliasRegistry</a> <span class="keyword">const</span>* m_tagAliases = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l08694"></a><span class="lineno"> 8694</span>&#160; </div>
@@ -8689,7 +8689,7 @@ $(function() {
 <div class="line"><a name="l08758"></a><span class="lineno"> 8758</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l08759"></a><span class="lineno"><a class="line" href="class_catch_1_1_text_flow_1_1_column_1_1iterator.html"> 8759</a></span>&#160;            <span class="keyword">class </span><a class="code" href="class_catch_1_1_text_flow_1_1_column_1_1iterator.html">iterator</a> {</div>
 <div class="line"><a name="l08760"></a><span class="lineno"> 8760</span>&#160;                <span class="keyword">friend</span> <a class="code" href="class_catch_1_1_text_flow_1_1_column.html">Column</a>;</div>
-<div class="line"><a name="l08761"></a><span class="lineno"> 8761</span>&#160;                <span class="keyword">struct </span>EndTag {};</div>
+<div class="line"><a name="l08761"></a><span class="lineno"><a class="line" href="struct_catch_1_1_text_flow_1_1_column_1_1iterator_1_1_end_tag.html"> 8761</a></span>&#160;                <span class="keyword">struct </span><a class="code" href="struct_catch_1_1_text_flow_1_1_column_1_1iterator_1_1_end_tag.html">EndTag</a> {};</div>
 <div class="line"><a name="l08762"></a><span class="lineno"> 8762</span>&#160; </div>
 <div class="line"><a name="l08763"></a><span class="lineno"> 8763</span>&#160;                <a class="code" href="class_catch_1_1_text_flow_1_1_column.html">Column</a> <span class="keyword">const</span>&amp; m_column;</div>
 <div class="line"><a name="l08764"></a><span class="lineno"> 8764</span>&#160;                <span class="keywordtype">size_t</span> m_pos = 0;</div>
@@ -8698,7 +8698,7 @@ $(function() {
 <div class="line"><a name="l08767"></a><span class="lineno"> 8767</span>&#160;                <span class="keywordtype">size_t</span> m_end = 0;</div>
 <div class="line"><a name="l08768"></a><span class="lineno"> 8768</span>&#160;                <span class="keywordtype">bool</span> m_suffix = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l08769"></a><span class="lineno"> 8769</span>&#160; </div>
-<div class="line"><a name="l08770"></a><span class="lineno"> 8770</span>&#160;                <a class="code" href="class_catch_1_1_text_flow_1_1_column_1_1iterator.html">iterator</a>( <a class="code" href="class_catch_1_1_text_flow_1_1_column.html">Column</a> <span class="keyword">const</span>&amp; column, EndTag ):</div>
+<div class="line"><a name="l08770"></a><span class="lineno"> 8770</span>&#160;                <a class="code" href="class_catch_1_1_text_flow_1_1_column_1_1iterator.html">iterator</a>( <a class="code" href="class_catch_1_1_text_flow_1_1_column.html">Column</a> <span class="keyword">const</span>&amp; column, <a class="code" href="struct_catch_1_1_text_flow_1_1_column_1_1iterator_1_1_end_tag.html">EndTag</a> ):</div>
 <div class="line"><a name="l08771"></a><span class="lineno"> 8771</span>&#160;                    m_column( column ), m_pos( m_column.m_string.size() ) {}</div>
 <div class="line"><a name="l08772"></a><span class="lineno"> 8772</span>&#160; </div>
 <div class="line"><a name="l08773"></a><span class="lineno"> 8773</span>&#160;                <span class="keywordtype">void</span> calcLength();</div>
@@ -8728,15 +8728,15 @@ $(function() {
 <div class="line"><a name="l08797"></a><span class="lineno"> 8797</span>&#160;                <span class="keywordtype">bool</span> operator==( <a class="code" href="class_catch_1_1_text_flow_1_1_column_1_1iterator.html">iterator</a> <span class="keyword">const</span>&amp; other )<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l08798"></a><span class="lineno"> 8798</span>&#160;                    <span class="keywordflow">return</span> m_pos == other.m_pos &amp;&amp; &amp;m_column == &amp;other.m_column;</div>
 <div class="line"><a name="l08799"></a><span class="lineno"> 8799</span>&#160;                }</div>
-<div class="line"><a name="l08800"></a><span class="lineno"> 8800</span>&#160;                <span class="keywordtype">bool</span> operator!=( <a class="code" href="class_catch_1_1_text_flow_1_1_column_1_1iterator.html">iterator</a> <span class="keyword">const</span>&amp; other )<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l08800"></a><span class="lineno"> 8800</span>&#160;                <span class="keywordtype">bool</span> operator!=( iterator <span class="keyword">const</span>&amp; other )<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l08801"></a><span class="lineno"> 8801</span>&#160;                    <span class="keywordflow">return</span> !operator==( other );</div>
 <div class="line"><a name="l08802"></a><span class="lineno"> 8802</span>&#160;                }</div>
 <div class="line"><a name="l08803"></a><span class="lineno"> 8803</span>&#160;            };</div>
-<div class="line"><a name="l08804"></a><span class="lineno"> 8804</span>&#160;            <span class="keyword">using</span> <a class="code" href="class_catch_1_1_text_flow_1_1_column_1_1iterator.html">const_iterator</a> = <a class="code" href="class_catch_1_1_text_flow_1_1_column_1_1iterator.html">iterator</a>;</div>
+<div class="line"><a name="l08804"></a><span class="lineno"> 8804</span>&#160;            <span class="keyword">using</span> const_iterator = iterator;</div>
 <div class="line"><a name="l08805"></a><span class="lineno"> 8805</span>&#160; </div>
-<div class="line"><a name="l08806"></a><span class="lineno"> 8806</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="class_catch_1_1_text_flow_1_1_column.html">Column</a>( std::string <span class="keyword">const</span>&amp; text ): m_string( text ) {}</div>
+<div class="line"><a name="l08806"></a><span class="lineno"> 8806</span>&#160;            <span class="keyword">explicit</span> Column( std::string <span class="keyword">const</span>&amp; text ): m_string( text ) {}</div>
 <div class="line"><a name="l08807"></a><span class="lineno"> 8807</span>&#160; </div>
-<div class="line"><a name="l08808"></a><span class="lineno"> 8808</span>&#160;            <a class="code" href="class_catch_1_1_text_flow_1_1_column.html">Column</a>&amp; width( <span class="keywordtype">size_t</span> newWidth ) {</div>
+<div class="line"><a name="l08808"></a><span class="lineno"> 8808</span>&#160;            Column&amp; width( <span class="keywordtype">size_t</span> newWidth ) {</div>
 <div class="line"><a name="l08809"></a><span class="lineno"> 8809</span>&#160;                assert( newWidth &gt; 0 );</div>
 <div class="line"><a name="l08810"></a><span class="lineno"> 8810</span>&#160;                m_width = newWidth;</div>
 <div class="line"><a name="l08811"></a><span class="lineno"> 8811</span>&#160;                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
@@ -8768,13 +8768,13 @@ $(function() {
 <div class="line"><a name="l08838"></a><span class="lineno"> 8838</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l08839"></a><span class="lineno"><a class="line" href="class_catch_1_1_text_flow_1_1_columns_1_1iterator.html"> 8839</a></span>&#160;            <span class="keyword">class </span><a class="code" href="class_catch_1_1_text_flow_1_1_columns_1_1iterator.html">iterator</a> {</div>
 <div class="line"><a name="l08840"></a><span class="lineno"> 8840</span>&#160;                <span class="keyword">friend</span> <a class="code" href="class_catch_1_1_text_flow_1_1_columns.html">Columns</a>;</div>
-<div class="line"><a name="l08841"></a><span class="lineno"> 8841</span>&#160;                <span class="keyword">struct </span>EndTag {};</div>
+<div class="line"><a name="l08841"></a><span class="lineno"><a class="line" href="struct_catch_1_1_text_flow_1_1_columns_1_1iterator_1_1_end_tag.html"> 8841</a></span>&#160;                <span class="keyword">struct </span><a class="code" href="struct_catch_1_1_text_flow_1_1_columns_1_1iterator_1_1_end_tag.html">EndTag</a> {};</div>
 <div class="line"><a name="l08842"></a><span class="lineno"> 8842</span>&#160; </div>
 <div class="line"><a name="l08843"></a><span class="lineno"> 8843</span>&#160;                std::vector&lt;Column&gt; <span class="keyword">const</span>&amp; m_columns;</div>
 <div class="line"><a name="l08844"></a><span class="lineno"> 8844</span>&#160;                std::vector&lt;Column::iterator&gt; m_iterators;</div>
 <div class="line"><a name="l08845"></a><span class="lineno"> 8845</span>&#160;                <span class="keywordtype">size_t</span> m_activeIterators;</div>
 <div class="line"><a name="l08846"></a><span class="lineno"> 8846</span>&#160; </div>
-<div class="line"><a name="l08847"></a><span class="lineno"> 8847</span>&#160;                <a class="code" href="class_catch_1_1_text_flow_1_1_columns_1_1iterator.html">iterator</a>( <a class="code" href="class_catch_1_1_text_flow_1_1_columns.html">Columns</a> <span class="keyword">const</span>&amp; columns, EndTag );</div>
+<div class="line"><a name="l08847"></a><span class="lineno"> 8847</span>&#160;                <a class="code" href="class_catch_1_1_text_flow_1_1_columns_1_1iterator.html">iterator</a>( <a class="code" href="class_catch_1_1_text_flow_1_1_columns.html">Columns</a> <span class="keyword">const</span>&amp; columns, <a class="code" href="struct_catch_1_1_text_flow_1_1_columns_1_1iterator_1_1_end_tag.html">EndTag</a> );</div>
 <div class="line"><a name="l08848"></a><span class="lineno"> 8848</span>&#160; </div>
 <div class="line"><a name="l08849"></a><span class="lineno"> 8849</span>&#160;            <span class="keyword">public</span>:</div>
 <div class="line"><a name="l08850"></a><span class="lineno"> 8850</span>&#160;                <span class="keyword">using</span> difference_type = std::ptrdiff_t;</div>
@@ -8792,12 +8792,12 @@ $(function() {
 <div class="line"><a name="l08862"></a><span class="lineno"> 8862</span>&#160;                    <span class="keywordflow">return</span> m_iterators != other.m_iterators;</div>
 <div class="line"><a name="l08863"></a><span class="lineno"> 8863</span>&#160;                }</div>
 <div class="line"><a name="l08864"></a><span class="lineno"> 8864</span>&#160;                std::string operator*() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l08865"></a><span class="lineno"> 8865</span>&#160;                <a class="code" href="class_catch_1_1_text_flow_1_1_columns_1_1iterator.html">iterator</a>&amp; operator++();</div>
-<div class="line"><a name="l08866"></a><span class="lineno"> 8866</span>&#160;                <a class="code" href="class_catch_1_1_text_flow_1_1_columns_1_1iterator.html">iterator</a> operator++( <span class="keywordtype">int</span> );</div>
+<div class="line"><a name="l08865"></a><span class="lineno"> 8865</span>&#160;                iterator&amp; operator++();</div>
+<div class="line"><a name="l08866"></a><span class="lineno"> 8866</span>&#160;                iterator operator++( <span class="keywordtype">int</span> );</div>
 <div class="line"><a name="l08867"></a><span class="lineno"> 8867</span>&#160;            };</div>
-<div class="line"><a name="l08868"></a><span class="lineno"> 8868</span>&#160;            <span class="keyword">using</span> <a class="code" href="class_catch_1_1_text_flow_1_1_columns_1_1iterator.html">const_iterator</a> = <a class="code" href="class_catch_1_1_text_flow_1_1_columns_1_1iterator.html">iterator</a>;</div>
+<div class="line"><a name="l08868"></a><span class="lineno"> 8868</span>&#160;            <span class="keyword">using</span> const_iterator = iterator;</div>
 <div class="line"><a name="l08869"></a><span class="lineno"> 8869</span>&#160; </div>
-<div class="line"><a name="l08870"></a><span class="lineno"> 8870</span>&#160;            <a class="code" href="class_catch_1_1_text_flow_1_1_columns_1_1iterator.html">iterator</a> begin()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_catch_1_1_text_flow_1_1_columns_1_1iterator.html">iterator</a>( *<span class="keyword">this</span> ); }</div>
+<div class="line"><a name="l08870"></a><span class="lineno"> 8870</span>&#160;            iterator begin()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> iterator( *<span class="keyword">this</span> ); }</div>
 <div class="line"><a name="l08871"></a><span class="lineno"> 8871</span>&#160;            iterator end()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> { *<span class="keyword">this</span>, iterator::EndTag() }; }</div>
 <div class="line"><a name="l08872"></a><span class="lineno"> 8872</span>&#160; </div>
 <div class="line"><a name="l08873"></a><span class="lineno"> 8873</span>&#160;            Columns&amp; operator+=( Column <span class="keyword">const</span>&amp; col );</div>
@@ -10870,6 +10870,7 @@ $(function() {
 <div class="ttc" id="aclass_catch_1_1_detail_1_1unique__ptr_html"><div class="ttname"><a href="class_catch_1_1_detail_1_1unique__ptr.html">Catch::Detail::unique_ptr</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:1160</div></div>
 <div class="ttc" id="aclass_catch_1_1_errno_guard_html"><div class="ttname"><a href="class_catch_1_1_errno_guard.html">Catch::ErrnoGuard</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:7757</div></div>
 <div class="ttc" id="aclass_catch_1_1_event_listener_base_html"><div class="ttname"><a href="class_catch_1_1_event_listener_base.html">Catch::EventListenerBase</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:10591</div></div>
+<div class="ttc" id="aclass_catch_1_1_exception_translator_registrar_1_1_exception_translator_html"><div class="ttname"><a href="class_catch_1_1_exception_translator_registrar_1_1_exception_translator.html">Catch::ExceptionTranslatorRegistrar::ExceptionTranslator</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:6512</div></div>
 <div class="ttc" id="aclass_catch_1_1_exception_translator_registrar_html"><div class="ttname"><a href="class_catch_1_1_exception_translator_registrar.html">Catch::ExceptionTranslatorRegistrar</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:6510</div></div>
 <div class="ttc" id="aclass_catch_1_1_exception_translator_registry_html"><div class="ttname"><a href="class_catch_1_1_exception_translator_registry.html">Catch::ExceptionTranslatorRegistry</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:7780</div></div>
 <div class="ttc" id="aclass_catch_1_1_expr_lhs_html"><div class="ttname"><a href="class_catch_1_1_expr_lhs.html">Catch::ExprLhs</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:5027</div></div>
@@ -10891,6 +10892,7 @@ $(function() {
 <div class="ttc" id="aclass_catch_1_1_generators_1_1_take_generator_html"><div class="ttname"><a href="class_catch_1_1_generators_1_1_take_generator.html">Catch::Generators::TakeGenerator</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:6921</div></div>
 <div class="ttc" id="aclass_catch_1_1_junit_reporter_html"><div class="ttname"><a href="class_catch_1_1_junit_reporter.html">Catch::JunitReporter</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:10664</div></div>
 <div class="ttc" id="aclass_catch_1_1_lazy_expression_html"><div class="ttname"><a href="class_catch_1_1_lazy_expression.html">Catch::LazyExpression</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:956</div></div>
+<div class="ttc" id="aclass_catch_1_1_listener_registrar_1_1_listener_factory_html"><div class="ttname"><a href="class_catch_1_1_listener_registrar_1_1_listener_factory.html">Catch::ListenerRegistrar::ListenerFactory</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:4018</div></div>
 <div class="ttc" id="aclass_catch_1_1_listener_registrar_html"><div class="ttname"><a href="class_catch_1_1_listener_registrar.html">Catch::ListenerRegistrar</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:4016</div></div>
 <div class="ttc" id="aclass_catch_1_1_listening_reporter_html"><div class="ttname"><a href="class_catch_1_1_listening_reporter.html">Catch::ListeningReporter</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:10717</div></div>
 <div class="ttc" id="aclass_catch_1_1_match_expr_html"><div class="ttname"><a href="class_catch_1_1_match_expr.html">Catch::MatchExpr</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:9061</div></div>
@@ -10930,6 +10932,9 @@ $(function() {
 <div class="ttc" id="aclass_catch_1_1_test_invoker_as_function_html"><div class="ttname"><a href="class_catch_1_1_test_invoker_as_function.html">Catch::TestInvokerAsFunction</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:8642</div></div>
 <div class="ttc" id="aclass_catch_1_1_test_invoker_as_method_html"><div class="ttname"><a href="class_catch_1_1_test_invoker_as_method.html">Catch::TestInvokerAsMethod</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:5672</div></div>
 <div class="ttc" id="aclass_catch_1_1_test_registry_html"><div class="ttname"><a href="class_catch_1_1_test_registry.html">Catch::TestRegistry</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:8618</div></div>
+<div class="ttc" id="aclass_catch_1_1_test_spec_1_1_name_pattern_html"><div class="ttname"><a href="class_catch_1_1_test_spec_1_1_name_pattern.html">Catch::TestSpec::NamePattern</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:3675</div></div>
+<div class="ttc" id="aclass_catch_1_1_test_spec_1_1_pattern_html"><div class="ttname"><a href="class_catch_1_1_test_spec_1_1_pattern.html">Catch::TestSpec::Pattern</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:3665</div></div>
+<div class="ttc" id="aclass_catch_1_1_test_spec_1_1_tag_pattern_html"><div class="ttname"><a href="class_catch_1_1_test_spec_1_1_tag_pattern.html">Catch::TestSpec::TagPattern</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:3683</div></div>
 <div class="ttc" id="aclass_catch_1_1_test_spec_html"><div class="ttname"><a href="class_catch_1_1_test_spec.html">Catch::TestSpec</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:3663</div></div>
 <div class="ttc" id="aclass_catch_1_1_test_spec_parser_html"><div class="ttname"><a href="class_catch_1_1_test_spec_parser.html">Catch::TestSpecParser</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:8680</div></div>
 <div class="ttc" id="aclass_catch_1_1_text_flow_1_1_column_1_1iterator_html"><div class="ttname"><a href="class_catch_1_1_text_flow_1_1_column_1_1iterator.html">Catch::TextFlow::Column::iterator</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:8759</div></div>
@@ -10951,6 +10956,9 @@ $(function() {
 <div class="ttc" id="astruct_catch_1_1_automake_reporter_html"><div class="ttname"><a href="struct_catch_1_1_automake_reporter.html">Catch::AutomakeReporter</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:10354</div></div>
 <div class="ttc" id="astruct_catch_1_1_benchmark_1_1_benchmark_html"><div class="ttname"><a href="struct_catch_1_1_benchmark_1_1_benchmark.html">Catch::Benchmark::Benchmark</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:2612</div></div>
 <div class="ttc" id="astruct_catch_1_1_benchmark_1_1_chronometer_html"><div class="ttname"><a href="struct_catch_1_1_benchmark_1_1_chronometer.html">Catch::Benchmark::Chronometer</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:1921</div></div>
+<div class="ttc" id="astruct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable_html"><div class="ttname"><a href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">Catch::Benchmark::Detail::BenchmarkFunction::callable</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:2021</div></div>
+<div class="ttc" id="astruct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1do__nothing_html"><div class="ttname"><a href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1do__nothing.html">Catch::Benchmark::Detail::BenchmarkFunction::do_nothing</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:2050</div></div>
+<div class="ttc" id="astruct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1model_html"><div class="ttname"><a href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1model.html">Catch::Benchmark::Detail::BenchmarkFunction::model</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:2031</div></div>
 <div class="ttc" id="astruct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_html"><div class="ttname"><a href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function.html">Catch::Benchmark::Detail::BenchmarkFunction</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:2019</div></div>
 <div class="ttc" id="astruct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept_html"><div class="ttname"><a href="struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_concept.html">Catch::Benchmark::Detail::ChronometerConcept</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:1900</div></div>
 <div class="ttc" id="astruct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model_html"><div class="ttname"><a href="struct_catch_1_1_benchmark_1_1_detail_1_1_chronometer_model.html">Catch::Benchmark::Detail::ChronometerModel</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:1910</div></div>
@@ -11078,7 +11086,10 @@ $(function() {
 <div class="ttc" id="astruct_catch_1_1_test_group_stats_html"><div class="ttname"><a href="struct_catch_1_1_test_group_stats.html">Catch::TestGroupStats</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:1390</div></div>
 <div class="ttc" id="astruct_catch_1_1_test_run_info_html"><div class="ttname"><a href="struct_catch_1_1_test_run_info.html">Catch::TestRunInfo</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:1335</div></div>
 <div class="ttc" id="astruct_catch_1_1_test_run_stats_html"><div class="ttname"><a href="struct_catch_1_1_test_run_stats.html">Catch::TestRunStats</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:1401</div></div>
+<div class="ttc" id="astruct_catch_1_1_test_spec_1_1_filter_html"><div class="ttname"><a href="struct_catch_1_1_test_spec_1_1_filter.html">Catch::TestSpec::Filter</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:3691</div></div>
 <div class="ttc" id="astruct_catch_1_1_test_spec_1_1_filter_match_html"><div class="ttname"><a href="struct_catch_1_1_test_spec_1_1_filter_match.html">Catch::TestSpec::FilterMatch</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:3700</div></div>
+<div class="ttc" id="astruct_catch_1_1_text_flow_1_1_column_1_1iterator_1_1_end_tag_html"><div class="ttname"><a href="struct_catch_1_1_text_flow_1_1_column_1_1iterator_1_1_end_tag.html">Catch::TextFlow::Column::iterator::EndTag</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:8761</div></div>
+<div class="ttc" id="astruct_catch_1_1_text_flow_1_1_columns_1_1iterator_1_1_end_tag_html"><div class="ttname"><a href="struct_catch_1_1_text_flow_1_1_columns_1_1iterator_1_1_end_tag.html">Catch::TextFlow::Columns::iterator::EndTag</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:8841</div></div>
 <div class="ttc" id="astruct_catch_1_1_totals_html"><div class="ttname"><a href="struct_catch_1_1_totals.html">Catch::Totals</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:827</div></div>
 <div class="ttc" id="astruct_catch_1_1_version_html"><div class="ttname"><a href="struct_catch_1_1_version.html">Catch::Version</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:6584</div></div>
 <div class="ttc" id="astruct_catch_1_1_wait_for_keypress_html"><div class="ttname"><a href="struct_catch_1_1_wait_for_keypress.html">Catch::WaitForKeypress</a></div><div class="ttdef"><b>Definition:</b> catch_amalgamated.hpp:123</div></div>

@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -69,6 +69,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_catch_1_1_generators_1_1_generators-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Catch::Generators::Generators&lt; T &gt; Class Template Reference</div>  </div>
@@ -111,6 +113,32 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> () override<
 <tr class="memitem:a21b51517a35b33f12d80dc293f8a98ca inherit pub_methods_class_catch_1_1_generators_1_1_generator_untyped_base"><td class="memItemLeft" align="right" valign="top"><a id="a21b51517a35b33f12d80dc293f8a98ca"></a>
 <a class="el" href="class_catch_1_1_generators_1_1_generator_untyped_base.html">GeneratorUntypedBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_catch_1_1_generators_1_1_generator_untyped_base.html">GeneratorUntypedBase</a> const &amp;)=default</td></tr>
 <tr class="separator:a21b51517a35b33f12d80dc293f8a98ca inherit pub_methods_class_catch_1_1_generators_1_1_generator_untyped_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a56e1b82d4c9c952076cd58efbf7a4572"><td class="memItemLeft" align="right" valign="top"><a id="a56e1b82d4c9c952076cd58efbf7a4572"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>populate</b> (<a class="el" href="class_catch_1_1_generators_1_1_generator_wrapper.html">GeneratorWrapper</a>&lt; T &gt; &amp;&amp;generator)</td></tr>
+<tr class="separator:a56e1b82d4c9c952076cd58efbf7a4572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad708036fa5a9bf0cd1520ce111bc851d"><td class="memItemLeft" align="right" valign="top"><a id="ad708036fa5a9bf0cd1520ce111bc851d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>populate</b> (T &amp;&amp;val)</td></tr>
+<tr class="separator:ad708036fa5a9bf0cd1520ce111bc851d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff8b7dda734d1808b644fefc67f4c98"><td class="memTemplParams" colspan="2"><a id="a8ff8b7dda734d1808b644fefc67f4c98"></a>
+template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a8ff8b7dda734d1808b644fefc67f4c98"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>populate</b> (U &amp;&amp;val)</td></tr>
+<tr class="separator:a8ff8b7dda734d1808b644fefc67f4c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb8051e604c7415bb7e7de91278c278"><td class="memTemplParams" colspan="2"><a id="aebb8051e604c7415bb7e7de91278c278"></a>
+template&lt;typename U , typename... Gs&gt; </td></tr>
+<tr class="memitem:aebb8051e604c7415bb7e7de91278c278"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>populate</b> (U &amp;&amp;valueOrGenerator, Gs &amp;&amp;... moreGenerators)</td></tr>
+<tr class="separator:aebb8051e604c7415bb7e7de91278c278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4d41bb9f0e8d726a8a53c86354bf19de"><td class="memItemLeft" align="right" valign="top"><a id="a4d41bb9f0e8d726a8a53c86354bf19de"></a>
+std::vector&lt; <a class="el" href="class_catch_1_1_generators_1_1_generator_wrapper.html">GeneratorWrapper</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_generators</b></td></tr>
+<tr class="separator:a4d41bb9f0e8d726a8a53c86354bf19de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f5cd6b2479cfadbd45033c4ad17ff0c"><td class="memItemLeft" align="right" valign="top"><a id="a8f5cd6b2479cfadbd45033c4ad17ff0c"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_current</b> = 0</td></tr>
+<tr class="separator:a8f5cd6b2479cfadbd45033c4ad17ff0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

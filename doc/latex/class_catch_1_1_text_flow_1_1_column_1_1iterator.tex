@@ -1,5 +1,10 @@
 \hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator}{}\doxysection{Catch\+::Text\+Flow\+::Column\+::iterator Class Reference}
 \label{class_catch_1_1_text_flow_1_1_column_1_1iterator}\index{Catch::TextFlow::Column::iterator@{Catch::TextFlow::Column::iterator}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_catch_1_1_text_flow_1_1_column_1_1iterator_1_1_end_tag}{End\+Tag}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,6 +43,42 @@ bool {\bfseries operator==} (\mbox{\hyperlink{class_catch_1_1_text_flow_1_1_colu
 \item 
 \mbox{\Hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator_a69bc5925e91f5f90278750764445a693}\label{class_catch_1_1_text_flow_1_1_column_1_1iterator_a69bc5925e91f5f90278750764445a693}} 
 bool {\bfseries operator!=} (\mbox{\hyperlink{class_catch_1_1_text_flow_1_1_column_1_1iterator}{iterator}} const \&other) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator_ac07cb2643bd9b049bd3a23a78de546b1}\label{class_catch_1_1_text_flow_1_1_column_1_1iterator_ac07cb2643bd9b049bd3a23a78de546b1}} 
+{\bfseries iterator} (\mbox{\hyperlink{class_catch_1_1_text_flow_1_1_column}{Column}} const \&column, \mbox{\hyperlink{struct_catch_1_1_text_flow_1_1_column_1_1iterator_1_1_end_tag}{End\+Tag}})
+\item 
+\mbox{\Hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator_a7060d98e503b3bb8f26f795c36e25782}\label{class_catch_1_1_text_flow_1_1_column_1_1iterator_a7060d98e503b3bb8f26f795c36e25782}} 
+void {\bfseries calc\+Length} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator_ac05b43bb7a7adbdef2ea3d2e898a432b}\label{class_catch_1_1_text_flow_1_1_column_1_1iterator_ac05b43bb7a7adbdef2ea3d2e898a432b}} 
+size\+\_\+t {\bfseries indent} () const
+\item 
+\mbox{\Hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator_a6434bf4b393fcd43d321a3fdcf3bdcd8}\label{class_catch_1_1_text_flow_1_1_column_1_1iterator_a6434bf4b393fcd43d321a3fdcf3bdcd8}} 
+std\+::string {\bfseries add\+Indent\+And\+Suffix} (size\+\_\+t position, size\+\_\+t length) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator_ac99b39be6b71d2c6e200e6e8dc9b1088}\label{class_catch_1_1_text_flow_1_1_column_1_1iterator_ac99b39be6b71d2c6e200e6e8dc9b1088}} 
+friend {\bfseries Column}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator_a69231da80bf60dc320b3b9e0badd7ce7}\label{class_catch_1_1_text_flow_1_1_column_1_1iterator_a69231da80bf60dc320b3b9e0badd7ce7}} 
+\mbox{\hyperlink{class_catch_1_1_text_flow_1_1_column}{Column}} const  \& {\bfseries m\+\_\+column}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator_aec7b41d0fb7eb87dae6cf83fb719144f}\label{class_catch_1_1_text_flow_1_1_column_1_1iterator_aec7b41d0fb7eb87dae6cf83fb719144f}} 
+size\+\_\+t {\bfseries m\+\_\+pos} = 0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator_a117d509f83058c0cf12da9453f4ef27a}\label{class_catch_1_1_text_flow_1_1_column_1_1iterator_a117d509f83058c0cf12da9453f4ef27a}} 
+size\+\_\+t {\bfseries m\+\_\+len} = 0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator_abd07463f4c6c080b995dbca450d6a0d1}\label{class_catch_1_1_text_flow_1_1_column_1_1iterator_abd07463f4c6c080b995dbca450d6a0d1}} 
+size\+\_\+t {\bfseries m\+\_\+end} = 0
+\item 
+\mbox{\Hypertarget{class_catch_1_1_text_flow_1_1_column_1_1iterator_aa8b298321946148a0eb2240eb41dde9e}\label{class_catch_1_1_text_flow_1_1_column_1_1iterator_aa8b298321946148a0eb2240eb41dde9e}} 
+bool {\bfseries m\+\_\+suffix} = false
 \end{DoxyCompactItemize}
 
 

@@ -9,6 +9,34 @@
 \mbox{\Hypertarget{class_catch_1_1_wildcard_pattern_ae88acde37f50f7cbec8605acf434fe85}\label{class_catch_1_1_wildcard_pattern_ae88acde37f50f7cbec8605acf434fe85}} 
 virtual bool {\bfseries matches} (std\+::string const \&str) const
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_wildcard_pattern_af851fc7cd377fb358a50f58eb5dafadb}\label{class_catch_1_1_wildcard_pattern_af851fc7cd377fb358a50f58eb5dafadb}} 
+enum {\bfseries Wildcard\+Position} \{ {\bfseries No\+Wildcard} = 0
+, {\bfseries Wildcard\+At\+Start} = 1
+, {\bfseries Wildcard\+At\+End} = 2
+, {\bfseries Wildcard\+At\+Both\+Ends} = Wildcard\+At\+Start $\vert$ Wildcard\+At\+End
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_wildcard_pattern_a65a46178aaa0e13b641438b71659bae0}\label{class_catch_1_1_wildcard_pattern_a65a46178aaa0e13b641438b71659bae0}} 
+std\+::string {\bfseries normalise\+String} (std\+::string const \&str) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_wildcard_pattern_aef561aafa0f021653bc6b5806b6d57b0}\label{class_catch_1_1_wildcard_pattern_aef561aafa0f021653bc6b5806b6d57b0}} 
+Case\+Sensitive {\bfseries m\+\_\+case\+Sensitivity}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_wildcard_pattern_af74da965b1257c4e958d95da15f30c69}\label{class_catch_1_1_wildcard_pattern_af74da965b1257c4e958d95da15f30c69}} 
+Wildcard\+Position {\bfseries m\+\_\+wildcard} = No\+Wildcard
+\item 
+\mbox{\Hypertarget{class_catch_1_1_wildcard_pattern_a8b96a014f1194387ce441f8f0c0e8a2e}\label{class_catch_1_1_wildcard_pattern_a8b96a014f1194387ce441f8f0c0e8a2e}} 
+std\+::string {\bfseries m\+\_\+pattern}
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

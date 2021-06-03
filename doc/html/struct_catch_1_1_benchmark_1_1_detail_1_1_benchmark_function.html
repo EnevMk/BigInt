@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -70,6 +70,8 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Catch::Benchmark::Detail::BenchmarkFunction Struct Reference</div>  </div>
@@ -78,6 +80,15 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="catch__amalgamated_8hpp_source.html">catch_amalgamated.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">callable</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1do__nothing.html">do_nothing</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1model.html">model</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6d0382763e5fef9706efa32c5f0c09d7"><td class="memTemplParams" colspan="2"><a id="a6d0382763e5fef9706efa32c5f0c09d7"></a>
@@ -99,6 +110,19 @@ template&lt;typename Fun , typename std::enable_if&lt;!is_related&lt; Fun, Bench
 <tr class="memitem:ab78ffb29682af780ec2a4eac521351a5"><td class="memItemLeft" align="right" valign="top"><a id="ab78ffb29682af780ec2a4eac521351a5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="struct_catch_1_1_benchmark_1_1_chronometer.html">Chronometer</a> meter) const</td></tr>
 <tr class="separator:ab78ffb29682af780ec2a4eac521351a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0fc27845da6c113c772efa49136110ae"><td class="memTemplParams" colspan="2"><a id="a0fc27845da6c113c772efa49136110ae"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0fc27845da6c113c772efa49136110ae"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>BenchmarkFunction</b> (<a class="el" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1model.html">model</a>&lt; T &gt; *c)</td></tr>
+<tr class="separator:a0fc27845da6c113c772efa49136110ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aacfd45912b8d4536d5a854819ecf9b06"><td class="memItemLeft" align="right" valign="top"><a id="aacfd45912b8d4536d5a854819ecf9b06"></a>
+<a class="el" href="class_catch_1_1_detail_1_1unique__ptr.html">Catch::Detail::unique_ptr</a>&lt; <a class="el" href="struct_catch_1_1_benchmark_1_1_detail_1_1_benchmark_function_1_1callable.html">callable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>f</b></td></tr>
+<tr class="separator:aacfd45912b8d4536d5a854819ecf9b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>We need to reinvent std::function because every piece of code that might add overhead in a measurement context needs to have consistent performance characteristics so that we can account for it in the measurement. Implementations of std::function with optimizations that aren't always applicable, like small buffer optimizations, are not uncommon. This is effectively an implementation of std::function without any such optimizations; it may be slow, but it is consistently slow. </p>

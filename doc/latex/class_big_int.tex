@@ -2,34 +2,41 @@
 \label{class_big_int}\index{BigInt@{BigInt}}
 
 
+The main class for the whole project.  
+
+
+
+
 {\ttfamily \#include $<$Big\+Int.\+hpp$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_big_int_a5ba03c0375e92d754b5d164cdaec251b}\label{class_big_int_a5ba03c0375e92d754b5d164cdaec251b}} 
-\mbox{\hyperlink{class_big_int}{Big\+Int}} {\bfseries multiply\+By\+Num} (long long num) const
-\item 
-\mbox{\Hypertarget{class_big_int_a4aeea3d40c950967bf82593ade4f88c4}\label{class_big_int_a4aeea3d40c950967bf82593ade4f88c4}} 
-\mbox{\hyperlink{class_big_int}{Big\+Int}} {\bfseries divide\+By\+Two} () const
-\item 
-\mbox{\Hypertarget{class_big_int_aaeda6d9540ffe52433e17d4fc26dc14b}\label{class_big_int_aaeda6d9540ffe52433e17d4fc26dc14b}} 
-{\bfseries Big\+Int} (const \mbox{\hyperlink{class_string}{String}} \&value)
-\item 
-\mbox{\Hypertarget{class_big_int_a4421e6c1883874512f1b04543dafc64a}\label{class_big_int_a4421e6c1883874512f1b04543dafc64a}} 
-{\bfseries Big\+Int} (long long num)
-\item 
+\mbox{\hyperlink{class_big_int}{Big\+Int}} \mbox{\hyperlink{class_big_int_a5ba03c0375e92d754b5d164cdaec251b}{multiply\+By\+Num}} (long long num) const
+\begin{DoxyCompactList}\small\item\em Helper for the multiplication operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_big_int}{Big\+Int}} \mbox{\hyperlink{class_big_int_a4aeea3d40c950967bf82593ade4f88c4}{divide\+By\+Two}} () const
+\begin{DoxyCompactList}\small\item\em Helper method for the fast exponentiation method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_big_int_af677021c0987fc2a48da06837ed29c58}\label{class_big_int_af677021c0987fc2a48da06837ed29c58}} 
+\mbox{\hyperlink{class_big_int_af677021c0987fc2a48da06837ed29c58}{Big\+Int}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor -\/ Initializes An empty \mbox{\hyperlink{class_vector}{Vector}} with capacity of one. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_big_int_aaeda6d9540ffe52433e17d4fc26dc14b}{Big\+Int}} (const \mbox{\hyperlink{class_string}{String}} \&value)
+\begin{DoxyCompactList}\small\item\em Paramater Constructor, initializing a \mbox{\hyperlink{class_big_int}{Big\+Int}} number by \mbox{\hyperlink{class_string}{String}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_big_int_a4421e6c1883874512f1b04543dafc64a}{Big\+Int}} (long long num)
+\begin{DoxyCompactList}\small\item\em Parameter Constructor taking long long variable. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_big_int_ab1d17bb2c43e4defc2576b5da1e471ac}\label{class_big_int_ab1d17bb2c43e4defc2576b5da1e471ac}} 
-{\bfseries Big\+Int} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ long long $>$ \&v)
-\item 
+\mbox{\hyperlink{class_big_int_ab1d17bb2c43e4defc2576b5da1e471ac}{Big\+Int}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ long long $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Param Constructor taking a \mbox{\hyperlink{class_vector}{Vector}}. Sets the \mbox{\hyperlink{class_big_int}{Big\+Int}} memeber vector as the passed param. Used In pre-\/development. Reccommendet to use The \mbox{\hyperlink{class_string}{String}} Constructor instead. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_big_int_aafbe0eabb292157902ffbaf0bd08c626}\label{class_big_int_aafbe0eabb292157902ffbaf0bd08c626}} 
-{\bfseries Big\+Int} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj)
-\item 
+\mbox{\hyperlink{class_big_int_aafbe0eabb292157902ffbaf0bd08c626}{Big\+Int}} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_big_int_a8d1a57ad66a1d5458dce99e9d1a5e4f5}\label{class_big_int_a8d1a57ad66a1d5458dce99e9d1a5e4f5}} 
-\mbox{\hyperlink{class_big_int}{Big\+Int}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj)
-\item 
+\mbox{\hyperlink{class_big_int}{Big\+Int}} \& \mbox{\hyperlink{class_big_int_a8d1a57ad66a1d5458dce99e9d1a5e4f5}{operator=}} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_big_int_ae4fbc9cbd7efcd4d16873ac98f34b0fa}\label{class_big_int_ae4fbc9cbd7efcd4d16873ac98f34b0fa}} 
 const long long {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t i) const
+\item 
+\mbox{\Hypertarget{class_big_int_aa2afeaa9c9cb6d7be5c580a9dd3a2056}\label{class_big_int_aa2afeaa9c9cb6d7be5c580a9dd3a2056}} 
+long long {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t i)
 \item 
 \mbox{\Hypertarget{class_big_int_aa7809333caa74dc0c5ebb3d917a9914d}\label{class_big_int_aa7809333caa74dc0c5ebb3d917a9914d}} 
 bool {\bfseries operator==} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj) const
@@ -90,30 +97,21 @@ const \mbox{\hyperlink{class_vector}{Vector}}$<$ long long $>$ \& {\bfseries get
 \item 
 long long \mbox{\hyperlink{class_big_int_a097ab5754561b6d1ae7df32a8abab020}{calculate\+Digit\+Addition}} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj, int first, int second, long long \&rem) const
 \item 
-\mbox{\Hypertarget{class_big_int_a883d85f26ad4234ce5ca21dbb7b95220}\label{class_big_int_a883d85f26ad4234ce5ca21dbb7b95220}} 
-long long {\bfseries calculate\+Digit\+Subtraction} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj, int first, int second, \mbox{\hyperlink{class_big_int}{Big\+Int}} \&result, int index) const
+long long \mbox{\hyperlink{class_big_int_ada31bdeffe42db64b577cad8342d35c9}{calculate\+Digit\+Subtraction}} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj, int first, int second)
 \item 
-\mbox{\Hypertarget{class_big_int_a21d36548ba922d8a0214ec9d5d34014b}\label{class_big_int_a21d36548ba922d8a0214ec9d5d34014b}} 
-void {\bfseries calculate\+Big\+Int\+By\+Num} (int big\+Int\+Len, const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj, \mbox{\hyperlink{class_big_int}{Big\+Int}} \&result, long long num) const
-\item 
-\mbox{\Hypertarget{class_big_int_a956cc7863de2d1ded2aa036b5ae7f1c0}\label{class_big_int_a956cc7863de2d1ded2aa036b5ae7f1c0}} 
-\mbox{\hyperlink{class_big_int}{Big\+Int}} {\bfseries operator\+Handler\+Addition} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj) const
-\item 
-\mbox{\Hypertarget{class_big_int_a6a8b7b6a379bbbcc6ca6bd303b93df60}\label{class_big_int_a6a8b7b6a379bbbcc6ca6bd303b93df60}} 
-\mbox{\hyperlink{class_big_int}{Big\+Int}} {\bfseries operator\+Handler\+Subtraction} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj) const
-\item 
-\mbox{\Hypertarget{class_big_int_afa65ae8129f7c039f95f52898c5884cc}\label{class_big_int_afa65ae8129f7c039f95f52898c5884cc}} 
-\mbox{\hyperlink{class_big_int}{Big\+Int}} {\bfseries operator\+Handler\+Multiplication} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj) const
-\item 
-\mbox{\Hypertarget{class_big_int_aa8d88c544a7241d758cafcad0fc750f6}\label{class_big_int_aa8d88c544a7241d758cafcad0fc750f6}} 
-void {\bfseries sum\+Vectors\+Multiplication} (\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_big_int}{Big\+Int}} $>$ \&obj)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_big_int}{Big\+Int}} \mbox{\hyperlink{class_big_int_a956cc7863de2d1ded2aa036b5ae7f1c0}{operator\+Handler\+Addition}} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj) const
+\begin{DoxyCompactList}\small\item\em Helper method for the addition operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_big_int}{Big\+Int}} \mbox{\hyperlink{class_big_int_a6a8b7b6a379bbbcc6ca6bd303b93df60}{operator\+Handler\+Subtraction}} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj) const
+\begin{DoxyCompactList}\small\item\em Helper method for the subtraction operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_big_int}{Big\+Int}} \mbox{\hyperlink{class_big_int_afa65ae8129f7c039f95f52898c5884cc}{operator\+Handler\+Multiplication}} (const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&obj) const
+\begin{DoxyCompactList}\small\item\em Helper method for the multiplication operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_big_int_aa8d88c544a7241d758cafcad0fc750f6}{sum\+Vectors\+Multiplication}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_big_int}{Big\+Int}} $>$ \&obj)
+\begin{DoxyCompactList}\small\item\em Helper method for the multiplication operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_big_int_ac6e4c0c1ca6350a2d88a481dc55787a6}\label{class_big_int_ac6e4c0c1ca6350a2d88a481dc55787a6}} 
-\mbox{\hyperlink{class_vector}{Vector}}$<$ long long $>$ {\bfseries digits\+Container}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_vector}{Vector}}$<$ long long $>$ \mbox{\hyperlink{class_big_int_ac6e4c0c1ca6350a2d88a481dc55787a6}{digits\+Container}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_big_int}{Big\+Int}} Number itself. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -123,11 +121,48 @@ std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\
 
 
 \doxysubsection{Detailed Description}
-The main class for the whole project.
+The main class for the whole project. 
 
 Class \mbox{\hyperlink{class_big_int}{Big\+Int}}, its purpose being enabling users to work with numbers too big that aren\textquotesingle{}t supported by the language built-\/in types. Working in a billion number system, it offers broad functionality along with great effectiveness resource-\/wise.
 
 Core functionalities are\+: Addition, Subtraction, Multiplication and a fast exponentiation alghoritm. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_big_int_aaeda6d9540ffe52433e17d4fc26dc14b}\label{class_big_int_aaeda6d9540ffe52433e17d4fc26dc14b}} 
+\index{BigInt@{BigInt}!BigInt@{BigInt}}
+\index{BigInt@{BigInt}!BigInt@{BigInt}}
+\doxysubsubsection{\texorpdfstring{BigInt()}{BigInt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Big\+Int\+::\+Big\+Int (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Paramater Constructor, initializing a \mbox{\hyperlink{class_big_int}{Big\+Int}} number by \mbox{\hyperlink{class_string}{String}}. 
+
+This is the easiest and most intuitive way of initializing an object of Class \mbox{\hyperlink{class_big_int}{Big\+Int}}. Given that the library uses a not-\/so-\/popular billion number system, the developers want to use it should conform to some standarts. Since a single digit in a billion number system is in the range \mbox{[}0 -\/ 999999999\mbox{]}, \mbox{\hyperlink{class_big_int}{Big\+Int}} numbers can look messy at first. So, the developers have decided that \mbox{\hyperlink{class_big_int}{Big\+Int}} numbers should be represented with a space between every {\itshape billion system digit} and no spaces between single (decimal) digits. Therefore, strings passed to that constructor should stick to that standart. \hypertarget{class_big_int_autotoc_md0}{}\doxyparagraph{Example}\label{class_big_int_autotoc_md0}
+\mbox{\hyperlink{class_big_int}{Big\+Int}}(\char`\"{}134 240000\char`\"{}); // This Creates the \mbox{\hyperlink{class_big_int}{Big\+Int}} number 134 240000, two digits, which in decimal is 134 000 240 000.~\newline
+\mbox{\hyperlink{class_big_int}{Big\+Int}}(\char`\"{}5 1\char`\"{}); // This creates the \mbox{\hyperlink{class_big_int}{Big\+Int}} number 5 1, that\textquotesingle{}s two digits, which in decimal is 5 000 000 001~\newline
+~\newline
+ The constructor supports a bit of validation, like removing white\+Spaces. \hypertarget{class_big_int_autotoc_md1}{}\doxyparagraph{Example}\label{class_big_int_autotoc_md1}
+\mbox{\hyperlink{class_big_int}{Big\+Int}} big\+Number(\char`\"{}13     0   99391\char`\"{}); // Creates number 13 0 99391, three digits, 13 000 000 000 000 099 391 -\/ thirteen quintillion something..~\newline
+\mbox{\hyperlink{class_big_int}{Big\+Int}}(\char`\"{}900000000 0\char`\"{}) // 900 000 000 000 000 000 -\/ nine hundred quadrillion.~\newline
+~\newline
+Passing an invalid string though (cont. symbols other than numbers) causes the program to stop.~\newline
+Therefore developers who use this library in their project should think of implementing proper validation. 
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ \mbox{\hyperlink{class_string}{String}} containing the correct presentation of the desired \mbox{\hyperlink{class_big_int}{Big\+Int}} nuber \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_big_int_a4421e6c1883874512f1b04543dafc64a}\label{class_big_int_a4421e6c1883874512f1b04543dafc64a}} 
+\index{BigInt@{BigInt}!BigInt@{BigInt}}
+\index{BigInt@{BigInt}!BigInt@{BigInt}}
+\doxysubsubsection{\texorpdfstring{BigInt()}{BigInt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Big\+Int\+::\+Big\+Int (\begin{DoxyParamCaption}\item[{long long}]{num }\end{DoxyParamCaption})}
+
+
+
+Parameter Constructor taking long long variable. 
+
+This one initializes a single-\/digit \mbox{\hyperlink{class_big_int}{Big\+Int}} (max value 999 999 999), used in pre-\/development, not recommended to use. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_big_int_a097ab5754561b6d1ae7df32a8abab020}\label{class_big_int_a097ab5754561b6d1ae7df32a8abab020}} 
@@ -142,16 +177,174 @@ This method is used in the main addition operator. Given two \mbox{\hyperlink{cl
 \begin{DoxyParams}{Parameters}
 {\em obj} & -\/ a const reference to the second \mbox{\hyperlink{class_big_int}{Big\+Int}} number (the other is caller of the method) \\
 \hline
-{\em first} & -\/ the index of the digit from the first \mbox{\hyperlink{class_big_int}{Big\+Int}} number $\ast$(namely {\itshape this)} \\
+{\em first} & -\/ the index of the digit from the first \mbox{\hyperlink{class_big_int}{Big\+Int}} number (namely {\itshape this}) \\
 \hline
-{\em second} & -\/ the index of the digit from the second \mbox{\hyperlink{class_big_int}{Big\+Int}} number $\ast$(\\
-\hline
-{\em obj)$\ast$} & \\
+{\em second} & -\/ the index of the digit from the second \mbox{\hyperlink{class_big_int}{Big\+Int}} number ({\itshape obj}) \\
 \hline
 {\em rem} & -\/ A long long variable storing the eventual remainder of the sum of the two digits modulo the BASE \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ returns a long long variable holding the result digit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_big_int_ada31bdeffe42db64b577cad8342d35c9}\label{class_big_int_ada31bdeffe42db64b577cad8342d35c9}} 
+\index{BigInt@{BigInt}!calculateDigitSubtraction@{calculateDigitSubtraction}}
+\index{calculateDigitSubtraction@{calculateDigitSubtraction}!BigInt@{BigInt}}
+\doxysubsubsection{\texorpdfstring{calculateDigitSubtraction()}{calculateDigitSubtraction()}}
+{\footnotesize\ttfamily long long Big\+Int\+::calculate\+Digit\+Subtraction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&}]{obj,  }\item[{int}]{first,  }\item[{int}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+Helper method for the subtraction operator.
+
+This method is used in the main subtraction operator. Given two \mbox{\hyperlink{class_big_int}{Big\+Int}} numbers (one as argument, the other passed implicitly, as caller of the method), two indexes showing which exact digits in the two numbers are are respectively the minuend and subtrahend, 
+\begin{DoxyParams}{Parameters}
+{\em obj} & -\/ a const reference to the second \mbox{\hyperlink{class_big_int}{Big\+Int}} number (the other is caller of the method) \\
+\hline
+{\em first} & -\/ the index of the digit from the first \mbox{\hyperlink{class_big_int}{Big\+Int}} number (namely {\itshape this}) \\
+\hline
+{\em second} & -\/ the index of the digit from the second \mbox{\hyperlink{class_big_int}{Big\+Int}} number ({\itshape obj}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ returns a long long variable holding the result digit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_big_int_a4aeea3d40c950967bf82593ade4f88c4}\label{class_big_int_a4aeea3d40c950967bf82593ade4f88c4}} 
+\index{BigInt@{BigInt}!divideByTwo@{divideByTwo}}
+\index{divideByTwo@{divideByTwo}!BigInt@{BigInt}}
+\doxysubsubsection{\texorpdfstring{divideByTwo()}{divideByTwo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_big_int}{Big\+Int}} Big\+Int\+::divide\+By\+Two (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Helper method for the fast exponentiation method. 
+
+The effective exponentiation works on an algorithm using division by two in simplifying the operation, and as the project doesn\textquotesingle{}t support division, this method was implemented (Alghorithm simplifies the operation by dividing the \mbox{\hyperlink{class_big_int}{Big\+Int}} number by two each step) \begin{DoxyReturn}{Returns}
+-\/ Returns the caller of the method divided by long long 2. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+fast\+Pow(const Big\+Int \&power) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_big_int_a5ba03c0375e92d754b5d164cdaec251b}\label{class_big_int_a5ba03c0375e92d754b5d164cdaec251b}} 
+\index{BigInt@{BigInt}!multiplyByNum@{multiplyByNum}}
+\index{multiplyByNum@{multiplyByNum}!BigInt@{BigInt}}
+\doxysubsubsection{\texorpdfstring{multiplyByNum()}{multiplyByNum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_big_int}{Big\+Int}} Big\+Int\+::multiply\+By\+Num (\begin{DoxyParamCaption}\item[{long long}]{num }\end{DoxyParamCaption}) const}
+
+
+
+Helper for the multiplication operator. 
+
+As mentioned before, multiplication works by multiplying a \mbox{\hyperlink{class_big_int}{Big\+Int}} by all the digits of the other \mbox{\hyperlink{class_big_int}{Big\+Int}}. This Helper method takes a \mbox{\hyperlink{class_big_int}{Big\+Int}} (implicitly) and multiplies it by the passed long long number (\mbox{\hyperlink{class_big_int}{Big\+Int}} digit) 
+\begin{DoxyParams}{Parameters}
+{\em num} & -\/ long long number, \mbox{\hyperlink{class_big_int}{Big\+Int}} digit in context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ returns a new \mbox{\hyperlink{class_big_int}{Big\+Int}} object. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+operator$\ast$(const Big\+Int \&obj) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_big_int_a956cc7863de2d1ded2aa036b5ae7f1c0}\label{class_big_int_a956cc7863de2d1ded2aa036b5ae7f1c0}} 
+\index{BigInt@{BigInt}!operatorHandlerAddition@{operatorHandlerAddition}}
+\index{operatorHandlerAddition@{operatorHandlerAddition}!BigInt@{BigInt}}
+\doxysubsubsection{\texorpdfstring{operatorHandlerAddition()}{operatorHandlerAddition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_big_int}{Big\+Int}} Big\+Int\+::operator\+Handler\+Addition (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&}]{obj }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper method for the addition operator. 
+
+Used in the addition operator, this method handles addition for negative numbers. Works with two \mbox{\hyperlink{class_big_int}{Big\+Int}} numbers, the first one being {\itshape this} (the caller of the method) and the other as a const Bigint by reference. The Class basically simulates operations with negative numbers, but under the hood, it gets all the work down to operations with positive numbers and then returns their negated values. So this handler method takes care of that. Bear in mind there is a differrent handler for each operation -\/ +, -\/, $\ast$ 
+\begin{DoxyParams}{Parameters}
+{\em obj} & -\/ the second \mbox{\hyperlink{class_big_int}{Big\+Int}} addend (first one is {\itshape this}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+operator+(const Big\+Int \&obj) const 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+-\/ if the two Big\+Ints are positive, returns ZERO. Otherwise, returns the result of the proper operation called with positive numbers by negating the initial ones. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+negate() const  
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_big_int_afa65ae8129f7c039f95f52898c5884cc}\label{class_big_int_afa65ae8129f7c039f95f52898c5884cc}} 
+\index{BigInt@{BigInt}!operatorHandlerMultiplication@{operatorHandlerMultiplication}}
+\index{operatorHandlerMultiplication@{operatorHandlerMultiplication}!BigInt@{BigInt}}
+\doxysubsubsection{\texorpdfstring{operatorHandlerMultiplication()}{operatorHandlerMultiplication()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_big_int}{Big\+Int}} Big\+Int\+::operator\+Handler\+Multiplication (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&}]{obj }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper method for the multiplication operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & -\/ the second multipliеr (first one is caller of the method) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+operator$\ast$(const Big\+Int \&obj) const 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+-\/ if operation doesn\textquotesingle{}t need further handling -\/ returns ZERO, Otherwise calls proper operation with negated values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_big_int_a6a8b7b6a379bbbcc6ca6bd303b93df60}\label{class_big_int_a6a8b7b6a379bbbcc6ca6bd303b93df60}} 
+\index{BigInt@{BigInt}!operatorHandlerSubtraction@{operatorHandlerSubtraction}}
+\index{operatorHandlerSubtraction@{operatorHandlerSubtraction}!BigInt@{BigInt}}
+\doxysubsubsection{\texorpdfstring{operatorHandlerSubtraction()}{operatorHandlerSubtraction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_big_int}{Big\+Int}} Big\+Int\+::operator\+Handler\+Subtraction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_big_int}{Big\+Int}} \&}]{obj }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper method for the subtraction operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & -\/ the subtrahend (minuend is passed implicitly, {\itshape this}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+operator-\/(const Big\+Int \&obj) const 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+-\/ if operation doesn\textquotesingle{}t need further handling -\/ returns ZERO, Otherwise calls proper operation with negated values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_big_int_aa8d88c544a7241d758cafcad0fc750f6}\label{class_big_int_aa8d88c544a7241d758cafcad0fc750f6}} 
+\index{BigInt@{BigInt}!sumVectorsMultiplication@{sumVectorsMultiplication}}
+\index{sumVectorsMultiplication@{sumVectorsMultiplication}!BigInt@{BigInt}}
+\doxysubsubsection{\texorpdfstring{sumVectorsMultiplication()}{sumVectorsMultiplication()}}
+{\footnotesize\ttfamily void Big\+Int\+::sum\+Vectors\+Multiplication (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ \mbox{\hyperlink{class_big_int}{Big\+Int}} $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper method for the multiplication operator. 
+
+The multiplication operator works in the following way\+: Takes two \mbox{\hyperlink{class_big_int}{Big\+Int}} numbers, separates the second \mbox{\hyperlink{class_big_int}{Big\+Int}} number\textquotesingle{}s digits and multiplies the first \mbox{\hyperlink{class_big_int}{Big\+Int}} by all those digits. The result of that is a \mbox{\hyperlink{class_vector}{Vector}} of Big\+Ints. This method takes that \mbox{\hyperlink{class_vector}{Vector}} and sums all its elements in a special way, so that in the end the result is the product of the two initial Big\+Ints. 
+\begin{DoxyParams}{Parameters}
+{\em obj} & -\/ \mbox{\hyperlink{class_vector}{Vector}} containg all {\itshape subproducts} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ returns the final Product 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+operator$\ast$(const Big\+Int \&obj) 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_big_int_ac6e4c0c1ca6350a2d88a481dc55787a6}\label{class_big_int_ac6e4c0c1ca6350a2d88a481dc55787a6}} 
+\index{BigInt@{BigInt}!digitsContainer@{digitsContainer}}
+\index{digitsContainer@{digitsContainer}!BigInt@{BigInt}}
+\doxysubsubsection{\texorpdfstring{digitsContainer}{digitsContainer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector}{Vector}}$<$long long$>$ Big\+Int\+::digits\+Container\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The \mbox{\hyperlink{class_big_int}{Big\+Int}} Number itself. 
+
+A vector of type long long, containing the digits of the \mbox{\hyperlink{class_big_int}{Big\+Int}}. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

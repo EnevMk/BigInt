@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -69,6 +69,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_catch_1_1_test_registry-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Catch::TestRegistry Class Reference</div>  </div>
@@ -98,6 +99,27 @@ std::vector&lt; <a class="el" href="class_catch_1_1_test_case_handle.html">TestC
 <tr class="memitem:a3ee84f12242987a74f101d0232c46f64"><td class="memItemLeft" align="right" valign="top"><a id="a3ee84f12242987a74f101d0232c46f64"></a>
 std::vector&lt; <a class="el" href="class_catch_1_1_test_case_handle.html">TestCaseHandle</a> &gt; const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getAllTestsSorted</b> (<a class="el" href="struct_catch_1_1_i_config.html">IConfig</a> const &amp;config) const override</td></tr>
 <tr class="separator:a3ee84f12242987a74f101d0232c46f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a41d351251b8dced95458ffe1e47cc107"><td class="memItemLeft" align="right" valign="top"><a id="a41d351251b8dced95458ffe1e47cc107"></a>
+std::vector&lt; <a class="el" href="class_catch_1_1_detail_1_1unique__ptr.html">Detail::unique_ptr</a>&lt; <a class="el" href="struct_catch_1_1_test_case_info.html">TestCaseInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_owned_test_infos</b></td></tr>
+<tr class="separator:a41d351251b8dced95458ffe1e47cc107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86a10d416e50280183debbffeebd070e"><td class="memItemLeft" align="right" valign="top"><a id="a86a10d416e50280183debbffeebd070e"></a>
+std::vector&lt; <a class="el" href="struct_catch_1_1_test_case_info.html">TestCaseInfo</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_viewed_test_infos</b></td></tr>
+<tr class="separator:a86a10d416e50280183debbffeebd070e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea496e5a173f34658925dad6b41945ec"><td class="memItemLeft" align="right" valign="top"><a id="aea496e5a173f34658925dad6b41945ec"></a>
+std::vector&lt; <a class="el" href="class_catch_1_1_detail_1_1unique__ptr.html">Detail::unique_ptr</a>&lt; <a class="el" href="struct_catch_1_1_i_test_invoker.html">ITestInvoker</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_invokers</b></td></tr>
+<tr class="separator:aea496e5a173f34658925dad6b41945ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb56f778fe344b470ded03467ec0aeff"><td class="memItemLeft" align="right" valign="top"><a id="adb56f778fe344b470ded03467ec0aeff"></a>
+std::vector&lt; <a class="el" href="class_catch_1_1_test_case_handle.html">TestCaseHandle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_handles</b></td></tr>
+<tr class="separator:adb56f778fe344b470ded03467ec0aeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b161c64289d85947ea49d4d07c2376"><td class="memItemLeft" align="right" valign="top"><a id="ad6b161c64289d85947ea49d4d07c2376"></a>
+TestRunOrder&#160;</td><td class="memItemRight" valign="bottom"><b>m_currentSortOrder</b> = TestRunOrder::Declared</td></tr>
+<tr class="separator:ad6b161c64289d85947ea49d4d07c2376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec9f90c5844fa2bf674a2cf3b93e1f97"><td class="memItemLeft" align="right" valign="top"><a id="aec9f90c5844fa2bf674a2cf3b93e1f97"></a>
+std::vector&lt; <a class="el" href="class_catch_1_1_test_case_handle.html">TestCaseHandle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_sortedFunctions</b></td></tr>
+<tr class="separator:aec9f90c5844fa2bf674a2cf3b93e1f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="catch__amalgamated_8hpp_source.html">catch_amalgamated.hpp</a></li>

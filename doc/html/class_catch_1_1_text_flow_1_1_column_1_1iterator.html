@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -71,12 +71,19 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_catch_1_1_text_flow_1_1_column_1_1iterator-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Catch::TextFlow::Column::iterator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_catch_1_1_text_flow_1_1_column_1_1iterator_1_1_end_tag.html">EndTag</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a4129074851f5dd1fa12acaee6e6ce751"><td class="memItemLeft" align="right" valign="top"><a id="a4129074851f5dd1fa12acaee6e6ce751"></a>
@@ -115,6 +122,42 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a cl
 <tr class="memitem:a69bc5925e91f5f90278750764445a693"><td class="memItemLeft" align="right" valign="top"><a id="a69bc5925e91f5f90278750764445a693"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="class_catch_1_1_text_flow_1_1_column_1_1iterator.html">iterator</a> const &amp;other) const</td></tr>
 <tr class="separator:a69bc5925e91f5f90278750764445a693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ac07cb2643bd9b049bd3a23a78de546b1"><td class="memItemLeft" align="right" valign="top"><a id="ac07cb2643bd9b049bd3a23a78de546b1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b> (<a class="el" href="class_catch_1_1_text_flow_1_1_column.html">Column</a> const &amp;column, <a class="el" href="struct_catch_1_1_text_flow_1_1_column_1_1iterator_1_1_end_tag.html">EndTag</a>)</td></tr>
+<tr class="separator:ac07cb2643bd9b049bd3a23a78de546b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7060d98e503b3bb8f26f795c36e25782"><td class="memItemLeft" align="right" valign="top"><a id="a7060d98e503b3bb8f26f795c36e25782"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>calcLength</b> ()</td></tr>
+<tr class="separator:a7060d98e503b3bb8f26f795c36e25782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac05b43bb7a7adbdef2ea3d2e898a432b"><td class="memItemLeft" align="right" valign="top"><a id="ac05b43bb7a7adbdef2ea3d2e898a432b"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>indent</b> () const</td></tr>
+<tr class="separator:ac05b43bb7a7adbdef2ea3d2e898a432b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6434bf4b393fcd43d321a3fdcf3bdcd8"><td class="memItemLeft" align="right" valign="top"><a id="a6434bf4b393fcd43d321a3fdcf3bdcd8"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>addIndentAndSuffix</b> (size_t position, size_t length) const</td></tr>
+<tr class="separator:a6434bf4b393fcd43d321a3fdcf3bdcd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac99b39be6b71d2c6e200e6e8dc9b1088"><td class="memItemLeft" align="right" valign="top"><a id="ac99b39be6b71d2c6e200e6e8dc9b1088"></a>
+friend&#160;</td><td class="memItemRight" valign="bottom"><b>Column</b></td></tr>
+<tr class="separator:ac99b39be6b71d2c6e200e6e8dc9b1088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69231da80bf60dc320b3b9e0badd7ce7"><td class="memItemLeft" align="right" valign="top"><a id="a69231da80bf60dc320b3b9e0badd7ce7"></a>
+<a class="el" href="class_catch_1_1_text_flow_1_1_column.html">Column</a> const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>m_column</b></td></tr>
+<tr class="separator:a69231da80bf60dc320b3b9e0badd7ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7b41d0fb7eb87dae6cf83fb719144f"><td class="memItemLeft" align="right" valign="top"><a id="aec7b41d0fb7eb87dae6cf83fb719144f"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_pos</b> = 0</td></tr>
+<tr class="separator:aec7b41d0fb7eb87dae6cf83fb719144f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117d509f83058c0cf12da9453f4ef27a"><td class="memItemLeft" align="right" valign="top"><a id="a117d509f83058c0cf12da9453f4ef27a"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_len</b> = 0</td></tr>
+<tr class="separator:a117d509f83058c0cf12da9453f4ef27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd07463f4c6c080b995dbca450d6a0d1"><td class="memItemLeft" align="right" valign="top"><a id="abd07463f4c6c080b995dbca450d6a0d1"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_end</b> = 0</td></tr>
+<tr class="separator:abd07463f4c6c080b995dbca450d6a0d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8b298321946148a0eb2240eb41dde9e"><td class="memItemLeft" align="right" valign="top"><a id="aa8b298321946148a0eb2240eb41dde9e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_suffix</b> = false</td></tr>
+<tr class="separator:aa8b298321946148a0eb2240eb41dde9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="catch__amalgamated_8hpp_source.html">catch_amalgamated.hpp</a></li>

@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -69,6 +69,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_catch_1_1_wildcard_pattern-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Catch::WildcardPattern Class Reference</div>  </div>
@@ -83,6 +86,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae88acde37f50f7cbec8605acf434fe85"><td class="memItemLeft" align="right" valign="top"><a id="ae88acde37f50f7cbec8605acf434fe85"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>matches</b> (std::string const &amp;str) const</td></tr>
 <tr class="separator:ae88acde37f50f7cbec8605acf434fe85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:af851fc7cd377fb358a50f58eb5dafadb"><td class="memItemLeft" align="right" valign="top"><a id="af851fc7cd377fb358a50f58eb5dafadb"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>WildcardPosition</b> { <b>NoWildcard</b> = 0
+, <b>WildcardAtStart</b> = 1
+, <b>WildcardAtEnd</b> = 2
+, <b>WildcardAtBothEnds</b> = WildcardAtStart | WildcardAtEnd
+ }</td></tr>
+<tr class="separator:af851fc7cd377fb358a50f58eb5dafadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a65a46178aaa0e13b641438b71659bae0"><td class="memItemLeft" align="right" valign="top"><a id="a65a46178aaa0e13b641438b71659bae0"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>normaliseString</b> (std::string const &amp;str) const</td></tr>
+<tr class="separator:a65a46178aaa0e13b641438b71659bae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aef561aafa0f021653bc6b5806b6d57b0"><td class="memItemLeft" align="right" valign="top"><a id="aef561aafa0f021653bc6b5806b6d57b0"></a>
+CaseSensitive&#160;</td><td class="memItemRight" valign="bottom"><b>m_caseSensitivity</b></td></tr>
+<tr class="separator:aef561aafa0f021653bc6b5806b6d57b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74da965b1257c4e958d95da15f30c69"><td class="memItemLeft" align="right" valign="top"><a id="af74da965b1257c4e958d95da15f30c69"></a>
+WildcardPosition&#160;</td><td class="memItemRight" valign="bottom"><b>m_wildcard</b> = NoWildcard</td></tr>
+<tr class="separator:af74da965b1257c4e958d95da15f30c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b96a014f1194387ce441f8f0c0e8a2e"><td class="memItemLeft" align="right" valign="top"><a id="a8b96a014f1194387ce441f8f0c0e8a2e"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_pattern</b></td></tr>
+<tr class="separator:a8b96a014f1194387ce441f8f0c0e8a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="catch__amalgamated_8hpp_source.html">catch_amalgamated.hpp</a></li>

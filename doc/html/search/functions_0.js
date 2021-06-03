@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['calculatedigitaddition_9',['calculateDigitAddition',['../class_big_int.html#a097ab5754561b6d1ae7df32a8abab020',1,'BigInt']]]
+  ['addchild_721',['addChild',['../class_catch_1_1_test_case_tracking_1_1_i_tracker.html#abb8b8e22ef7b7acaddb5d8dea96755bf',1,'Catch::TestCaseTracking::ITracker']]],
+  ['approx_722',['Approx',['../catch__amalgamated_8hpp.html#a935746b6148231574ee244d5110fae18',1,'Catch::Matchers']]]
 ];

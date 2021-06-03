@@ -21,6 +21,27 @@ std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+
 \mbox{\Hypertarget{class_catch_1_1_test_registry_a3ee84f12242987a74f101d0232c46f64}\label{class_catch_1_1_test_registry_a3ee84f12242987a74f101d0232c46f64}} 
 std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ const  \& {\bfseries get\+All\+Tests\+Sorted} (\mbox{\hyperlink{struct_catch_1_1_i_config}{IConfig}} const \&config) const override
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_registry_a41d351251b8dced95458ffe1e47cc107}\label{class_catch_1_1_test_registry_a41d351251b8dced95458ffe1e47cc107}} 
+std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{struct_catch_1_1_test_case_info}{Test\+Case\+Info}} $>$ $>$ {\bfseries m\+\_\+owned\+\_\+test\+\_\+infos}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_registry_a86a10d416e50280183debbffeebd070e}\label{class_catch_1_1_test_registry_a86a10d416e50280183debbffeebd070e}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_catch_1_1_test_case_info}{Test\+Case\+Info}} $\ast$ $>$ {\bfseries m\+\_\+viewed\+\_\+test\+\_\+infos}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_registry_aea496e5a173f34658925dad6b41945ec}\label{class_catch_1_1_test_registry_aea496e5a173f34658925dad6b41945ec}} 
+std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_detail_1_1unique__ptr}{Detail\+::unique\+\_\+ptr}}$<$ \mbox{\hyperlink{struct_catch_1_1_i_test_invoker}{ITest\+Invoker}} $>$ $>$ {\bfseries m\+\_\+invokers}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_registry_adb56f778fe344b470ded03467ec0aeff}\label{class_catch_1_1_test_registry_adb56f778fe344b470ded03467ec0aeff}} 
+std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ {\bfseries m\+\_\+handles}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_registry_ad6b161c64289d85947ea49d4d07c2376}\label{class_catch_1_1_test_registry_ad6b161c64289d85947ea49d4d07c2376}} 
+Test\+Run\+Order {\bfseries m\+\_\+current\+Sort\+Order} = Test\+Run\+Order\+::\+Declared
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_registry_aec9f90c5844fa2bf674a2cf3b93e1f97}\label{class_catch_1_1_test_registry_aec9f90c5844fa2bf674a2cf3b93e1f97}} 
+std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_test_case_handle}{Test\+Case\+Handle}} $>$ {\bfseries m\+\_\+sorted\+Functions}
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

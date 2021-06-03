@@ -18,6 +18,30 @@ T const  \& {\bfseries get} () const override
 \mbox{\Hypertarget{class_catch_1_1_generators_1_1_generators_ad127fd2a07347b527f79ab3b78bd40fb}\label{class_catch_1_1_generators_1_1_generators_ad127fd2a07347b527f79ab3b78bd40fb}} 
 bool {\bfseries next} () override
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_generators_1_1_generators_a56e1b82d4c9c952076cd58efbf7a4572}\label{class_catch_1_1_generators_1_1_generators_a56e1b82d4c9c952076cd58efbf7a4572}} 
+void {\bfseries populate} (\mbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper}{Generator\+Wrapper}}$<$ T $>$ \&\&generator)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_generators_1_1_generators_ad708036fa5a9bf0cd1520ce111bc851d}\label{class_catch_1_1_generators_1_1_generators_ad708036fa5a9bf0cd1520ce111bc851d}} 
+void {\bfseries populate} (T \&\&val)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_generators_1_1_generators_a8ff8b7dda734d1808b644fefc67f4c98}\label{class_catch_1_1_generators_1_1_generators_a8ff8b7dda734d1808b644fefc67f4c98}} 
+{\footnotesize template$<$typename U $>$ }\\void {\bfseries populate} (U \&\&val)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_generators_1_1_generators_aebb8051e604c7415bb7e7de91278c278}\label{class_catch_1_1_generators_1_1_generators_aebb8051e604c7415bb7e7de91278c278}} 
+{\footnotesize template$<$typename U , typename... Gs$>$ }\\void {\bfseries populate} (U \&\&value\+Or\+Generator, Gs \&\&... more\+Generators)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_generators_1_1_generators_a4d41bb9f0e8d726a8a53c86354bf19de}\label{class_catch_1_1_generators_1_1_generators_a4d41bb9f0e8d726a8a53c86354bf19de}} 
+std\+::vector$<$ \mbox{\hyperlink{class_catch_1_1_generators_1_1_generator_wrapper}{Generator\+Wrapper}}$<$ T $>$ $>$ {\bfseries m\+\_\+generators}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_generators_1_1_generators_a8f5cd6b2479cfadbd45033c4ad17ff0c}\label{class_catch_1_1_generators_1_1_generators_a8f5cd6b2479cfadbd45033c4ad17ff0c}} 
+size\+\_\+t {\bfseries m\+\_\+current} = 0
+\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 

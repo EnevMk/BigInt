@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['shouldredirectstdout_722',['shouldRedirectStdOut',['../struct_catch_1_1_reporter_preferences.html#a434511c4080edbbc12e0d1c31ea14769',1,'Catch::ReporterPreferences']]],
-  ['shouldreportallassertions_723',['shouldReportAllAssertions',['../struct_catch_1_1_reporter_preferences.html#a10e13e10dfdc9a97dde0a72c573d7419',1,'Catch::ReporterPreferences']]]
+  ['m_5fpreferences_762',['m_preferences',['../struct_catch_1_1_i_streaming_reporter.html#a9906e77110e557db869c2c33796a4076',1,'Catch::IStreamingReporter']]]
 ];

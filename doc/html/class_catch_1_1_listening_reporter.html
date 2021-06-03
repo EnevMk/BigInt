@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -69,6 +69,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_catch_1_1_listening_reporter-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Catch::ListeningReporter Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
@@ -162,6 +164,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ad5001d7247cc94e5fec26b0e702f134f inherit pub_methods_struct_catch_1_1_i_streaming_reporter"><td class="memItemLeft" align="right" valign="top"><a id="ad5001d7247cc94e5fec26b0e702f134f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>fatalErrorEncountered</b> (<a class="el" href="class_catch_1_1_string_ref.html">StringRef</a> name)</td></tr>
 <tr class="separator:ad5001d7247cc94e5fec26b0e702f134f inherit pub_methods_struct_catch_1_1_i_streaming_reporter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a01f8469613bdef85dc4a72a13104643e"><td class="memItemLeft" align="right" valign="top"><a id="a01f8469613bdef85dc4a72a13104643e"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Reporters</b> = std::vector&lt; <a class="el" href="class_catch_1_1_detail_1_1unique__ptr.html">IStreamingReporterPtr</a> &gt;</td></tr>
+<tr class="separator:a01f8469613bdef85dc4a72a13104643e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af694a00a4d4bba7d179b1c230979acd7"><td class="memItemLeft" align="right" valign="top"><a id="af694a00a4d4bba7d179b1c230979acd7"></a>
+Reporters&#160;</td><td class="memItemRight" valign="bottom"><b>m_listeners</b></td></tr>
+<tr class="separator:af694a00a4d4bba7d179b1c230979acd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08fc9be1699049179f587706c431f4df"><td class="memItemLeft" align="right" valign="top"><a id="a08fc9be1699049179f587706c431f4df"></a>
+<a class="el" href="class_catch_1_1_detail_1_1unique__ptr.html">IStreamingReporterPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_reporter</b> = nullptr</td></tr>
+<tr class="separator:a08fc9be1699049179f587706c431f4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

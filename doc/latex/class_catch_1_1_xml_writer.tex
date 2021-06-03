@@ -50,6 +50,36 @@ void {\bfseries write\+Stylesheet\+Ref} (std\+::string const \&url)
 \mbox{\Hypertarget{class_catch_1_1_xml_writer_aba98703d9852416e237de82aed4a9c4f}\label{class_catch_1_1_xml_writer_aba98703d9852416e237de82aed4a9c4f}} 
 void {\bfseries ensure\+Tag\+Closed} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_writer_a4b3d6ff6c7d7b6b4a2fa03e41e240823}\label{class_catch_1_1_xml_writer_a4b3d6ff6c7d7b6b4a2fa03e41e240823}} 
+void {\bfseries apply\+Formatting} (Xml\+Formatting fmt)
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_writer_a92fb640f3055a8a3cc15827ff680a659}\label{class_catch_1_1_xml_writer_a92fb640f3055a8a3cc15827ff680a659}} 
+void {\bfseries write\+Declaration} ()
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_writer_aeb07b4e735567a14eb92c72d26769d9a}\label{class_catch_1_1_xml_writer_aeb07b4e735567a14eb92c72d26769d9a}} 
+void {\bfseries newline\+If\+Necessary} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_writer_ae7a99fb12a935a6cec8eff50330e6810}\label{class_catch_1_1_xml_writer_ae7a99fb12a935a6cec8eff50330e6810}} 
+bool {\bfseries m\+\_\+tag\+Is\+Open} = false
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_writer_ab22c927b78eabdeb47390d8dd4e90ad5}\label{class_catch_1_1_xml_writer_ab22c927b78eabdeb47390d8dd4e90ad5}} 
+bool {\bfseries m\+\_\+needs\+Newline} = false
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_writer_a73241386778cdb898b6da390ef89ff2a}\label{class_catch_1_1_xml_writer_a73241386778cdb898b6da390ef89ff2a}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries m\+\_\+tags}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_writer_ac9f2917a19b297383533cd1d1c08c0af}\label{class_catch_1_1_xml_writer_ac9f2917a19b297383533cd1d1c08c0af}} 
+std\+::string {\bfseries m\+\_\+indent}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_xml_writer_a651c4ae4e42088b478df71cd81177b9e}\label{class_catch_1_1_xml_writer_a651c4ae4e42088b478df71cd81177b9e}} 
+std\+::ostream \& {\bfseries m\+\_\+os}
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

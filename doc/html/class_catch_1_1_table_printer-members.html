@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -76,11 +76,16 @@ $(function() {
 <table class="directory">
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>close</b>() (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>columnInfos</b>() const -&gt; std::vector&lt; ColumnInfo &gt; const &amp; (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>open</b>() (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>operator&lt;&lt;</b> (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_columnInfos</b> (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_currentColumn</b> (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_isOpen</b> (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_os</b> (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_oss</b> (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>open</b>() (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator&lt;&lt;</b> (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>operator&lt;&lt;</b> (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>TablePrinter</b>(std::ostream &amp;os, std::vector&lt; ColumnInfo &gt; columnInfos) (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator&lt;&lt;</b> (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>TablePrinter</b>(std::ostream &amp;os, std::vector&lt; ColumnInfo &gt; columnInfos) (defined in <a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a>)</td><td class="entry"><a class="el" href="class_catch_1_1_table_printer.html">Catch::TablePrinter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -24,7 +24,7 @@
    <div id="projectname">BigInt
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Represents a realisation of BigInteger class working in billion number system.</div>
+   <div id="projectbrief">Milli</div>
   </td>
  </tr>
  </tbody>
@@ -70,6 +70,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="struct_catch_1_1_benchmark_1_1_detail_1_1_object_storage-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Catch::Benchmark::Detail::ObjectStorage&lt; T, Destruct &gt; Struct Template Reference</div>  </div>
@@ -98,6 +100,29 @@ template&lt;typename... Args&gt; </td></tr>
 template&lt;bool AllowManualDestruction = !Destruct&gt; </td></tr>
 <tr class="memitem:a088724173765b38361170afe98a70d6f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; AllowManualDestruction &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>destruct</b> ()</td></tr>
 <tr class="separator:a088724173765b38361170afe98a70d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a4d0b7ffcd125156fc80a2290749a6b0f"><td class="memTemplParams" colspan="2"><a id="a4d0b7ffcd125156fc80a2290749a6b0f"></a>
+template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a4d0b7ffcd125156fc80a2290749a6b0f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>destruct_on_exit</b> (typename std::enable_if&lt; Destruct, U &gt;::type *=0)</td></tr>
+<tr class="separator:a4d0b7ffcd125156fc80a2290749a6b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a709683bf5a730e46c867819e4604709b"><td class="memTemplParams" colspan="2"><a id="a709683bf5a730e46c867819e4604709b"></a>
+template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a709683bf5a730e46c867819e4604709b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>destruct_on_exit</b> (typename std::enable_if&lt;!Destruct, U &gt;::type *=0)</td></tr>
+<tr class="separator:a709683bf5a730e46c867819e4604709b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31c30085a09d09f2a4cf748fdca1706"><td class="memItemLeft" align="right" valign="top"><a id="ac31c30085a09d09f2a4cf748fdca1706"></a>
+T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>stored_object</b> ()</td></tr>
+<tr class="separator:ac31c30085a09d09f2a4cf748fdca1706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39bb42f26f3dbafb6cf181caa1ec9b22"><td class="memItemLeft" align="right" valign="top"><a id="a39bb42f26f3dbafb6cf181caa1ec9b22"></a>
+T const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>stored_object</b> () const</td></tr>
+<tr class="separator:a39bb42f26f3dbafb6cf181caa1ec9b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a48f30c8cb5b52a83e381ee2260eaa498"><td class="memItemLeft" align="right" valign="top"><a id="a48f30c8cb5b52a83e381ee2260eaa498"></a>
+TStorage&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+<tr class="separator:a48f30c8cb5b52a83e381ee2260eaa498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="catch__amalgamated_8hpp_source.html">catch_amalgamated.hpp</a></li>

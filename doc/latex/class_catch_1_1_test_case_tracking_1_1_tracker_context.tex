@@ -24,6 +24,27 @@ bool {\bfseries completed\+Cycle} () const
 \mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_tracker_context_a0439ee3170881dbfb1df90a681d48423}\label{class_catch_1_1_test_case_tracking_1_1_tracker_context_a0439ee3170881dbfb1df90a681d48423}} 
 void {\bfseries set\+Current\+Tracker} (\mbox{\hyperlink{class_catch_1_1_test_case_tracking_1_1_i_tracker}{ITracker}} $\ast$tracker)
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_tracker_context_ad60a86070dec47e3521e2b06c66cb86a}\label{class_catch_1_1_test_case_tracking_1_1_tracker_context_ad60a86070dec47e3521e2b06c66cb86a}} 
+enum {\bfseries Run\+State} \{ {\bfseries Not\+Started}
+, {\bfseries Executing}
+, {\bfseries Completed\+Cycle}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_tracker_context_a2ff79af867ceffdbd0db15d30ebfdc98}\label{class_catch_1_1_test_case_tracking_1_1_tracker_context_a2ff79af867ceffdbd0db15d30ebfdc98}} 
+ITracker\+Ptr {\bfseries m\+\_\+root\+Tracker}
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_tracker_context_a36509ae6501fc3469afb3a1b6c9d6bee}\label{class_catch_1_1_test_case_tracking_1_1_tracker_context_a36509ae6501fc3469afb3a1b6c9d6bee}} 
+\mbox{\hyperlink{class_catch_1_1_test_case_tracking_1_1_i_tracker}{ITracker}} $\ast$ {\bfseries m\+\_\+current\+Tracker} = nullptr
+\item 
+\mbox{\Hypertarget{class_catch_1_1_test_case_tracking_1_1_tracker_context_a5d593dac4a5cebaf5fd95afe90fc16a1}\label{class_catch_1_1_test_case_tracking_1_1_tracker_context_a5d593dac4a5cebaf5fd95afe90fc16a1}} 
+Run\+State {\bfseries m\+\_\+run\+State} = Not\+Started
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
