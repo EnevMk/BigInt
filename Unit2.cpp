@@ -122,7 +122,7 @@ TEST_CASE("fastPow a negative num by odd power") {
 }
 
 TEST_CASE("Multiply negative by negative") {
-    BigInt a("-500 000 000"); // half a billion
+    BigInt a("-500000000"); // half a billion
     BigInt b("-1 0");
     CHECK(a * b == BigInt("500000000 0"));
 }
