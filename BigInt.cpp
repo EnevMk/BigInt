@@ -73,7 +73,7 @@ BigInt& BigInt::operator=(const BigInt &obj) {
 }
 
 bool BigInt::operator==(const BigInt &obj) const {
-    //return bigNum == obj.bigNum;
+    
     for (int i = 0; i < this->digitsContainer.size(); ++i) {
 
         if (this->digitsContainer[i] != obj.digitsContainer[i]) {
@@ -85,7 +85,6 @@ bool BigInt::operator==(const BigInt &obj) const {
 
 void BigInt::reserveVectorCapacity(int n) {
     this->digitsContainer.reserve(n);
-    //this->bigNum.null();
 }
 
 void BigInt::pushLast(long long digit) {
@@ -131,11 +130,11 @@ void BigInt::cutFirstNull() {
     }
 }
 
-void BigInt::null() {
+/* void BigInt::null() {
     for (int i = 0; i < this->digitsContainer.maxCapacity(); ++i) {
         digitsContainer[i] = 0;
     }
-}
+} */
 
 BigInt BigInt::divideByTwo() const {
 
@@ -249,7 +248,6 @@ BigInt BigInt::operator+(const BigInt &obj) const {
 
     res.digitsContainer.popBack();
     res.reserveVectorCapacity(newSize);
-    res.null();
     
     long long remainder = 0;
 
@@ -289,21 +287,6 @@ BigInt BigInt::operatorHandlerSubtraction(const BigInt &obj) const {
     return BigInt(0);
 }
 
-/* long long BigInt::calculateDigitSubtraction(const BigInt &obj, int first, int second, BigInt &result, int index) const {
-
-    long long minuend;
-    long long subtrahend;
-
-    minuend = (first - 1 < 0) ? 0 : (*this)[first - 1];
-    subtrahend = (second - 1 < 0) ? 0 : obj[second - 1];
-    
-    (minuend < subtrahend) ? result.digitsContainer[index - 1]--, minuend += BASE : 1;
-
-    long long digit = minuend - subtrahend + result.digitsContainer[index];
-
-    return digit;
-} */
-
 long long BigInt::calculateDigitSubtraction(const BigInt &obj, int first, int second) {
 
     long long minuend;
@@ -331,13 +314,11 @@ BigInt BigInt::operator-(const BigInt &obj) const {
     res.digitsContainer.shrink();
 
     res.reserveVectorCapacity(newSize);
-    res.null();
     
     BigInt copyOfFirst = *this;
 
     for (int i = newSize - 1; i >= 0; --i) {
         
-        //long long digit = calculateDigitSubtraction(obj, fstLen, sndLen, res, i);
         long long digit = copyOfFirst.calculateDigitSubtraction(obj, fstLen, sndLen);
         
         res.pushLast(digit);
@@ -408,47 +389,6 @@ BigInt BigInt::operator*(const BigInt &obj) const {
 
     return res;
 }
-
-/* void BigInt::calculateBigIntByNum(int bigIntLen, const BigInt &obj, BigInt& result, long long num) const {
-
-    int maxLen = bigIntLen + 1, diff = 1;
-
-    long long remainder = 0;
-
-    for (int i = bigIntLen - 1; i >= 0; --i) {
-        
-        long long digit = result[i + diff] + (obj[i] * num) % BASE;
-        result.pushLast(digit + remainder);
-
-        remainder = (obj[i] * num) / BASE;
-    }
-
-    if (remainder != 0) result.pushLast(remainder);
-    else {
-        result.pushLast(0);
-    }
-
-} */
-
-/* BigInt BigInt::calculateBigIntByNum(int bigIntLen, long long num) const {
-    int maxLen = bigIntLen + 1, diff = 1;
-
-    long long remainder = 0;
-
-    BigInt result;
-    result.reserveVectorCapacity(maxLen);
-
-    for (int i = bigIntLen - 1; i >= 0; --i) {
-
-        long long digit = ((*this)[i] * num) % BASE;
-        result.pushLast(digit + remainder);
-
-        remainder = (*this)[i] * num / BASE;
-    }
-
-    result.pushLast(remainder);
-    return result;
-} */
 
 BigInt BigInt::multiplyByNum(long long num) const {
 

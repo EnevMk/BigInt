@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['addchild_721',['addChild',['../class_catch_1_1_test_case_tracking_1_1_i_tracker.html#abb8b8e22ef7b7acaddb5d8dea96755bf',1,'Catch::TestCaseTracking::ITracker']]],
-  ['approx_722',['Approx',['../catch__amalgamated_8hpp.html#a935746b6148231574ee244d5110fae18',1,'Catch::Matchers']]]
+  ['bigint_26',['BigInt',['../class_big_int.html#af677021c0987fc2a48da06837ed29c58',1,'BigInt::BigInt()'],['../class_big_int.html#aaeda6d9540ffe52433e17d4fc26dc14b',1,'BigInt::BigInt(const String &amp;value)'],['../class_big_int.html#a4421e6c1883874512f1b04543dafc64a',1,'BigInt::BigInt(long long num)'],['../class_big_int.html#ab1d17bb2c43e4defc2576b5da1e471ac',1,'BigInt::BigInt(const Vector&lt; long long &gt; &amp;v)'],['../class_big_int.html#aafbe0eabb292157902ffbaf0bd08c626',1,'BigInt::BigInt(const BigInt &amp;obj)']]]
 ];

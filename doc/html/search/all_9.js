@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['junitreporter_144',['JunitReporter',['../class_catch_1_1_junit_reporter.html',1,'Catch']]]
+  ['reservevectorcapacity_16',['reserveVectorCapacity',['../class_big_int.html#ab1ff43f00f4478bdc97103a25bb82194',1,'BigInt']]]
 ];

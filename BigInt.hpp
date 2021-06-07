@@ -128,15 +128,15 @@ public:
     /// Therefore, strings passed to that constructor should stick to that standart.
     /// ### Example
     
-    /// BigInt("134 240000"); // This Creates the BigInt number 134 240000, two digits, which in decimal is 134 000 240 000.\n
-    /// BigInt("5 1"); // This creates the BigInt number 5 1, that's two digits, which in decimal is 5 000 000 001\n\n
+    /// BigInt("134 240000"); // This Creates the BigInt number 134 240000, two digits, which in decimal is 134 000 240 000. \n
+    /// BigInt("5 1"); // This creates the BigInt number 5 1, that's two digits, which in decimal is 5 000 000 001 \n \n
     
     /// The constructor supports a bit of validation, like removing whiteSpaces.
     /// ### Example
     /// BigInt bigNumber("13     0   99391"); // Creates number 13 0 99391, three digits, 
-    /// 13 000 000 000 000 099 391 - thirteen quintillion something..\n
-    /// BigInt("900000000 0") // 900 000 000 000 000 000 - nine hundred quadrillion.\n\n
-    /// Passing an invalid string though (cont. symbols other than numbers) causes the program to stop.\n
+    /// 13 000 000 000 000 099 391 - thirteen quintillion something.. \n
+    /// BigInt("900000000 0") // 900 000 000 000 000 000 - nine hundred quadrillion. \n \n
+    /// Passing an invalid string though (cont. symbols other than numbers) causes the program to stop. \n
     /// Therefore developers who use this library in their project should think of implementing proper validation.
     /// @param value - String containing the correct presentation of the desired BigInt nuber
     BigInt(const String &value);
@@ -166,22 +166,92 @@ public:
     bool operator>=(const BigInt &obj) const;
     bool operator<=(const BigInt &obj) const;
 
+    /// @brief A method that returns its caller, but negated.
+    ///
+    /// As mentioned before, to handle arithmetical operations class BigInt sometimes needs to use the negated values of the arguments.
+    /// This method is simple, but fundamental for the class. For example * a + (-b) * is * a - b *,  * -a + (-b) * is * -a -b * and so forth.
+    /// @return - the negated caller of the method.
+    /// ### Example
+    /// BigInt("5 0").negate(); // The constructor will create the number 5 0 (5 000 000 000 in dec.) and then the negate method will return 
+    /// the number -5 0. So the whole evaluation of the method will result in -5 0.
     BigInt negate() const; // returns the negated BigInt number
+
+    /// @brief Helper method for arithmetic operations +, -, *
+    ///
+    /// by default, all three arithmetic operations presume that the result will be one with maximal count of digits.
+    /// For example, lets take two two-digit numbers. Due to the nature of the container (a Vector), it is needed to reserve memory
+    /// for the result before the actual evaluation of the expression. So, for two two-digit numbers and operation + called, memory for 
+    /// a Three-digit bignum will be reserved. (BigInt("9 9") + BigInt("9 9") results in BigInt("1 0 8")). 
+    /// But, sometimes that may not be a proper final return value - let's have BigInt("2 5") + BigInt("1 5"). In that case we want the answer 
+    /// BigInt("4 0"), but as the operator will have reserved a Vector of size three for the result so we will actually have BigInt("0 4 0"),
+    /// which is incorrect. That's what this method does - in case of a zero digit on first position, it handles it and returns a correct result.
     void cutFirstNull();
-    void null();
+
+    /* /// @brief Helper method for the arithmetical operations.
+    ///
+    /// In the - operation, while applying the operation digit by digit, sometimes we may have a similar situation:
+    /// Let's say we want to do BigInt("1 750000000") - BigInt("900000000"). Digit by digit means the operator will do 
+    /// 750000000 * BASE^0 - 900000000 ^ BASE ^ 0 and 1 * BASE ^ 1 - 0 ^ BASE^1. But, 750000000 is less than 900000000
+    //void null(); */
+
+    /// @brief just a method that calls reserve() on the private member data digitsContainer.
     void reserveVectorCapacity(int n);
+
+    /// @brief Helper method for the arithmetic operators.
+    ///
+    /// As all the arithmetic operators work digit by digit, the result is composed backwards.
+    /// For example, If we want BigInt("17 500000") - BigInt("8 300000"), first the operator - calculates
+    /// 500000 - 300000 and pushes it at the back of the result Vector (i-th position), and after that calculates 
+    /// 17 - 8 and pushes it to the (i - 1 th position).
+    /// @param digit - the long long digit pushet at the last non-calculated position of the result Vector.
+
     void pushLast(long long digit); // pushes a long long to the last free position of the vector
     void push(long long digit);
+
+    /// @brief method that return the length of the BigInt, i.e. its digits count.
     int size() const;
+    
+    /// @brief getter for the private member data.
     const Vector<long long>& getVector() const;
     
+    /// @brief the standart friend function to output a BigInt object to a stream.
     friend std::ostream& operator<<(std::ostream &os, const BigInt &obj);
 
+    /// Operation + : performing addition on two BigInt numbers. Working digit by digit, meaning it sums the long long variables on each
+    /// position.
+    /// @param obj - the second addend (first one is caller of the method).
+    /// @see calculateDigitAddition(const BigInt &obj, int first, int second, long long &rem) const
+    /// @see operatorHandlerAddition(const BigInt &obj) const
+    /// @return the Result BigInt number.
     BigInt operator+(const BigInt &obj) const;
+
+    /// Operation - : performing subtraction on a Minuend number (the caller of the method) by a subtrahend (parameter).
+    /// @param obj - the subtrahend BigInt. (Minuend is caller of the method).
+    /// @see calculateDigitSubtraction(const BigInt &obj, int first, int second)
+    /// @see operatorHandlerSubtraction(const BigInt &obj) const
+    /// @return - the Result BigInt difference.
     BigInt operator-(const BigInt &obj) const;
+
+    /// Operation * : Performing multiplication on two BigInt numbers. Works by multiplying the first one by all
+    /// the digits of the second one, which result in a vector of products (BigInts) and then summing that vector
+    /// gives the final result.
+    /// @param obj - the second multiplier (first one is caller of the method)
+    /// @see operatorHandlerMultiplication(const BigInt &obj) const;
+    /// @see sumVectorsMultiplication(Vector<BigInt> &obj);
+    /// @see multiplyByNum(long long num) const;
+    /// @return - the product BigInt.
     BigInt operator*(const BigInt &obj) const;
-    //BigInt fastPow(const BigInt &obj) const;
-    //friend BigInt fastPow(const BigInt &number, const BigInt &power);
+    
+    /// @brief An exponentiation method for BigInt number working on an optimised algorithm.
+    ///
+    /// This method uses the simple, but powerful algorithm for exponentiation by squaring. It's a recursive algorithm
+    /// That simmplifies the task by squaring the argument and halving the power on each recursive call. \n
+    /// So x^n = (x^2) ^ n/2 if n is odd \n
+    /// or x^n = x * (x^2) ^ n\2
+    /// For Example, (in decimal) if we pass 3^13, The function would be evaluated the following way:
+    /// This reduces the count of multiplication operations significantly.
+    /// @param power - the exponent value (BigInt object)
+    /// @return - the caller of the method raised to the *power* argument.
     BigInt fastPow(const BigInt &power) const;
 };
 

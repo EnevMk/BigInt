@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['findchild_730',['findChild',['../class_catch_1_1_test_case_tracking_1_1_i_tracker.html#a22c42880036ec7f8ec8d82a3e943c8e6',1,'Catch::TestCaseTracking::ITracker']]]
+  ['multiplybynum_33',['multiplyByNum',['../class_big_int.html#a5ba03c0375e92d754b5d164cdaec251b',1,'BigInt']]]
 ];

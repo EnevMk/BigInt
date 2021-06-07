@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['generatorwrapper_731',['GeneratorWrapper',['../class_catch_1_1_generators_1_1_generator_wrapper.html#a60489f55be04e4f4d88359f54ddb03ef',1,'Catch::Generators::GeneratorWrapper']]]
+  ['negate_34',['negate',['../class_big_int.html#a1781725b3efae67b133b2bb373818cc2',1,'BigInt']]]
 ];

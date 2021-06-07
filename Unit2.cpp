@@ -97,3 +97,43 @@ TEST_CASE("Minus operation ") {
     BigInt num2("900000000");
     CHECK(numb - num2 == BigInt("800000000"));
 }
+
+TEST_CASE("negative Minus negative") {
+    BigInt neg1("-23 198 0");
+    BigInt neg2("-19 199 0");
+    BigInt res("-3 999999999 0");
+    CHECK(neg1 - neg2 == res);
+}
+
+TEST_CASE("Negative Plus positive") {
+    BigInt neg("-3 170000987");
+    BigInt pos("3 170000987");
+    CHECK(neg - pos == BigInt("-6 340001974"));
+}
+
+TEST_CASE("fastPow a negative num") {
+    BigInt fast("-4 2");
+    CHECK(fast.fastPow(BigInt("2")) == BigInt("16 16 4"));
+}
+
+TEST_CASE("fastPow a negative num by odd power") {
+    BigInt big("-3 0");
+    CHECK(big.fastPow(BigInt("3")) == BigInt("-27 0 0 0"));
+}
+
+TEST_CASE("Multiply negative by negative") {
+    BigInt a("-500 000 000"); // half a billion
+    BigInt b("-1 0");
+    CHECK(a * b == BigInt("500000000 0"));
+}
+
+TEST_CASE("Multiplication") {
+    BigInt a("134 240000");
+    BigInt b("2 0");;
+    CHECK(a * b == BigInt("268 480000 0"));
+}
+
+TEST_CASE("Negate method") {
+    BigInt one("1");
+    CHECK(one.negate() == BigInt("-1"));
+}
